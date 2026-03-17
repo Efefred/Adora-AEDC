@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "types": ["node", "playwright"],
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node"
+  },
+  "include": ["**/*.ts"]
+}

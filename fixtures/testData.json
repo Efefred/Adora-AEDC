@@ -1,0 +1,16 @@
+{
+  "login": {
+    "urlPath": "/login",
+    "username": "bpsuseraedc@bpsafrica.com",
+    "password": "Adora!!12345",
+    "invalidUsername": "invaliduser@adora.com",
+    "invalidPassword": "WrongPassword",
+    "whitespaceUsername": "   ",
+    "whitespacePassword": "   "
+  },
+  "nodeEnergyAnalysis": {
+    "dtNumber": "060018110941",
+    "f11Number": "210800445403",
+    "f33Number": "230401079633"
+  }
+}
