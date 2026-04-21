@@ -1,28 +1,48 @@
-
 const { expect } = require('@playwright/test');
+
 const { NodeEnergyAnalysisHelper } = require('../utils/nodeEnergyAnalysisHelper');
 
 class GridEnergyProfilePage {
   constructor(page) {
     this.page = page;
+    this.currentMode = null;
 
     this.pageHeader = page.getByRole('main').getByText('Grid Energy Profile', { exact: true });
 
     this.distributionTransformerTab = page.getByText('Distribution Transformer', { exact: true });
-
     this.outgoing33KvFeedersTab = page.getByText('Outgoing 33KV Feeders', { exact: true });
-    this.feeder33SearchInput = page.getByRole('textbox', {
-      name: 'Search by Feeder 33 name or number'
-    });
-
     this.outgoing11KvFeedersTab = page.getByText('Outgoing 11KV Feeders', { exact: true });
-    this.feeder11SearchInput = page.getByRole('textbox', {
-      name: 'Search by Feeder 11 name or number'
-    });
 
-    this.dtSearchInput = page.getByRole('textbox', {
-      name: 'Search by DT name or number'
-    });
+    this.dtSearchInput = page
+      .locator(
+        'input[placeholder="Search by DT name or number"], input[title="Search by DT name or number"], input[name="searchText"]'
+      )
+      .first();
+
+    this.feeder33SearchInput = page
+      .locator(
+        'input[placeholder="Search by Feeder 33 name or number"], input[title="Search by Feeder 33 name or number"], input[name="searchText"]'
+      )
+      .first();
+
+    this.feeder11SearchInput = page
+      .locator(
+        'input[placeholder="Search by Feeder 11 name or number"], input[title="Search by Feeder 11 name or number"], input[name="searchText"]'
+      )
+      .first();
+
+    this.downloadReportButton = page
+      .locator('button, a, div, span')
+      .filter({ hasText: /^Download Report$/ })
+      .first();
+  }
+
+  escapeRegex(text) {
+    return String(text).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  normalizeText(text) {
+    return String(text).replace(/\s+/g, ' ').trim();
   }
 
   async assertLoaded() {
@@ -30,41 +50,120 @@ class GridEnergyProfilePage {
     await expect(this.pageHeader).toBeVisible({ timeout: 90_000 });
   }
 
+  async waitForGridToStabilize() {
+    await this.page.waitForLoadState('networkidle', { timeout: 90_000 }).catch(() => {});
+    await this.page.waitForTimeout(1500);
+  }
+
   async openDistributionTransformerTab() {
+    this.currentMode = 'dt';
+
     await expect(this.distributionTransformerTab).toBeVisible({ timeout: 90_000 });
     await this.distributionTransformerTab.click();
     await expect(this.dtSearchInput).toBeVisible({ timeout: 90_000 });
+    await this.waitForGridToStabilize();
   }
 
   async openOutgoing33KvFeedersTab() {
+    this.currentMode = 'f33';
+
     await expect(this.outgoing33KvFeedersTab).toBeVisible({ timeout: 90_000 });
     await this.outgoing33KvFeedersTab.click();
     await expect(this.feeder33SearchInput).toBeVisible({ timeout: 90_000 });
+    await this.waitForGridToStabilize();
   }
 
   async openOutgoing11KvFeedersTab() {
+    this.currentMode = 'f11';
+
     await expect(this.outgoing11KvFeedersTab).toBeVisible({ timeout: 90_000 });
     await this.outgoing11KvFeedersTab.click();
     await expect(this.feeder11SearchInput).toBeVisible({ timeout: 90_000 });
+    await this.waitForGridToStabilize();
+  }
+
+  async clickDownloadReport() {
+    await expect(this.downloadReportButton).toBeVisible({ timeout: 90_000 });
+    await this.downloadReportButton.scrollIntoViewIfNeeded();
+    await this.downloadReportButton.click();
   }
 
   getSearchInput(mode) {
     if (mode === 'dt') return this.dtSearchInput;
     if (mode === 'f33') return this.feeder33SearchInput;
-    return this.feeder11SearchInput;
+    if (mode === 'f11') return this.feeder11SearchInput;
+    throw new Error(`Unsupported mode: ${mode}`);
   }
 
-  getSearchSuggestion(searchValue) {
-    return this.page.getByText(searchValue, { exact: true }).last();
+  getPrimaryIdentifierHeader(mode) {
+    if (mode === 'dt') return 'METER NUMBER';
+    if (mode === 'f33') return 'FEEDER NUMBER';
+    if (mode === 'f11') return 'FEEDER NUMBER';
+    throw new Error(`Unsupported mode: ${mode}`);
   }
 
-  getExactRowBySearchValue(searchValue) {
+  _getAutocompletePanel() {
     return this.page
-      .locator('tbody tr, [role="row"]')
-      .filter({
-        has: this.page.locator('td, [role="cell"]').filter({ hasText: searchValue })
-      })
+      .locator(
+        [
+          '.mat-mdc-autocomplete-panel',
+          '.mat-autocomplete-panel',
+          '[role="listbox"]',
+          '.cdk-overlay-pane .autocomplete-wrapper',
+          '.autocomplete-wrapper'
+        ].join(', ')
+      )
+      .filter({ has: this.page.locator('*') })
       .last();
+  }
+
+  _getOptionInPanel(searchValue) {
+    const escaped = this.escapeRegex(searchValue);
+
+    return this._getAutocompletePanel()
+      .locator(
+        [
+          '.mat-mdc-option',
+          'mat-option',
+          '.mat-option',
+          '[role="option"]',
+          '.autocomplete-option',
+          '.option',
+          'div',
+          'span'
+        ].join(', ')
+      )
+      .filter({ hasText: new RegExp(escaped) })
+      .first();
+  }
+
+  async _clearInput(input) {
+    await input.waitFor({ state: 'visible', timeout: 90_000 });
+    await input.click({ clickCount: 3 });
+    await input.press('Delete').catch(() => {});
+    await input.press('Backspace').catch(() => {});
+    await expect(input).toHaveValue('', { timeout: 10_000 }).catch(async () => {
+      await input.fill('');
+    });
+  }
+
+  async _tryGetPanelAndOption(searchValue, timeout = 4000) {
+    const panel = this._getAutocompletePanel();
+    const panelVisible = await panel.isVisible().catch(() => false);
+
+    if (!panelVisible) {
+      await panel.waitFor({ state: 'visible', timeout }).catch(() => {});
+    }
+
+    const visibleNow = await panel.isVisible().catch(() => false);
+    if (!visibleNow) {
+      return { panel: null, option: null, panelVisible: false, optionVisible: false };
+    }
+
+    const option = this._getOptionInPanel(searchValue);
+    const optionVisible = await option.isVisible().catch(() => false);
+
+    return { panel, option, panelVisible: true, optionVisible };
   }
 
   getAllDataRows() {
@@ -72,90 +171,6 @@ class GridEnergyProfilePage {
       .locator('tbody tr, [role="row"]')
       .filter({ has: this.page.locator('td, [role="cell"]') });
   }
-
-  async getResultRow(searchValue) {
-    const exactRow = this.getExactRowBySearchValue(searchValue);
-    await expect(exactRow).toBeVisible({ timeout: 90_000 });
-    return exactRow;
-  }
-
-  async searchByDtNumber(dtNumber) {
-    await this.searchWithDropdown('dt', dtNumber);
-  }
-
-  async searchByFeeder33Number(feeder33Number) {
-    await this.searchWithDropdown('f33', feeder33Number);
-  }
-
-  async searchByFeeder11Number(feeder11Number) {
-    await this.searchWithDropdown('f11', feeder11Number);
-  }
-
-  // async searchWithDropdown(mode, searchValue) {
-  //   const input = this.getSearchInput(mode);
-
-  //   await expect(input).toBeVisible({ timeout: 90_000 });
-  //   await input.click();
-  //   await input.fill('');
-  //   await input.fill(searchValue);
-  //   await expect(input).toHaveValue(searchValue, { timeout: 10_000 });
-
-  //   const suggestion = this.getSearchSuggestion(searchValue);
-  //   await expect(suggestion).toBeVisible({ timeout: 30_000 });
-  //   await suggestion.click();
-
-  //   const matchedRow = this.getExactRowBySearchValue(searchValue);
-  //   await expect(matchedRow).toBeVisible({ timeout: 90_000 });
-  // }
-
-  // async searchWithDropdown(mode, searchValue) {
-  // const input = this.getSearchInput(mode);
-
-  // await expect(input).toBeVisible({ timeout: 90_000 });
-  // await input.click();
-  // await input.fill('');
-  // await input.fill(searchValue);
-  // await expect(input).toHaveValue(searchValue, { timeout: 10_000 });
-
-  // const suggestion = this.getSearchSuggestion(searchValue);
-  // await expect(suggestion).toBeVisible({ timeout: 30_000 });
-  // await expect(suggestion).toBeEnabled({ timeout: 30_000 });
-
-  // await suggestion.scrollIntoViewIfNeeded();
-  // await suggestion.click({ force: true });
-
-  // await this.page.waitForTimeout(2000);
-
-  // const matchedRow = this.getExactRowBySearchValue(searchValue);
-  // await expect(matchedRow).toBeVisible({ timeout: 90_000 });
-  // }
-
-  async searchWithDropdown(mode, searchValue) {
-  const input = this.getSearchInput(mode);
-
-  await expect(input).toBeVisible({ timeout: 90_000 });
-  await input.click();
-  await input.fill('');
-  await input.fill(searchValue);
-  await expect(input).toHaveValue(searchValue, { timeout: 10_000 });
-
-  const suggestion = this.getSearchSuggestion(searchValue);
-  await expect(suggestion).toBeVisible({ timeout: 30_000 });
-
-  await suggestion.scrollIntoViewIfNeeded();
-
-  try {
-    await suggestion.click({ force: true });
-  } catch {
-    await this.page.mouse.move(0, 0);
-    await suggestion.click({ force: true });
-  }
-
-  await this.page.waitForTimeout(2000);
-
-  const matchedRow = this.getExactRowBySearchValue(searchValue);
-  await expect(matchedRow).toBeVisible({ timeout: 90_000 });
-}
 
   getColumnHeader(headerName) {
     return this.page
@@ -177,13 +192,172 @@ class GridEnergyProfilePage {
     const headerCount = await headers.count();
 
     for (let i = 0; i < headerCount; i++) {
-      const text = (await headers.nth(i).innerText()).trim();
+      const text = this.normalizeText(await headers.nth(i).innerText());
       if (text === headerName) {
         return i;
       }
     }
 
     throw new Error(`Column header not found: ${headerName}`);
+  }
+
+  async getResultRowByIdentifier(mode, searchValue) {
+    const headerName = this.getPrimaryIdentifierHeader(mode);
+    const columnIndex = await this.getColumnIndexByHeader(headerName);
+    const rows = this.getAllDataRows();
+    const rowCount = await rows.count();
+    const expected = this.normalizeText(searchValue);
+
+    for (let i = 0; i < rowCount; i++) {
+      const row = rows.nth(i);
+      const cells = row.locator('td, [role="cell"]');
+      const cellCount = await cells.count();
+
+      if (columnIndex >= cellCount) continue;
+
+      const actual = this.normalizeText(await cells.nth(columnIndex).innerText());
+      if (actual === expected) {
+        await expect(row).toBeVisible({ timeout: 90_000 });
+        return row;
+      }
+    }
+
+    throw new Error(
+      `No result row found for "${searchValue}" under "${headerName}" in mode "${mode}".`
+    );
+  }
+
+  async _isResultRowVisible(mode, searchValue) {
+    try {
+      const rows = this.getAllDataRows();
+      const rowCount = await rows.count();
+
+      if (rowCount === 1) {
+        return await rows.first().isVisible();
+      }
+
+      const row = await this.getResultRowByIdentifier(mode, searchValue);
+      return await row.isVisible();
+    } catch {
+      return false;
+    }
+  }
+
+  async _selectUsingPanel(option) {
+    await option.scrollIntoViewIfNeeded();
+
+    try {
+      await option.click({ force: true });
+    } catch {
+      await option.evaluate((el) => {
+        el.dispatchEvent(
+          new MouseEvent('mousedown', {
+            bubbles: true,
+            cancelable: true,
+            view: window
+          })
+        );
+        el.dispatchEvent(
+          new MouseEvent('mouseup', {
+            bubbles: true,
+            cancelable: true,
+            view: window
+          })
+        );
+        el.dispatchEvent(
+          new MouseEvent('click', {
+            bubbles: true,
+            cancelable: true,
+            view: window
+          })
+        );
+      });
+    }
+  }
+
+  async _selectUsingKeyboard(input) {
+    await input.press('ArrowDown').catch(() => {});
+    await this.page.waitForTimeout(300);
+    await input.press('Enter').catch(() => {});
+  }
+
+  async _commitAutocompleteSelection(mode, input, searchValue) {
+    const firstTry = await this._tryGetPanelAndOption(searchValue);
+
+    if (firstTry.panelVisible && firstTry.optionVisible) {
+      await this._selectUsingPanel(firstTry.option);
+    } else {
+      await this._selectUsingKeyboard(input);
+    }
+
+    await this.page.waitForTimeout(800);
+    await this.waitForGridToStabilize();
+
+    if (await this._isResultRowVisible(mode, searchValue)) {
+      return;
+    }
+
+    await this._clearInput(input);
+    await input.type(searchValue, { delay: 120 });
+    await expect(input).toHaveValue(searchValue, { timeout: 15_000 });
+
+    const secondTry = await this._tryGetPanelAndOption(searchValue);
+
+    if (secondTry.panelVisible && secondTry.optionVisible) {
+      await this._selectUsingPanel(secondTry.option);
+    } else {
+      await this._selectUsingKeyboard(input);
+      await input.press('Tab').catch(() => {});
+    }
+
+    await this.page.waitForTimeout(800);
+    await this.waitForGridToStabilize();
+  }
+
+  async searchWithDropdown(mode, searchValue) {
+    this.currentMode = mode;
+
+    const input = this.getSearchInput(mode);
+    await input.waitFor({ state: 'visible', timeout: 90_000 });
+
+    await input.click();
+    await this._clearInput(input);
+    await input.type(searchValue, { delay: 120 });
+    await expect(input).toHaveValue(searchValue, { timeout: 15_000 });
+
+    await this._commitAutocompleteSelection(mode, input, searchValue);
+
+    const matchedRow = await this.getResultRow(searchValue);
+    await expect(matchedRow).toBeVisible({ timeout: 90_000 });
+  }
+
+  async searchByDtNumber(dtNumber) {
+    await this.searchWithDropdown('dt', dtNumber);
+  }
+
+  async searchByFeeder33Number(feeder33Number) {
+    await this.searchWithDropdown('f33', feeder33Number);
+  }
+
+  async searchByFeeder11Number(feeder11Number) {
+    await this.searchWithDropdown('f11', feeder11Number);
+  }
+
+  async getResultRow(searchValue) {
+    const rows = this.getAllDataRows();
+    const rowCount = await rows.count();
+
+    if (rowCount === 1) {
+      const row = rows.first();
+      await expect(row).toBeVisible({ timeout: 90_000 });
+      return row;
+    }
+
+    if (!this.currentMode) {
+      throw new Error('Current mode is not set before attempting to resolve result row.');
+    }
+
+    return await this.getResultRowByIdentifier(this.currentMode, searchValue);
   }
 
   async getCellTextByHeader(searchValue, headerName) {
@@ -194,11 +368,13 @@ class GridEnergyProfilePage {
     const oneBasedColIndex = String(columnIndex + 1);
 
     const ariaCell = row
-      .locator(`td[aria-colindex="${oneBasedColIndex}"], [role="cell"][aria-colindex="${oneBasedColIndex}"]`)
+      .locator(
+        `td[aria-colindex="${oneBasedColIndex}"], [role="cell"][aria-colindex="${oneBasedColIndex}"]`
+      )
       .first();
 
     if (await ariaCell.count()) {
-      return (await ariaCell.innerText()).trim();
+      return this.normalizeText(await ariaCell.innerText());
     }
 
     const cells = row.locator('td, [role="cell"]');
@@ -214,7 +390,7 @@ class GridEnergyProfilePage {
       );
     }
 
-    return (await cells.nth(columnIndex).innerText()).trim();
+    return this.normalizeText(await cells.nth(columnIndex).innerText());
   }
 
   async getLarAndParParsedValues(searchValue) {
@@ -236,37 +412,25 @@ class GridEnergyProfilePage {
     const row = await this.getResultRow(searchValue);
     await expect(row).toBeVisible({ timeout: 90_000 });
     await row.click();
-    await this.page.waitForTimeout(2000);
   }
 
-  // async openCustomersTabInModal() {
-  //   const customersTab = this.page.getByText('Customers', { exact: true });
-  //   await expect(customersTab).toBeVisible({ timeout: 30_000 });
-  //   await customersTab.click();
-  //   await this.page.waitForTimeout(1500);
-  // }
-
   async openCustomersTabInModal() {
-  const modal = this.page.locator('[role="dialog"]').last();
+    const modal = this.page.locator('[role="dialog"]').last();
 
-  const customersTab = modal
-    .locator('span')
-    .filter({ hasText: 'Customers' })
-    .first();
+    const customersTab = modal
+      .locator('span')
+      .filter({ hasText: 'Customers' })
+      .first();
 
-  await expect(customersTab).toBeVisible({ timeout: 30_000 });
-  await customersTab.click();
-
-  await this.page.waitForTimeout(1500);
- }
+    await expect(customersTab).toBeVisible({ timeout: 30_000 });
+    await customersTab.click();
+  }
 
   parseConsumptionMwhFromCardText(cardText) {
     const normalized = cardText.replace(/\s+/g, ' ').trim();
     const match = normalized.match(/Consumption\s+([\d,.]+)\s*MWh/i);
 
-    if (!match) {
-      return 0;
-    }
+    if (!match) return 0;
 
     const value = Number(match[1].replace(/,/g, '').trim());
     return Number.isNaN(value) ? 0 : value;
@@ -282,7 +446,6 @@ class GridEnergyProfilePage {
     const count = await cards.count();
 
     let total = 0;
-
     for (let i = 0; i < count; i++) {
       const text = await cards.nth(i).innerText();
       total += this.parseConsumptionMwhFromCardText(text);
@@ -297,7 +460,7 @@ class GridEnergyProfilePage {
 
     await expect(indicator).toBeVisible({ timeout: 30_000 });
 
-    const text = (await indicator.innerText()).trim();
+    const text = this.normalizeText(await indicator.innerText());
     const match = text.match(/Page\s+(\d+)\s+of\s+(\d+)/i);
 
     if (!match) {
@@ -314,9 +477,7 @@ class GridEnergyProfilePage {
     const modal = this.page.locator('[role="dialog"]').last();
     const { current, last } = await this.getCustomerModalPagination();
 
-    if (current >= last) {
-      return;
-    }
+    if (current >= last) return;
 
     const nextPageButton = modal.getByRole('button', { name: String(current + 1) });
 
@@ -327,8 +488,6 @@ class GridEnergyProfilePage {
       const pagination = await this.getCustomerModalPagination();
       expect(pagination.current).toBe(current + 1);
     }).toPass({ timeout: 15_000 });
-
-    await this.page.waitForTimeout(1000);
   }
 
   async getTotalCustomerConsumptionMwhFromModal() {
@@ -346,9 +505,7 @@ class GridEnergyProfilePage {
 
       total += await this.sumConsumptionOnCurrentCustomerPage();
 
-      if (current >= last) {
-        break;
-      }
+      if (current >= last) break;
 
       await this.goToNextCustomerModalPage();
     }

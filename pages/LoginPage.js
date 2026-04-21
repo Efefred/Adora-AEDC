@@ -8,21 +8,15 @@ class LoginPage {
     this.passwordInput = page.getByRole('textbox', { name: 'Password' });
     this.loginButton = page.getByRole('button', { name: 'Login' });
   }
-
-  // async open(loginPath = '/login') {
-  //   await this.page.goto(loginPath);
-  //   await expect(this.page).toHaveURL(/\/login/);
-  //   await expect(this.loginButton).toBeVisible();
-  // }
   
    async open(loginPath = '/login') {
-    await this.page.goto(loginPath, { waitUntil: 'domcontentloaded', timeout: 120_000 });
+    await this.page.goto(loginPath, { waitUntil: 'domcontentloaded', timeout: 60_000 });
     await expect(this.page).toHaveURL(/\/login/i, { timeout: 30_000 });
 
     try {
       await expect(this.loginButton).toBeVisible({ timeout: 20_000 });
     } catch {
-      await this.page.reload({ waitUntil: 'domcontentloaded', timeout: 120_000 });
+      await this.page.reload({ waitUntil: 'domcontentloaded', timeout: 60_000 });
       await expect(this.page).toHaveURL(/\/login/i, { timeout: 30_000 });
       await expect(this.loginButton).toBeVisible({ timeout: 20_000 });
     }

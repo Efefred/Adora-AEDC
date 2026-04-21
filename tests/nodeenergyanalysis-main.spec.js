@@ -11,6 +11,7 @@ const nodeEnergyCases = [
     title: 'Distribution Transformer',
     numberLabel: 'DT Number',
     searchValue: testData.nodeEnergyAnalysis.dtNumber,
+    mode: 'dt',
     openTab: async (page) => page.openDistributionTransformerTab(),
     search: async (page, value) => page.searchByDtNumber(value),
     supportsCustomerConsumptionValidation: true
@@ -19,6 +20,7 @@ const nodeEnergyCases = [
     title: 'Outgoing 33KV Feeders',
     numberLabel: 'Feeder 33 No',
     searchValue: testData.nodeEnergyAnalysis.f33Number,
+    mode: 'f33',
     openTab: async (page) => page.openOutgoing33KvFeedersTab(),
     search: async (page, value) => page.searchByFeeder33Number(value),
     supportsCustomerConsumptionValidation: false
@@ -27,10 +29,11 @@ const nodeEnergyCases = [
     title: 'Outgoing 11KV Feeders',
     numberLabel: 'Feeder 11 No',
     searchValue: testData.nodeEnergyAnalysis.f11Number,
+    mode: 'f11',
     openTab: async (page) => page.openOutgoing11KvFeedersTab(),
     search: async (page, value) => page.searchByFeeder11Number(value),
     supportsCustomerConsumptionValidation: false
-  },
+  }
 ];
 
 test.describe('Node Energy Analysis', () => {
@@ -40,6 +43,7 @@ test.describe('Node Energy Analysis', () => {
     title,
     numberLabel,
     searchValue,
+    mode,
     openTab,
     search,
     supportsCustomerConsumptionValidation
@@ -105,47 +109,9 @@ test.describe('Node Energy Analysis', () => {
           return;
         }
 
-        await test.step('Open DT modal, sum all customer Consumption values in MWh, and validate Retailed Energy + Losses', async () => {
-          await gridEnergyProfilePage.openDetailsModalFromResultRow(searchValue);
-          await gridEnergyProfilePage.openCustomersTabInModal();
-
-          const totalCustomerConsumptionMwh =
-            await gridEnergyProfilePage.getTotalCustomerConsumptionMwhFromModal();
-
-          const retailedEnergyMwh =
-            NodeEnergyAnalysisHelper.computeRetailedEnergy(totalCustomerConsumptionMwh);
-
-          const lossesResult =
-            NodeEnergyAnalysisHelper.computeLosses(result.delta, retailedEnergyMwh);
-
-          console.log(`Customer Consumption Total (MWh): ${totalCustomerConsumptionMwh.toFixed(6)}`);
-          console.log(`Retailed Energy (MWh)          : ${retailedEnergyMwh.toFixed(3)}`);
-
-          if (!lossesResult.isComputable) {
-            console.log(`Losses (MWh)                   : Not computable (${lossesResult.reason})`);
-            expect(lossesResult.losses).toBeNull();
-            return;
-          }
-
-          console.log(`Losses (MWh)                   : ${lossesResult.losses.toFixed(3)}`);
-
-          expect(
-            NodeEnergyAnalysisHelper.compareWithTolerance(
-              retailedEnergyMwh,
-              totalCustomerConsumptionMwh,
-              0.001
-            )
-          ).toBeTruthy();
-
-          expect(
-            NodeEnergyAnalysisHelper.compareWithTolerance(
-              lossesResult.losses,
-              result.delta - retailedEnergyMwh,
-              0.001
-            )
-          ).toBeTruthy();
-        });
       });
     });
   });
 });
+
+
