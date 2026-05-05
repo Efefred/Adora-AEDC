@@ -1,0 +1,3 @@
+33KV Feeders: Communicating: 88, Non Communicating: 34, Total: 122
+11KV Feeders: Communicating: 284, Non Communicating: 117, Total: 401
+Distribution Transformers: Communicating: 168, Non Communicating: 16589, Total: 16757

@@ -1,0 +1,13 @@
+
+[NODE ENERGY ANALYSIS RESULT]
+Outgoing 33KV Feeders
+Feeder 33 No             : 230401079633
+LAR                     : 142788
+PAR                     : 149160
+Energy Delta            : 6372.000
+MF                      : 1
+Energy Received         : 6372.000
+Retailed Energy         : null
+Losses                  : 1201.700
+Loss %                  : 18.859
+Custom HTML report generated: C:\BPS_Automation\ADORA_AEDC_AUTOMATION\test-results\custom-reports\node-energy-analysis-outgoing-33kv-feeders-report.html

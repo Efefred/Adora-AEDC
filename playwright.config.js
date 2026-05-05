@@ -1,14 +1,17 @@
-const { defineConfig } = require('@playwright/test');
-require('dotenv').config();
+import { defineConfig } from '@playwright/test';
+import dotenv from 'dotenv';
 
-module.exports = defineConfig({
+dotenv.config();
+
+export default defineConfig({
   testDir: './tests',
-  timeout: 180000,
-  expect: { timeout: 20000 },
+  timeout: 180_000,
   fullyParallel: false,
   retries: 1,
   reporter: [['html', { open: 'never' }], ['list']],
-
+  expect: {
+    timeout: 20_000
+  },
   use: {
     baseURL: process.env.BASE_URL,
     headless: true,
@@ -16,9 +19,24 @@ module.exports = defineConfig({
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
-    navigationTimeout: 120000,
-    launchOptions: {
-      args: ['--start-maximized']
+    navigationTimeout: 120_000
+  },
+  reporter: [
+  ['list'],
+  ['html'],
+  ['allure-playwright']
+],
+  projects: [
+    {
+      name: 'setup',
+      testMatch: /auth\.setup\.js/
+    },
+    {
+      name: 'chromium',
+      use: {
+        storageState: 'playwright/.auth/user.json'
+      },
+      dependencies: ['setup']
     }
-  }
+  ]
 });

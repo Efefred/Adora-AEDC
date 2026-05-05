@@ -393,6 +393,97 @@ class GridEnergyProfilePage {
     return this.normalizeText(await cells.nth(columnIndex).innerText());
   }
 
+  // async getBandValues(searchValue) {
+  //   return {
+  //     'Band A': await this.getCellTextByHeader(searchValue, 'Band A'),
+  //     'Band B': await this.getCellTextByHeader(searchValue, 'Band B'),
+  //     'Band C': await this.getCellTextByHeader(searchValue, 'Band C'),
+  //     'Band D': await this.getCellTextByHeader(searchValue, 'Band D'),
+  //     'Band E': await this.getCellTextByHeader(searchValue, 'Band E')
+  //   };
+  // }
+
+  // async getActiveBand(searchValue) {
+  //   const bandValues = await this.getBandValues(searchValue);
+
+  //   const activeBands = Object.entries(bandValues)
+  //     .filter(([, value]) => this.normalizeText(value) === '1')
+  //     .map(([bandName]) => bandName);
+
+  //   if (activeBands.length !== 1) {
+  //     throw new Error(
+  //       `Expected exactly one active band with value 1 for "${searchValue}", but found: ${JSON.stringify(bandValues)}`
+  //     );
+  //   }
+
+  //   return activeBands[0];
+  // }
+
+
+  //   async getBandValues() {
+  //   const bandStrip = this.page
+  //     .locator('div, section')
+  //     .filter({ has: this.page.getByText('Band A', { exact: true }) })
+  //     .filter({ has: this.page.getByText('Band E', { exact: true }) })
+  //     .first();
+
+  //   await expect(bandStrip).toBeVisible({ timeout: 90_000 });
+
+  //   const text = this.normalizeText(await bandStrip.innerText());
+
+  //   const match = text.match(
+  //     /Band A\s+(\d+).*Band B\s+(\d+).*Band C\s+(\d+).*Band D\s+(\d+).*Band E\s+(\d+)/i
+  //   );
+
+  //   if (!match) {
+  //     throw new Error(`Unable to parse band summary strip text: "${text}"`);
+  //   }
+
+  //   return {
+  //     'Band A': match[1],
+  //     'Band B': match[2],
+  //     'Band C': match[3],
+  //     'Band D': match[4],
+  //     'Band E': match[5]
+  //   };
+  // }
+
+async getBandValues() {
+  const text = this.normalizeText(await this.page.locator('body').innerText());
+
+  const match = text.match(
+    /Band A\s*(\d+).*Band B\s*(\d+).*Band C\s*(\d+).*Band D\s*(\d+).*Band E\s*(\d+)/i
+  );
+
+  if (!match) {
+    throw new Error(`Unable to parse band values from page text: "${text}"`);
+  }
+
+  return {
+    'Band A': match[1],
+    'Band B': match[2],
+    'Band C': match[3],
+    'Band D': match[4],
+    'Band E': match[5]
+  };
+}
+
+  async getActiveBand() {
+    const bandValues = await this.getBandValues();
+
+    const activeBands = Object.entries(bandValues)
+      .filter(([, value]) => this.normalizeText(value) === '1')
+      .map(([bandName]) => bandName);
+
+    if (activeBands.length !== 1) {
+      throw new Error(
+        `Expected exactly one active band with value 1, but found: ${JSON.stringify(bandValues)}`
+      );
+    }
+
+    return activeBands[0];
+  }
+
   async getLarAndParParsedValues(searchValue) {
     const larRaw = await this.getCellTextByHeader(searchValue, 'LAR (MWH)');
     const parRaw = await this.getCellTextByHeader(searchValue, 'PAR (MWH)');

@@ -1,11 +1,25 @@
 class NodeEnergyAnalysisHelper {
   /**
-   * Parses UI readings like "4,387.152" or "N/A"
+   * Parses UI readings like "4,387.152", "N/A", "-", "-∞"
    */
   static parseReading(value) {
-    const cleaned = value.replace(/,/g, '').trim();
+    if (value === null || value === undefined) {
+      return {
+        raw: value,
+        value: null,
+        isAvailable: false
+      };
+    }
 
-    if (!cleaned || /^N\/A$/i.test(cleaned)) {
+    const cleaned = String(value).replace(/,/g, '').trim();
+
+    if (
+      !cleaned ||
+      /^N\/A$/i.test(cleaned) ||
+      cleaned === '-' ||
+      cleaned === '-∞' ||
+      cleaned === '∞'
+    ) {
       return {
         raw: value,
         value: null,
@@ -77,19 +91,37 @@ class NodeEnergyAnalysisHelper {
   }
 
   /**
-   * B. Energy Received (already handled via delta)
-   * MF = 1 → energyReceived = delta
+   * B. Energy Received
+   * Formula:
+   * energyReceived = delta × MF
    */
-  static computeEnergyReceived(deltaMwh) {
-    if (deltaMwh === null || deltaMwh === undefined) {
-      return null;
+  static computeEnergyReceived(deltaMwh, mf) {
+    if (
+      deltaMwh === null ||
+      deltaMwh === undefined ||
+      mf === null ||
+      mf === undefined
+    ) {
+      return {
+        energyReceived: null,
+        isComputable: false,
+        reason: 'Delta or MF is null'
+      };
     }
 
-    return deltaMwh; // MF = 1
+    const energyReceived = deltaMwh * mf;
+
+    return {
+      energyReceived,
+      isComputable: true
+    };
   }
 
   /**
-   * C. Retailed Energy (Σ customer consumption already in MWh)
+   * C. Retailed Energy
+   * NOTE:
+   * We now read retailed energy directly from the searched row.
+   * This method is kept only to avoid breaking any older code path.
    */
   static computeRetailedEnergy(totalCustomerConsumptionMwh) {
     if (
