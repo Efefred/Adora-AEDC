@@ -1,0 +1,262 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - img "Cancel" [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e10]: You have been dormant for too long
+      - generic [ref=e11]: "You will be logged out in : 30"
+    - generic [ref=e12]:
+      - button "Stay logged in" [ref=e13] [cursor=pointer]
+      - button "Log out" [ref=e14] [cursor=pointer]
+  - generic [ref=e16]:
+    - generic [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e21] [cursor=pointer]:
+          - img [ref=e22]
+          - generic [ref=e24]: Dashboard
+        - generic [ref=e26] [cursor=pointer]:
+          - img [ref=e27]
+          - generic [ref=e29]: Administrative Dashboard
+        - generic [ref=e31] [cursor=pointer]:
+          - img [ref=e32]
+          - generic [ref=e34]: Summary Executive Dashboard
+        - generic [ref=e36] [cursor=pointer]:
+          - img [ref=e37]
+          - generic [ref=e39]: Executive Dashboard
+        - generic [ref=e41] [cursor=pointer]:
+          - img [ref=e42]
+          - generic [ref=e44]: Managerial Dashboard
+        - generic [ref=e46] [cursor=pointer]:
+          - img [ref=e47]
+          - generic [ref=e49]: System Reliability Indices
+        - generic [ref=e51] [cursor=pointer]:
+          - img [ref=e52]
+          - generic [ref=e54]: Grid Energy Profile
+          - img "arrow icon" [ref=e55]
+        - generic [ref=e57] [cursor=pointer]:
+          - img [ref=e58]
+          - generic [ref=e60]: Outage & Availability
+          - img "arrow icon" [ref=e61]
+        - generic [ref=e63]:
+          - generic [ref=e64] [cursor=pointer]:
+            - img [ref=e65]
+            - generic [ref=e67]: Unplanned Outage Schedule
+          - generic:
+            - img
+            - generic: Planned Outage Schedule
+          - generic [ref=e68] [cursor=pointer]:
+            - img [ref=e69]
+            - generic [ref=e71]: Asset Availability Report
+          - generic [ref=e72] [cursor=pointer]:
+            - img [ref=e73]
+            - generic [ref=e75]: Communicating
+          - generic [ref=e76] [cursor=pointer]:
+            - img [ref=e77]
+            - generic [ref=e79]: Non Communicating
+        - generic [ref=e81] [cursor=pointer]:
+          - img [ref=e82]
+          - generic [ref=e84]: Trend Analysis
+          - img "arrow icon" [ref=e85]
+        - generic [ref=e87] [cursor=pointer]:
+          - img [ref=e88]
+          - generic [ref=e90]: Watch List
+        - generic [ref=e92] [cursor=pointer]:
+          - img [ref=e93]
+          - generic [ref=e95]: Assets Load Forecast
+        - generic [ref=e97] [cursor=pointer]:
+          - img [ref=e98]
+          - generic [ref=e100]: Settings
+          - img "arrow icon" [ref=e101]
+        - generic [ref=e103] [cursor=pointer]:
+          - img [ref=e104]
+          - generic [ref=e106]: Reports
+      - generic [ref=e107]:
+        - generic [ref=e108]:
+          - img "Network Management" [ref=e110]
+          - generic [ref=e111]:
+            - generic [ref=e112]: Module
+            - generic [ref=e113]: Network Management
+          - generic [ref=e114] [cursor=pointer]: Switch Module
+        - generic [ref=e117] [cursor=pointer]:
+          - generic [ref=e118]: Logout
+          - img "Logout icon" [ref=e119]
+    - generic [ref=e122]:
+      - generic [ref=e123]:
+        - img "Left Alignment icon" [ref=e124] [cursor=pointer]
+        - img "Header icon" [ref=e125] [cursor=pointer]
+      - generic [ref=e126]:
+        - button "English" [ref=e127] [cursor=pointer]
+        - button "French" [ref=e128] [cursor=pointer]
+        - generic [ref=e129] [cursor=pointer]:
+          - generic [ref=e130]:
+            - img "Network Management" [ref=e131]
+            - text: Network Management
+          - generic [ref=e132]:
+            - text: Switch
+            - img "Chevron right" [ref=e133]
+        - img "Header Notification icon" [ref=e135] [cursor=pointer]
+        - button "BA BPS AEDC" [ref=e137] [cursor=pointer]:
+          - generic [ref=e139]: BA
+          - generic [ref=e141]: BPS AEDC
+          - img [ref=e142]
+    - main [ref=e145]:
+      - generic [ref=e148]:
+        - generic [ref=e149]:
+          - img [ref=e151] [cursor=pointer]
+          - generic [ref=e153]: Back
+        - generic [ref=e154]:
+          - generic [ref=e155]:
+            - heading "Select Asset Type" [level=2] [ref=e156]
+            - generic [ref=e157]:
+              - generic [ref=e158] [cursor=pointer]:
+                - radio "DT" [checked] [ref=e159]
+                - generic [ref=e160]: DT
+              - generic [ref=e161] [cursor=pointer]:
+                - radio "11KV Network" [ref=e162]
+                - generic [ref=e163]: 11KV Network
+              - generic [ref=e164] [cursor=pointer]:
+                - radio "33KV Network" [ref=e165]
+                - generic [ref=e166]: 33KV Network
+              - generic [ref=e167] [cursor=pointer]:
+                - radio "11/132Kv Network" [ref=e168]
+                - generic [ref=e169]: 11/132Kv Network
+              - generic [ref=e170] [cursor=pointer]:
+                - radio "330Kv Network" [ref=e171]
+                - generic [ref=e172]: 330Kv Network
+              - generic [ref=e173] [cursor=pointer]:
+                - radio "Transmission Station" [ref=e174]
+                - generic [ref=e175]: Transmission Station
+              - generic [ref=e176] [cursor=pointer]:
+                - radio "Substation" [ref=e177]
+                - generic [ref=e178]: Substation
+          - generic [ref=e179]:
+            - heading "Outage Owner" [level=2] [ref=e180]
+            - generic [ref=e181]:
+              - generic [ref=e182] [cursor=pointer]:
+                - radio "AEDC" [checked] [active] [ref=e183]
+                - generic [ref=e184]: AEDC
+              - generic [ref=e185] [cursor=pointer]:
+                - radio "TCN" [ref=e186]
+                - generic [ref=e187]: TCN
+              - generic [ref=e188] [cursor=pointer]:
+                - radio "GENCO" [ref=e189]
+                - generic [ref=e190]: GENCO
+            - generic [ref=e191]:
+              - generic [ref=e192]:
+                - heading "Select type of Outage" [level=2] [ref=e193]
+                - combobox [ref=e194]:
+                  - option "Emergency Outage" [selected]
+                  - option "Asset Maintenance"
+                  - option "Load Shedding"
+              - generic [ref=e195]:
+                - heading "Select Outage Indication" [level=2] [ref=e196]
+                - combobox [ref=e197]:
+                  - option "Earth Fault" [selected]
+                  - option "Overcurrent"
+                  - option "Overcurrent & Earth Fault"
+                  - option "Instantaneous Earth Fault"
+                  - option "Instantaneous Overcurrent"
+                  - option "Instantaneous Overcurrent & Earth Fault"
+                  - option "Broken Conductor"
+                  - option "Maintenance"
+            - generic [ref=e198]:
+              - generic [ref=e199]:
+                - heading "Reason for Outage" [level=2] [ref=e200]
+                - textbox "Enter Reason for Outage" [ref=e201]
+              - generic [ref=e204] [cursor=pointer]:
+                - img "Upload Icon" [ref=e205]
+                - paragraph [ref=e206]:
+                  - text: Upload Image Before Outage
+                  - text: JPG, PNG, PDF (5MB Max)
+          - generic [ref=e207]:
+            - generic [ref=e208]:
+              - generic [ref=e209]:
+                - heading "Affected Business Unit" [level=2] [ref=e210]
+                - combobox [ref=e211]:
+                  - option "Select" [disabled] [selected]
+                  - option /
+                  - option "CBO-APO"
+                  - option "CBO-GARKI"
+                  - option "CBO-KOGI"
+                  - option "CBO-NASARAWA"
+                  - option "CBO-NIGER"
+                  - option "CBO-WUSE"
+                  - option "DUMMYREGION"
+                  - option "FCT CENTRAL"
+                  - option "FCT EAST"
+                  - option "FCT NORTH"
+                  - option "FCT NORTH/WEST"
+                  - option "FCT SOUTH EAST"
+                  - option "FCT SOUTH EAST/CENTRAL"
+                  - option "FCT SOUTH SOUTH"
+                  - option "FCT WEST"
+                  - option "HQ REGION"
+                  - option "JAYDEE"
+                  - option "KOGI"
+                  - option "NASARAWA"
+                  - option "NIGER"
+              - generic [ref=e212]:
+                - heading "Undertaking Office" [level=2] [ref=e213]
+                - combobox [disabled] [ref=e214]:
+                  - option "Select" [disabled] [selected]
+            - generic [ref=e215]:
+              - generic [ref=e216]:
+                - heading "Affected DT" [level=2] [ref=e217]
+                - combobox [disabled] [ref=e218]:
+                  - option "Select" [disabled] [selected]
+              - generic [ref=e219]:
+                - heading "Connected Feeder" [level=2] [ref=e220]
+                - textbox [disabled] [ref=e221]
+          - generic [ref=e222]:
+            - generic [ref=e223]:
+              - generic [ref=e224]:
+                - heading "Permit Holder Name" [level=2] [ref=e225]
+                - textbox "Select" [ref=e228] [cursor=pointer]
+              - generic [ref=e229]:
+                - heading "Permit Holder Email" [level=2] [ref=e230]
+                - textbox [disabled] [ref=e231]
+            - generic [ref=e233]:
+              - heading "Permit Holder Designation" [level=2] [ref=e234]
+              - textbox [disabled] [ref=e235]
+          - generic [ref=e237]:
+            - generic [ref=e238]:
+              - generic [ref=e239]: Outage Start (Date and Time)
+              - generic [ref=e242] [cursor=pointer]:
+                - img [ref=e244]
+                - textbox [ref=e247]
+            - generic [ref=e248]:
+              - generic [ref=e249]: Outage End (Date and Time)
+              - generic [ref=e252] [cursor=pointer]:
+                - img [ref=e254]
+                - textbox [ref=e257]
+            - generic [ref=e258]:
+              - heading "Duration" [level=2] [ref=e259]
+              - textbox [disabled] [ref=e260]
+          - generic [ref=e261]:
+            - generic [ref=e262]:
+              - generic [ref=e263]:
+                - heading "Weather" [level=2] [ref=e264]
+                - combobox [ref=e265]:
+                  - option "Sunny/Hot" [selected]
+                  - option "Cloudy"
+                  - option "Windy"
+                  - option "Rainy"
+                  - option "Stormy"
+                  - option "Clear Sky"
+              - generic [ref=e266]:
+                - heading "Load Loss (MW)" [level=2] [ref=e267]
+                - spinbutton [ref=e268]
+              - generic [ref=e269]:
+                - heading "Number of Customers Affected" [level=2] [ref=e270]
+                - spinbutton [ref=e271]
+            - generic [ref=e272]:
+              - generic [ref=e273]:
+                - heading "Areas Affected" [level=2] [ref=e274]
+                - textbox [disabled] [ref=e275]
+              - generic [ref=e276]:
+                - heading "Message to Affected Customers" [level=2] [ref=e277]
+                - textbox "Enter Message to Affected Customers" [ref=e278]
+        - button "Submit" [ref=e280] [cursor=pointer]
+```

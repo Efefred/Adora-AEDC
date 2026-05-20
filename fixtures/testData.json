@@ -12,5 +12,23 @@
     "dtNumber": "060018110941",
     "f11Number": "210800445403",
     "f33Number": "230401079633"
+  },
+  "plannedOutage": {
+    "assetType": "DT",
+    "owner": "AEDC",
+    "outageType": "Emergency Outage",
+    "outageIndication": "Earth Fault",
+    "reason": "Overload",
+    "businessUnit": "CBO-WUSE",
+    "undertakingOffice": "Wuse 2",
+    "affectedDT": "109 PLAZA DT (ADETOKUNBO ADEMOLA)",
+    "permitHolderName": "BPS AEDC AEDC",
+    "permitHolderEmail": "bpsuseraedc@bpsafrica.com",
+    "designation": "QA TEST ROLE",
+    "weather": "Sunny/Hot",
+    "loadLoss": "100",
+    "message": "Please Bear With Us",
+    "expectedDuration": "60 Minutes",
+    "pendingOutageMessage": "You have pending unresolved outage. Please resolve it and apply for a new one"
   }
 }

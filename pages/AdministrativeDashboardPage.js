@@ -6,8 +6,15 @@ class AdministrativeDashboardPage {
 
     this.administrativeDashboardMenu = page.getByText('Administrative Dashboard', { exact: true });
     this.communicationQuickNav = page.getByText('Communication', { exact: true });
+    this.communicationByBandsQuickNav = page.getByText('Communication By Bands', { exact: true });
+
     this.assetSectionHeader = page.getByText(
       'Asset Communicating and Non-communicating Analysis',
+      { exact: true }
+    );
+
+    this.communicationByBandsSectionHeader = page.getByText(
+      'Communicating and Non-communicating by Bands',
       { exact: true }
     );
   }
@@ -35,15 +42,40 @@ class AdministrativeDashboardPage {
     await expect(this.assetSectionHeader).toBeVisible({ timeout: 90_000 });
   }
 
+  async openCommunicationByBandsSection() {
+    await expect(this.communicationByBandsQuickNav).toBeVisible({ timeout: 90_000 });
+    await this.communicationByBandsQuickNav.scrollIntoViewIfNeeded();
+    await this.communicationByBandsQuickNav.click();
+
+    await expect(this.communicationByBandsSectionHeader).toBeVisible({ timeout: 90_000 });
+  }
+
   getAssetSection() {
     return this.page.locator('#communcation');
+  }
+
+  getCommunicationByBandsSection() {
+    return this.page.locator('#communcation-bands');
   }
 
   getCardByTitle(title) {
     return this.getAssetSection()
       .locator('.asset-card')
       .filter({
-        has: this.page.locator('.header span.name').filter({ hasText: new RegExp(`^${title}$`) })
+        has: this.page.locator('.header span.name').filter({
+          hasText: new RegExp(`^${title}$`)
+        })
+      })
+      .first();
+  }
+
+  getCommunicationByBandsCardByTitle(title) {
+    return this.getCommunicationByBandsSection()
+      .locator('.asset-card')
+      .filter({
+        has: this.page.locator('.header span.name').filter({
+          hasText: new RegExp(`^${title}$`)
+        })
       })
       .first();
   }
@@ -52,7 +84,7 @@ class AdministrativeDashboardPage {
     await expect(locator).toBeVisible({ timeout: 30_000 });
 
     const text = (await locator.textContent())?.trim() || '';
-    const value = Number(text.replace(/,/g, ''));
+    const value = Number(text.replace(/,/g, '').replace('%', ''));
 
     if (Number.isNaN(value)) {
       throw new Error(`${errorMessage}. Found text: "${text}"`);
@@ -102,7 +134,6 @@ class AdministrativeDashboardPage {
       expect(Number.isNaN(communicating)).toBeFalsy();
       expect(Number.isNaN(nonCommunicating)).toBeFalsy();
 
-      // Guard against premature read of initial empty/placeholder state.
       expect(total === 0 && communicating === 0 && nonCommunicating === 0).toBeFalsy();
     }).toPass({ timeout: 90_000, intervals: [1000, 2000, 3000] });
   }
@@ -112,44 +143,102 @@ class AdministrativeDashboardPage {
 
     const card = this.getCardByTitle(title);
 
-    const total = await this.getTotalFromCard(card);
-    const communicating = await this.getCommunicatingFromCard(card);
-    const nonCommunicating = await this.getNonCommunicatingFromCard(card);
-
     return {
       title,
-      communicating,
-      nonCommunicating,
-      total
+      communicating: await this.getCommunicatingFromCard(card),
+      nonCommunicating: await this.getNonCommunicatingFromCard(card),
+      total: await this.getTotalFromCard(card)
     };
   }
 
   async getAllAssetCommunicationMetrics() {
-    const feeders33 = await this.getCardMetrics('33KV Feeders');
-    const feeders11 = await this.getCardMetrics('11KV Feeders');
-    const distributionTransformers = await this.getCardMetrics('Distribution Transformers');
-
     return {
-      feeders33,
-      feeders11,
-      distributionTransformers
+      feeders33: await this.getCardMetrics('33KV Feeders'),
+      feeders11: await this.getCardMetrics('11KV Feeders'),
+      distributionTransformers: await this.getCardMetrics('Distribution Transformers')
     };
   }
 
-  async logAllAssetCommunicationMetrics() {
-    const metrics = await this.getAllAssetCommunicationMetrics();
+  async getBandCountAndPercentage(card, groupClass, bandName) {
+    const groupBlock = card
+      .locator(`.${groupClass}`)
+      .locator('xpath=ancestor::div[contains(@class,"col-12")][1]');
 
-    console.log(
-      `33KV Feeders: Communicating: ${metrics.feeders33.communicating}, Non Communicating: ${metrics.feeders33.nonCommunicating}, Total: ${metrics.feeders33.total}`
-    );
-    console.log(
-      `11KV Feeders: Communicating: ${metrics.feeders11.communicating}, Non Communicating: ${metrics.feeders11.nonCommunicating}, Total: ${metrics.feeders11.total}`
-    );
-    console.log(
-      `Distribution Transformers: Communicating: ${metrics.distributionTransformers.communicating}, Non Communicating: ${metrics.distributionTransformers.nonCommunicating}, Total: ${metrics.distributionTransformers.total}`
+    const bandRow = groupBlock
+      .locator('.communicating-border .ng-star-inserted')
+      .filter({
+        has: this.page.locator('span').filter({
+          hasText: new RegExp(`^${bandName}$`)
+        })
+      })
+      .first();
+
+    await expect(bandRow).toBeVisible({ timeout: 30_000 });
+
+    const countText = (await bandRow.locator('span.mr-3').first().textContent())?.trim() || '';
+    const percentageText =
+      (await bandRow.locator('span.percent-value').first().textContent())?.trim() || '';
+
+    return {
+      count: Number(countText.replace(/,/g, '')),
+      percentage: percentageText,
+      raw: `${countText} ${percentageText}`
+    };
+  }
+
+  async getCommunicationByBandsCardMetrics(title) {
+    const card = this.getCommunicationByBandsCardByTitle(title);
+    await expect(card).toBeVisible({ timeout: 90_000 });
+
+    const total = await this.getTotalFromCard(card);
+
+    const communicating = await this.readNumber(
+      card.locator('.communicating span.value').first(),
+      `Could not read ${title} communicating value`
     );
 
-    return metrics;
+    const nonCommunicating = await this.readNumber(
+      card.locator('.non-communicating span.value').first(),
+      `Could not read ${title} non communicating value`
+    );
+
+    const bandNames = ['Band A', 'Band B', 'Band C', 'Band D', 'Band E'];
+
+    const communicatingBands = {};
+    const nonCommunicatingBands = {};
+
+    for (const bandName of bandNames) {
+      communicatingBands[bandName] = await this.getBandCountAndPercentage(
+        card,
+        'communicating',
+        bandName
+      );
+
+      nonCommunicatingBands[bandName] = await this.getBandCountAndPercentage(
+        card,
+        'non-communicating',
+        bandName
+      );
+    }
+
+    return {
+      title,
+      total,
+      communicating,
+      nonCommunicating,
+      communicatingBands,
+      nonCommunicatingBands
+    };
+  }
+
+  async getAllCommunicationByBandsMetrics() {
+    return {
+      feeders33: await this.getCommunicationByBandsCardMetrics('33KV Feeders'),
+      feeders11: await this.getCommunicationByBandsCardMetrics('11KV Feeders'),
+      distributionTransformers: await this.getCommunicationByBandsCardMetrics(
+        'Distribution Transformers'
+      )
+    };
   }
 }
 

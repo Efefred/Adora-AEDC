@@ -1,0 +1,52 @@
+Asset - 33KV Feeders: Communicating: 84, Non Communicating: 38, Total: 122
+Asset - 11KV Feeders: Communicating: 276, Non Communicating: 125, Total: 401
+Asset - Distribution Transformers: Communicating: 163, Non Communicating: 16595, Total: 16758
+Bands - 33KV Feeders: Communicating: 84, Non Communicating: 38, Total: 122
+Bands - 11KV Feeders: Communicating: 276, Non Communicating: 125, Total: 401
+Bands - Distribution Transformers: Communicating: 163, Non Communicating: 16595, Total: 16758
+
+[COMMUNICATION BY BANDS - 33KV FEEDERS]
+Total: 122
+Communicating: 84
+  Band A: 46
+  Band B: 26
+  Band C: 6
+  Band D: 5
+  Band E: 1
+Non Communicating: 38
+  Band A: 15
+  Band B: 2
+  Band C: 2
+  Band D: 6
+  Band E: 0
+
+[COMMUNICATION BY BANDS - 11KV FEEDERS]
+Total: 401
+Communicating: 276
+  Band A: 155
+  Band B: 69
+  Band C: 27
+  Band D: 23
+  Band E: 0
+Non Communicating: 125
+  Band A: 19
+  Band B: 14
+  Band C: 8
+  Band D: 22
+  Band E: 0
+
+[COMMUNICATION BY BANDS - DISTRIBUTION TRANSFORMERS]
+Total: 16758
+Communicating: 163
+  Band A: 0
+  Band B: 1
+  Band C: 0
+  Band D: 0
+  Band E: 0
+Non Communicating: 16595
+  Band A: 14
+  Band B: 3
+  Band C: 5
+  Band D: 1
+  Band E: 2
+Custom HTML report generated: C:\BPS_Automation\ADORA_AEDC_AUTOMATION\test-results\custom-reports\admin-dashboard-communication-report.html

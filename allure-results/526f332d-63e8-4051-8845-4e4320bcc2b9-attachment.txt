@@ -1,0 +1,4 @@
+33KV Feeders: Communicating: 83, Non Communicating: 39, Total: 122
+11KV Feeders: Communicating: 280, Non Communicating: 121, Total: 401
+Distribution Transformers: Communicating: 157, Non Communicating: 16600, Total: 16757
+Custom HTML report generated: C:\BPS_Automation\ADORA_AEDC_AUTOMATION\test-results\custom-reports\admin-dashboard-asset-communication-report.html

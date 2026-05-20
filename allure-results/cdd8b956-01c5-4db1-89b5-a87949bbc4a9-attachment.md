@@ -1,0 +1,285 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - img "Cancel" [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e10]: You have been dormant for too long
+      - generic [ref=e11]: "You will be logged out in : 30"
+    - generic [ref=e12]:
+      - button "Stay logged in" [ref=e13] [cursor=pointer]
+      - button "Log out" [ref=e14] [cursor=pointer]
+  - generic [ref=e16]:
+    - generic [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e21] [cursor=pointer]:
+          - img [ref=e22]
+          - generic [ref=e24]: Dashboard
+        - generic [ref=e26] [cursor=pointer]:
+          - img [ref=e27]
+          - generic [ref=e29]: Administrative Dashboard
+        - generic [ref=e31] [cursor=pointer]:
+          - img [ref=e32]
+          - generic [ref=e34]: Summary Executive Dashboard
+        - generic [ref=e36] [cursor=pointer]:
+          - img [ref=e37]
+          - generic [ref=e39]: Executive Dashboard
+        - generic [ref=e41] [cursor=pointer]:
+          - img [ref=e42]
+          - generic [ref=e44]: Managerial Dashboard
+        - generic [ref=e46] [cursor=pointer]:
+          - img [ref=e47]
+          - generic [ref=e49]: System Reliability Indices
+        - generic [ref=e51] [cursor=pointer]:
+          - img [ref=e52]
+          - generic [ref=e54]: Grid Energy Profile
+          - img "arrow icon" [ref=e55]
+        - generic [ref=e57] [cursor=pointer]:
+          - img [ref=e58]
+          - generic [ref=e60]: CIM Grid Energy Profile
+          - img "arrow icon" [ref=e61]
+        - generic [ref=e63] [cursor=pointer]:
+          - img [ref=e64]
+          - generic [ref=e66]: Outage & Availability
+          - img "arrow icon" [ref=e67]
+        - generic [ref=e69]:
+          - generic [ref=e70] [cursor=pointer]:
+            - img [ref=e71]
+            - generic [ref=e73]: Unplanned Outage Schedule
+          - generic [active]:
+            - img
+            - generic: Planned Outage Schedule
+          - generic [ref=e74] [cursor=pointer]:
+            - img [ref=e75]
+            - generic [ref=e77]: Asset Availability Report
+          - generic [ref=e78] [cursor=pointer]:
+            - img [ref=e79]
+            - generic [ref=e81]: Communicating
+          - generic [ref=e82] [cursor=pointer]:
+            - img [ref=e83]
+            - generic [ref=e85]: Non Communicating
+        - generic [ref=e87] [cursor=pointer]:
+          - img [ref=e88]
+          - generic [ref=e90]: Trend Analysis
+          - img "arrow icon" [ref=e91]
+        - generic [ref=e93] [cursor=pointer]:
+          - img [ref=e94]
+          - generic [ref=e96]: Watch List
+        - generic [ref=e98] [cursor=pointer]:
+          - img [ref=e99]
+          - generic [ref=e101]: Assets Load Forecast
+        - generic [ref=e103] [cursor=pointer]:
+          - img [ref=e104]
+          - generic [ref=e106]: Settings
+          - img "arrow icon" [ref=e107]
+        - generic [ref=e109] [cursor=pointer]:
+          - img [ref=e110]
+          - generic [ref=e112]: Reports
+      - generic [ref=e113]:
+        - generic [ref=e114]:
+          - img "Network Management" [ref=e116]
+          - generic [ref=e117]:
+            - generic [ref=e118]: Module
+            - generic [ref=e119]: Network Management
+          - generic [ref=e120] [cursor=pointer]: Switch Module
+        - generic [ref=e123] [cursor=pointer]:
+          - generic [ref=e124]: Logout
+          - img "Logout icon" [ref=e125]
+    - generic [ref=e128]:
+      - generic [ref=e129]:
+        - img "Left Alignment icon" [ref=e130] [cursor=pointer]
+        - img "Header icon" [ref=e131] [cursor=pointer]
+      - generic [ref=e132]:
+        - button "English" [ref=e133] [cursor=pointer]
+        - button "French" [ref=e134] [cursor=pointer]
+        - generic [ref=e135] [cursor=pointer]:
+          - generic [ref=e136]:
+            - img "Network Management" [ref=e137]
+            - text: Network Management
+          - generic [ref=e138]:
+            - text: Switch
+            - img "Chevron right" [ref=e139]
+        - img "Header Notification icon" [ref=e141] [cursor=pointer]
+        - button "BA BPS AEDC" [ref=e143] [cursor=pointer]:
+          - generic [ref=e145]: BA
+          - generic [ref=e147]: BPS AEDC
+          - img [ref=e148]
+    - main [ref=e151]:
+      - main [ref=e154]:
+        - generic [ref=e155]:
+          - generic [ref=e157]: Planned Outage Schedule
+          - generic [ref=e160]:
+            - generic [ref=e161]: Outage Request
+            - generic [ref=e162] [cursor=pointer]: HQ/Regional Control Center
+            - generic [ref=e163] [cursor=pointer]: Pending SG Card
+            - generic [ref=e164] [cursor=pointer]: Confirmed Outage
+            - generic [ref=e165] [cursor=pointer]: Active Outage
+            - generic [ref=e166] [cursor=pointer]: Suspended Outage
+            - generic [ref=e167] [cursor=pointer]: Cancelled Outage
+            - generic [ref=e168] [cursor=pointer]: Resolved Outage
+          - generic [ref=e169]:
+            - generic [ref=e170]:
+              - generic [ref=e175] [cursor=pointer]: Add Filter
+              - generic [ref=e178] [cursor=pointer]:
+                - generic [ref=e179]:
+                  - img [ref=e180]
+                  - generic [ref=e182]: Period
+                - generic [ref=e183]:
+                  - textbox "Select date range" [ref=e184]: 11/04/26 - 11/05/26
+                  - img [ref=e185]
+              - generic [ref=e188]:
+                - img [ref=e189] [cursor=pointer]
+                - textbox "Search by Asset Name or Number or Coverage Area" [ref=e191] [cursor=pointer]
+            - generic [ref=e192]:
+              - button "Download Report" [ref=e194] [cursor=pointer]:
+                - generic [ref=e195]: Download Report
+                - img [ref=e196]
+              - button "Create New Outage" [ref=e198] [cursor=pointer]
+          - generic [ref=e199]:
+            - generic [ref=e204]:
+              - generic [ref=e205]: Total New Outage
+              - generic [ref=e206]: "2"
+            - generic [ref=e211]:
+              - generic [ref=e212]: Total New 33KV Outage
+              - generic [ref=e213]: "0"
+            - generic [ref=e218]:
+              - generic [ref=e219]: Total New 11KV Outage
+              - generic [ref=e220]: "0"
+            - generic [ref=e225]:
+              - generic [ref=e226]: Total New DT Outage
+              - generic [ref=e227]: "2"
+          - generic [ref=e228]:
+            - main [ref=e229]:
+              - table [ref=e231]:
+                - rowgroup [ref=e232]:
+                  - columnheader "PLANNED OUTAGE TYPE" [ref=e233]
+                  - columnheader "INDICATION" [ref=e234]
+                  - columnheader "CREATION DATE TIME" [ref=e235]
+                  - columnheader "REASON FOR OUTAGE" [ref=e236]
+                  - columnheader "CREATED BY" [ref=e237]
+                  - columnheader "CREATION ID" [ref=e238]
+                  - columnheader "ASSET NAME" [ref=e239]
+                  - columnheader "LOAD LOSS (MW)" [ref=e240]
+                  - columnheader "ASSET TYPE" [ref=e241]
+                  - columnheader "ASSET LOCATION" [ref=e242]
+                  - columnheader "START TIME" [ref=e243]
+                  - columnheader "END TIME" [ref=e244]
+                  - columnheader "DURATION (HRS)" [ref=e245]
+                  - columnheader "RECOMMENDED BY" [ref=e246]
+                  - columnheader "FL APPROVAL" [ref=e247]
+                  - columnheader "SL APPROVAL" [ref=e248]
+                  - columnheader "PERMIT HOLDER NAME" [ref=e249]
+                  - columnheader "PERMIT HOLDER EMAIL" [ref=e250]
+                  - columnheader "STATUS" [ref=e251]
+                  - columnheader "AFFECTED AREA" [ref=e252]
+                - rowgroup [ref=e253]:
+                  - row "Emergency Outage Earth Fault May 07, 2026, 06:23:03 test Kenny QA POT0000000506 AEDC OFFICE Copy 2.00 DT Wuse 2 May 07, 2026, 06:24:00 May 07, 2026, 06:28:00 0:04 Kenny QA N/A N/A Kenny QA kehinde.detayo@gmail.com Recommended View Affected Area ..." [ref=e254]:
+                    - cell "Emergency Outage" [ref=e255]:
+                      - generic "Emergency Outage" [ref=e257]
+                    - cell "Earth Fault" [ref=e258]:
+                      - generic "Earth Fault" [ref=e260]
+                    - cell "May 07, 2026, 06:23:03" [ref=e261]:
+                      - generic [ref=e262]: May 07, 2026, 06:23:03
+                    - cell "test" [ref=e263]:
+                      - generic "test" [ref=e265]
+                    - cell "Kenny QA" [ref=e266]:
+                      - generic "Kenny QA" [ref=e268]
+                    - cell "POT0000000506" [ref=e269]:
+                      - generic "POT0000000506" [ref=e271]
+                    - cell "AEDC OFFICE Copy" [ref=e272]:
+                      - generic [ref=e273]:
+                        - generic "AEDC OFFICE" [ref=e274]
+                        - img "Copy" [ref=e275]
+                    - cell "2.00" [ref=e276]:
+                      - generic "2.00" [ref=e278]
+                    - cell "DT" [ref=e279]:
+                      - generic "DT" [ref=e281]
+                    - cell "Wuse 2" [ref=e282]:
+                      - generic "Wuse 2" [ref=e284]
+                    - cell "May 07, 2026, 06:24:00" [ref=e285]:
+                      - generic [ref=e286]: May 07, 2026, 06:24:00
+                    - cell "May 07, 2026, 06:28:00" [ref=e287]:
+                      - generic [ref=e288]: May 07, 2026, 06:28:00
+                    - cell "0:04" [ref=e289]:
+                      - generic "0:04" [ref=e291]
+                    - cell "Kenny QA" [ref=e292]:
+                      - generic "Kenny QA" [ref=e294]
+                    - cell "N/A" [ref=e295]:
+                      - generic [ref=e297]: N/A
+                    - cell "N/A" [ref=e298]:
+                      - generic [ref=e300]: N/A
+                    - cell "Kenny QA" [ref=e301]:
+                      - generic "Kenny QA" [ref=e303]
+                    - cell "kehinde.detayo@gmail.com" [ref=e304]:
+                      - generic "kehinde.detayo@gmail.com" [ref=e306]
+                    - cell "Recommended" [ref=e307]:
+                      - generic "Recommended" [ref=e309]
+                    - cell "View Affected Area" [ref=e310]:
+                      - button "View Affected Area" [ref=e312] [cursor=pointer]
+                    - cell "..." [ref=e313]:
+                      - img "..." [ref=e315]
+                  - row "Emergency Outage Earth Fault Apr 20, 2026, 11:37:51 test Ana Vulin POT0000000497 109 PLAZA DT (ADETOKUNBO ADEMOLA) Copy 2.00 DT Wuse 2 May 08, 2026, 01:01:00 May 09, 2026, 01:01:00 24:00 Ana Vulin N/A N/A Faith QAs faithi@bpsafrica.com Recommended View Affected Area ..." [ref=e316]:
+                    - cell "Emergency Outage" [ref=e317]:
+                      - generic "Emergency Outage" [ref=e319]
+                    - cell "Earth Fault" [ref=e320]:
+                      - generic "Earth Fault" [ref=e322]
+                    - cell "Apr 20, 2026, 11:37:51" [ref=e323]:
+                      - generic [ref=e324]: Apr 20, 2026, 11:37:51
+                    - cell "test" [ref=e325]:
+                      - generic "test" [ref=e327]
+                    - cell "Ana Vulin" [ref=e328]:
+                      - generic "Ana Vulin" [ref=e330]
+                    - cell "POT0000000497" [ref=e331]:
+                      - generic "POT0000000497" [ref=e333]
+                    - cell "109 PLAZA DT (ADETOKUNBO ADEMOLA) Copy" [ref=e334]:
+                      - generic [ref=e335]:
+                        - generic "109 PLAZA DT (ADETOKUNBO ADEMOLA)" [ref=e336]
+                        - img "Copy" [ref=e337]
+                    - cell "2.00" [ref=e338]:
+                      - generic "2.00" [ref=e340]
+                    - cell "DT" [ref=e341]:
+                      - generic "DT" [ref=e343]
+                    - cell "Wuse 2" [ref=e344]:
+                      - generic "Wuse 2" [ref=e346]
+                    - cell "May 08, 2026, 01:01:00" [ref=e347]:
+                      - generic [ref=e348]: May 08, 2026, 01:01:00
+                    - cell "May 09, 2026, 01:01:00" [ref=e349]:
+                      - generic [ref=e350]: May 09, 2026, 01:01:00
+                    - cell "24:00" [ref=e351]:
+                      - generic "24:00" [ref=e353]
+                    - cell "Ana Vulin" [ref=e354]:
+                      - generic "Ana Vulin" [ref=e356]
+                    - cell "N/A" [ref=e357]:
+                      - generic [ref=e359]: N/A
+                    - cell "N/A" [ref=e360]:
+                      - generic [ref=e362]: N/A
+                    - cell "Faith QAs" [ref=e363]:
+                      - generic "Faith QAs" [ref=e365]
+                    - cell "faithi@bpsafrica.com" [ref=e366]:
+                      - generic "faithi@bpsafrica.com" [ref=e368]
+                    - cell "Recommended" [ref=e369]:
+                      - generic "Recommended" [ref=e371]
+                    - cell "View Affected Area" [ref=e372]:
+                      - button "View Affected Area" [ref=e374] [cursor=pointer]
+                    - cell "..." [ref=e375]:
+                      - img "..." [ref=e377]
+            - navigation "Page navigation example" [ref=e380]:
+              - list [ref=e381]:
+                - generic [ref=e382]: Page 1 of 1
+                - generic [ref=e383]:
+                  - listitem:
+                    - generic:
+                      - img "<<"
+                  - listitem:
+                    - generic:
+                      - img "<"
+                  - listitem:
+                    - generic: "1"
+                  - listitem:
+                    - generic:
+                      - img ">"
+                  - listitem:
+                    - generic:
+                      - img ">>"
+```

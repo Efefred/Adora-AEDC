@@ -1,0 +1,1841 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - img "Cancel" [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e10]: You have been dormant for too long
+      - generic [ref=e11]: "You will be logged out in : 30"
+    - generic [ref=e12]:
+      - button "Stay logged in" [ref=e13] [cursor=pointer]
+      - button "Log out" [ref=e14] [cursor=pointer]
+  - generic [ref=e16]:
+    - generic [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e21] [cursor=pointer]:
+          - img [ref=e22]
+          - generic [ref=e24]: Dashboard
+        - generic [ref=e25]:
+          - generic:
+            - img
+            - generic: Administrative Dashboard
+        - generic [ref=e27] [cursor=pointer]:
+          - img
+          - generic [ref=e29]: Summary Executive Dashboard
+        - generic [ref=e31] [cursor=pointer]:
+          - img [ref=e32]
+          - generic [ref=e34]: Executive Dashboard
+        - generic [ref=e36] [cursor=pointer]:
+          - img [ref=e37]
+          - generic [ref=e39]: System Reliability Indices
+        - generic [ref=e41] [cursor=pointer]:
+          - img [ref=e42]
+          - generic [ref=e44]: Grid Energy Profile
+          - img "arrow icon" [ref=e45]
+        - generic [ref=e47] [cursor=pointer]:
+          - img [ref=e48]
+          - generic [ref=e50]: CIM Grid Energy Profile
+          - img "arrow icon" [ref=e51]
+        - generic [ref=e53] [cursor=pointer]:
+          - img [ref=e54]
+          - generic [ref=e56]: Outage & Availability
+          - img "arrow icon" [ref=e57]
+        - generic [ref=e59] [cursor=pointer]:
+          - img [ref=e60]
+          - generic [ref=e62]: Trend Analysis
+          - img "arrow icon" [ref=e63]
+        - generic [ref=e65] [cursor=pointer]:
+          - img [ref=e66]
+          - generic [ref=e68]: Watch List
+        - generic [ref=e70] [cursor=pointer]:
+          - img [ref=e71]
+          - generic [ref=e73]: Assets Load Forecast
+        - generic [ref=e75] [cursor=pointer]:
+          - img [ref=e76]
+          - generic [ref=e78]: Settings
+          - img "arrow icon" [ref=e79]
+        - generic [ref=e81] [cursor=pointer]:
+          - img [ref=e82]
+          - generic [ref=e84]: Reports
+      - generic [ref=e85]:
+        - generic [ref=e86]:
+          - img "Network Management" [ref=e88]
+          - generic [ref=e89]:
+            - generic [ref=e90]: Module
+            - generic [ref=e91]: Network Management
+          - generic [ref=e92] [cursor=pointer]: Switch Module
+        - generic [ref=e95] [cursor=pointer]:
+          - generic [ref=e96]: Logout
+          - img "Logout icon" [ref=e97]
+    - generic [ref=e100]:
+      - generic [ref=e101]:
+        - img "Left Alignment icon" [ref=e102] [cursor=pointer]
+        - img "Header icon" [ref=e103] [cursor=pointer]
+      - generic [ref=e104]:
+        - button "English" [ref=e105] [cursor=pointer]
+        - button "French" [ref=e106] [cursor=pointer]
+        - generic [ref=e107] [cursor=pointer]:
+          - generic [ref=e108]:
+            - img "Network Management" [ref=e109]
+            - text: Network Management
+          - generic [ref=e110]:
+            - text: Switch
+            - img "Chevron right" [ref=e111]
+        - img "Header Notification icon" [ref=e113] [cursor=pointer]
+        - button "BA BPS AEDC" [ref=e115] [cursor=pointer]:
+          - generic [ref=e117]: BA
+          - generic [ref=e119]: BPS AEDC
+          - img [ref=e120]
+    - main [ref=e123]:
+      - generic [ref=e124]:
+        - generic [ref=e125]:
+          - generic [ref=e127]:
+            - text: Dashboard
+            - img ">" [ref=e128]
+            - text: Network Overview
+          - generic [ref=e129]:
+            - generic [ref=e135] [cursor=pointer]: Add Filter
+            - generic [ref=e139] [cursor=pointer]:
+              - generic [ref=e140]:
+                - img [ref=e141]
+                - generic [ref=e143]: Period
+              - generic [ref=e144]:
+                - textbox "Select date range" [ref=e145]: 01/05/26 - 06/05/26
+                - img [ref=e146]
+        - generic [ref=e151]:
+          - generic [ref=e152]:
+            - text: "132KV AJAOKUTA TS_33KV ADOGO FDR_PL_PL Availability: 11.5"
+            - img [ref=e154]
+            - text: 11.66%
+          - generic [ref=e156]:
+            - text: "132KV AJAOKUTA TS_33KV ANYIGBA FDR_PL_PL Availability: 0"
+            - img [ref=e158]
+            - text: 0%
+          - generic [ref=e160]:
+            - text: "132KV AJAOKUTA TS_33KV CONFLUENCE FDR_PL_PL Availability: 0"
+            - img [ref=e162]
+            - text: 0%
+          - generic [ref=e164]:
+            - text: "132KV AJAOKUTA TS_33KV STEEL PLANT FDR_PL_PL Availability: 9.5"
+            - img [ref=e166]
+            - text: 4.50%
+          - generic [ref=e168]:
+            - text: "132KV AKWANGA TS_33KV FDR 1 (AKWANGA FDR)_PL_PL Availability: 0"
+            - img [ref=e170]
+            - text: 0%
+          - generic [ref=e172]:
+            - text: "132KV AKWANGA TS_33KV FDR 1 (AKWANGA FDR)_PL_PL_2 Availability: 11.5"
+            - img [ref=e174]
+            - text: 7.00%
+          - generic [ref=e176]:
+            - text: "132KV AKWANGA TS_33KV FDR 2 (LAFIA)_PL_PL Availability: 0"
+            - img [ref=e178]
+            - text: 9.76%
+          - generic [ref=e180]:
+            - text: "132KV AKWANGA TS_33KV FDR 3(WATERBOARD)_PL_PL Availability: 11.5"
+            - img [ref=e182]
+            - text: 21.15%
+          - generic [ref=e184]:
+            - text: "132KV APO TS_33KV FDR H23_PL_PL Availability: 11.5"
+            - img [ref=e186]
+            - text: 6.75%
+          - generic [ref=e188]:
+            - text: "132KV APO TS_33KV FDR H1_PL_PL Availability: 10"
+            - img [ref=e190]
+            - text: 9.62%
+          - generic [ref=e192]:
+            - text: "132KV APO TS_33KV FDR H11_PL_PL Availability: 11.5"
+            - img [ref=e194]
+            - text: 6.71%
+          - generic [ref=e196]:
+            - text: "132KV APO TS_33KV FDR H13 (JICA)_PL_PL Availability: 0"
+            - img [ref=e198]
+            - text: 0%
+          - generic [ref=e200]:
+            - text: "132KV APO TS_33KV FDR H15_PL_PL Availability: 11.5"
+            - img [ref=e202]
+            - text: 5.09%
+          - generic [ref=e204]:
+            - text: "132KV APO TS_33KV FDR H2_PL_PL Availability: 11.5"
+            - img [ref=e206]
+            - text: 1.47%
+          - generic [ref=e208]:
+            - text: "132KV APO TS_33KV FDR H21_PL_PL Availability: 11.5"
+            - img [ref=e210]
+            - text: 1.17%
+          - generic [ref=e212]:
+            - text: "132KV APO TS_33KV FDR H3_PL_PL Availability: 11.5"
+            - img [ref=e214]
+            - text: 9.57%
+          - generic [ref=e216]:
+            - text: "132KV APO TS_33KV FDR H31_PL_PL Availability: 11.5"
+            - img [ref=e218]
+            - text: 7.02%
+          - generic [ref=e220]:
+            - text: "132KV APO TS_33KV FDR H33_PL_PL Availability: 2.5"
+            - img [ref=e222]
+            - text: 1.37%
+          - generic [ref=e224]:
+            - text: "132KV APO TS_33KV FDR H35_PL_PL Availability: 11.5"
+            - img [ref=e226]
+            - text: 13.18%
+          - generic [ref=e228]:
+            - text: "132KV APO TS_33KV FDR H37_PL_PL Availability: 0"
+            - img [ref=e230]
+            - text: 0%
+          - generic [ref=e232]:
+            - text: "132KV APO TS_33KV FDR H5_PL_PL Availability: 11.5"
+            - img [ref=e234]
+            - text: 9.02%
+          - generic [ref=e236]:
+            - text: "132KV APO TS_33KV FDR H7_PL_PL Availability: 0"
+            - img [ref=e238]
+            - text: 0%
+          - generic [ref=e240]:
+            - text: "132KV BIDA TS_33KV AGAIE FDR_PL_PL Availability: 0"
+            - img [ref=e242]
+            - text: 71.15%
+          - generic [ref=e244]:
+            - text: "132KV BIDA TS_33KV DOKO FDR_PL_PL Availability: 0"
+            - img [ref=e246]
+            - text: 5.88%
+          - generic [ref=e248]:
+            - text: "132KV BIDA TS_33KV KUTIGI FDR_PL_PL Availability: 0"
+            - img [ref=e250]
+            - text: 35.80%
+          - generic [ref=e252]:
+            - text: "132KV BIDA TS_33KV LEMU FDR_PL_PL Availability: 0"
+            - img [ref=e254]
+            - text: 3.14%
+          - generic [ref=e256]:
+            - text: "132KV BIDA TS_33KV NEW AGAIE FDR_PL_PL Availability: 0"
+            - img [ref=e258]
+            - text: 100%
+          - generic [ref=e260]:
+            - text: "132KV BIDA TS_T3_PL_PL Availability: 0"
+            - img [ref=e262]
+            - text: 0%
+          - generic [ref=e264]:
+            - text: "132KV BIDA TS_T4_PL_PL Availability: 0"
+            - img [ref=e266]
+            - text: 0%
+          - generic [ref=e268]:
+            - text: "132KV CENTRAL AREA TS_33KV FDR 2_PL_PL Availability: 11.5"
+            - img [ref=e270]
+            - text: 1.20%
+          - generic [ref=e272]:
+            - text: "132KV CENTRAL AREA TS_33KV FDR 3_PL_PL Availability: 11.5"
+            - img [ref=e274]
+            - text: 2.89%
+          - generic [ref=e276]:
+            - text: "132KV CENTRAL AREA TS_33KV FDR 4_PL_PL Availability: 11.5"
+            - img [ref=e278]
+            - text: 5.75%
+          - generic [ref=e280]:
+            - text: "132KV CENTRAL AREA TS_33KV FDR 5_PL_PL Availability: 11.5"
+            - img [ref=e282]
+            - text: 21.23%
+          - generic [ref=e284]:
+            - text: "132KV CENTRAL AREA TS_33KV FDR 6_PL_PL Availability: 11.5"
+            - img [ref=e286]
+            - text: 0%
+          - generic [ref=e288]:
+            - text: "132KV CENTRAL AREA TS_33KV FDR 8_PL_PL Availability: 11.5"
+            - img [ref=e290]
+            - text: 6.37%
+          - generic [ref=e292]:
+            - text: "132KV GIS DAWAKI FDR_33KV FDR D6_PL_PL Availability: 0"
+            - img [ref=e294]
+            - text: 38.82%
+          - generic [ref=e296]:
+            - text: "132KV GIS DAWAKI TS_33KV FDR D1_PL_PL Availability: 11.5"
+            - img [ref=e298]
+            - text: 4.16%
+          - generic [ref=e300]:
+            - text: "132KV GIS DAWAKI TS_33KV FDR D2_PL_PL Availability: 0"
+            - img [ref=e302]
+            - text: 100%
+          - generic [ref=e304]:
+            - text: "132KV GIS DAWAKI TS_33KV FDR D5_PL_PL Availability: 0"
+            - img [ref=e306]
+            - text: 0%
+          - generic [ref=e308]:
+            - text: "132KV GIS DAWAKI TS_33KV FDR D6_PL_PL Availability: 0"
+            - img [ref=e310]
+            - text: 0%
+          - generic [ref=e312]:
+            - text: "132KV GWAGWALADA TS_33KV FDR L31_PL_PL Availability: 11.5"
+            - img [ref=e314]
+            - text: 8.04%
+          - generic [ref=e316]:
+            - text: "132KV GWAGWALADA TS_33KV FDR L32_PL_PL Availability: 0"
+            - img [ref=e318]
+            - text: 10.17%
+          - generic [ref=e320]:
+            - text: "132KV GWAGWALADA TS_33KV FDR L34_PL_PL Availability: 0"
+            - img [ref=e322]
+            - text: 11.68%
+          - generic [ref=e324]:
+            - text: "132KV GWAGWALADA TS_33KV FDR L35_PL_PL Availability: 11.5"
+            - img [ref=e326]
+            - text: 31.46%
+          - generic [ref=e328]:
+            - text: "132KV GWAGWALADA TS_33KV FDR L36_PL_PL Availability: 0"
+            - img [ref=e330]
+            - text: 0%
+          - generic [ref=e332]:
+            - text: "132KV KARU TS_33KV FDR K1_PL_PL Availability: 10.5"
+            - img [ref=e334]
+            - text: 7.67%
+          - generic [ref=e336]:
+            - text: "132KV KARU TS_33KV FDR K2_PL_PL Availability: 8.5"
+            - img [ref=e338]
+            - text: 3.03%
+          - generic [ref=e340]:
+            - text: "132KV KARU TS_33KV FDR K3_PL_PL Availability: 0"
+            - img [ref=e342]
+            - text: 31.77%
+          - generic [ref=e344]:
+            - text: "132KV KARU TS_33KV FDR K4_PL_PL Availability: 5.5"
+            - img [ref=e346]
+            - text: 38.35%
+          - generic [ref=e348]:
+            - text: "132KV KARU TS_33KV FDR K5_PL_PL Availability: 5.5"
+            - img [ref=e350]
+            - text: 35.11%
+          - generic [ref=e352]:
+            - text: "132KV KARU TS_33KV FDR K6_PL_PL Availability: 6"
+            - img [ref=e354]
+            - text: 7.44%
+          - generic [ref=e356]:
+            - text: "132KV KATAMPE 1 TS_33KV 9MOBILE FDR_PL_PL Availability: 11.5"
+            - img [ref=e358]
+            - text: 0.96%
+          - generic [ref=e360]:
+            - text: "132KV KATAMPE 1 TS_33KV GWARINPA FDR_PL_PL Availability: 10.5"
+            - img [ref=e362]
+            - text: 4.50%
+          - generic [ref=e364]:
+            - text: "132KV KATAMPE 1 TS_33KV JABI FDR_PL_PL Availability: 0"
+            - img [ref=e366]
+            - text: 11.48%
+          - generic [ref=e368]:
+            - text: "132KV KATAMPE 1 TS_33KV LIFECAMP FDR_PL_PL Availability: 11.5"
+            - img [ref=e370]
+            - text: 8.05%
+          - generic [ref=e372]:
+            - text: "132KV KATAMPE 1 TS_33KV WUSE II FDR_PL_PL Availability: 0"
+            - img [ref=e374]
+            - text: 0%
+          - generic [ref=e376]:
+            - text: "132KV KATAMPE 2 TS_33KV JAHI FDR_PL_PL Availability: 0"
+            - img [ref=e378]
+            - text: 43.13%
+          - generic [ref=e380]:
+            - text: "132KV KATAMPE 2 TS_33KV MAITAMA FDR_PL_PL Availability: 0"
+            - img [ref=e382]
+            - text: 63.61%
+          - generic [ref=e384]:
+            - text: "132KV KATAMPE 2 TS_33KV MPAPE FDR_PL_PL Availability: 11.5"
+            - img [ref=e386]
+            - text: 21.32%
+          - generic [ref=e388]:
+            - text: "132KV KEFFI TS_33KV AVATAR FDR_PL_PL Availability: 0"
+            - img [ref=e390]
+            - text: 0%
+          - generic [ref=e392]:
+            - text: "132KV KEFFI TS_33KV GRA FDR_PL_PL Availability: 2.5"
+            - img [ref=e394]
+            - text: 8.84%
+          - generic [ref=e396]:
+            - text: "132KV KEFFI TS_33KV KEFFI FDR_PL_PL Availability: 11.5"
+            - img [ref=e398]
+            - text: 13.54%
+          - generic [ref=e400]:
+            - text: "132KV KEFFI TS_33KV NASARAWA FDR_PL_PL Availability: 8.5"
+            - img [ref=e402]
+            - text: 10.55%
+          - generic [ref=e404]:
+            - text: "132KV KEFFI TS_33KV SMART FDR_PL_PL Availability: 0"
+            - img [ref=e406]
+            - text: 0%
+          - generic [ref=e408]:
+            - text: "132KV KEFFI TS_33KV UKE/MASAKA FDR_PL_PL Availability: 4"
+            - img [ref=e410]
+            - text: 54.22%
+          - generic [ref=e412]:
+            - text: "132KV KONTAGORA TS_33KV ARMY BARRACKS FDR_PL_PL Availability: 11.5"
+            - img [ref=e414]
+            - text: 8.11%
+          - generic [ref=e416]:
+            - text: "132KV KONTAGORA TS_33KV MASUGA FDR_PL_PL Availability: 9"
+            - img [ref=e418]
+            - text: 3.81%
+          - generic [ref=e420]:
+            - text: "132KV KONTAGORA TS_33KV TOWN FDR_PL_PL Availability: 11.5"
+            - img [ref=e422]
+            - text: 2.89%
+          - generic [ref=e424]:
+            - text: "132KV KONTAGORA TS_33KV WATER WORKS FDR_PL_PL Availability: 5.5"
+            - img [ref=e426]
+            - text: 16.36%
+          - generic [ref=e428]:
+            - text: "132KV KUBWA TS_33KV BWARI FDR_PL_PL Availability: 11.5"
+            - img [ref=e430]
+            - text: 84.11%
+          - generic [ref=e432]:
+            - text: "132KV KUBWA TS_33KV DAM FDR_PL_PL Availability: 11.5"
+            - img [ref=e434]
+            - text: 2.76%
+          - generic [ref=e436]:
+            - text: "132KV KUBWA TS_33KV DAWAKI FDR_PL_PL Availability: 11.5"
+            - img [ref=e438]
+            - text: 2.57%
+          - generic [ref=e440]:
+            - text: "132KV KUBWA TS_33KV DEIDEI FDR_PL_PL Availability: 2.5"
+            - img [ref=e442]
+            - text: 1.04%
+          - generic [ref=e444]:
+            - text: "132KV KUBWA TS_33KV KUBWA FDR_PL_PL Availability: 0"
+            - img [ref=e446]
+            - text: 19.33%
+          - generic [ref=e448]:
+            - text: "132KV KUBWA TS_33KV NIPP FDR_PL_PL Availability: 11.5"
+            - img [ref=e450]
+            - text: 18.22%
+          - generic [ref=e452]:
+            - text: "132KV KUKWABA TS_33KV FDR L31_PL_PL Availability: 2.5"
+            - img [ref=e454]
+            - text: 11.11%
+          - generic [ref=e456]:
+            - text: "132KV KUKWABA TS_33KV FDR L32_PL_PL Availability: 10"
+            - img [ref=e458]
+            - text: 26.53%
+          - generic [ref=e460]:
+            - text: "132KV KUKWABA TS_33KV FDR L33_PL_PL Availability: 11.5"
+            - img [ref=e462]
+            - text: 8.69%
+          - generic [ref=e464]:
+            - text: "132KV KUKWABA TS_33KV FDR L34_PL_PL Availability: 11.5"
+            - img [ref=e466]
+            - text: 11.78%
+          - generic [ref=e468]:
+            - text: "132KV KUKWABA TS_33KV FDR L35_PL_PL Availability: 11"
+            - img [ref=e470]
+            - text: 2.23%
+          - generic [ref=e472]:
+            - text: "132KV KUKWABA TS_33KV FDR L36_PL_PL Availability: 0"
+            - img [ref=e474]
+            - text: 20.95%
+          - generic [ref=e476]:
+            - text: "132KV LOKOJA T/S_33KV FDR 1_KOTO_GEGU_PL_PL Availability: 0"
+            - img [ref=e478]
+            - text: 0%
+          - generic [ref=e480]:
+            - text: "132KV LOKOJA TS_33KV FDR 1_PL_PL Availability: 2"
+            - img [ref=e482]
+            - text: 1.42%
+          - generic [ref=e484]:
+            - text: "132KV LOKOJA TS_33KV FDR 2_PL_PL Availability: 11.5"
+            - img [ref=e486]
+            - text: 40.33%
+          - generic [ref=e488]:
+            - text: "132KV LOKOJA TS_33KV FDR 3 CBN_PL_PL Availability: 7"
+            - img [ref=e490]
+            - text: 14.29%
+          - generic [ref=e492]:
+            - text: "132KV MINNA TS_33KV BIRGI FDR_PL_PL_HIGH POINT Availability: 0"
+            - img [ref=e494]
+            - text: 0%
+          - generic [ref=e496]:
+            - text: "132KV MINNA TS_33KV BIRIGI FDR_PL_PL Availability: 4"
+            - img [ref=e498]
+            - text: 19.33%
+          - generic [ref=e500]:
+            - text: "132KV MINNA TS_33KV FUT FDR_PL_PL Availability: 11.5"
+            - img [ref=e502]
+            - text: 0.39%
+          - generic [ref=e504]:
+            - text: "132KV MINNA TS_33KV KATAREGI FDR_PL_PL Availability: 0"
+            - img [ref=e506]
+            - text: 5.59%
+          - generic [ref=e508]:
+            - text: "132KV MINNA TS_33KV LAPAI FDR_PL_PL Availability: 2"
+            - img [ref=e510]
+            - text: 2.33%
+          - generic [ref=e512]:
+            - text: "132KV MINNA TS_33KV MAIKUNKELE FDR_PL_PL Availability: 0"
+            - img [ref=e514]
+            - text: 0%
+          - generic [ref=e516]:
+            - text: "132KV MINNA TS_33KV NNPC FDR_PL_PL Availability: 11.5"
+            - img [ref=e518]
+            - text: 7.67%
+          - generic [ref=e520]:
+            - text: "132KV MINNA TS_33KV POWER HOUSE FDR_PL_PL Availability: 0"
+            - img [ref=e522]
+            - text: 0%
+          - generic [ref=e524]:
+            - text: "132KV MINNA TS_33KV T4_PL_PL Availability: 0"
+            - img [ref=e526]
+            - text: 0%
+          - generic [ref=e528]:
+            - text: "132KV MINNA TS_33KV ZARUMAI FDR_PL_PL Availability: 11.5"
+            - img [ref=e530]
+            - text: 7.48%
+          - generic [ref=e532]:
+            - text: "132KV OKENE TS_33KV IKARE FDR_PL_PL Availability: 3"
+            - img [ref=e534]
+            - text: 25.96%
+          - generic [ref=e536]:
+            - text: "132KV OKENE TS_33KV ISANLU FDR_PL_PL Availability: 1.5"
+            - img [ref=e538]
+            - text: 10.19%
+          - generic [ref=e540]:
+            - text: "132KV OKENE TS_33KV OKENE 2 FDR_PL_PL Availability: 0.5"
+            - img [ref=e542]
+            - text: 23.28%
+          - generic [ref=e544]:
+            - text: "132KV OKENE TS_33KV OKENE FDR_PL_PL Availability: 0"
+            - img [ref=e546]
+            - text: 100%
+          - generic [ref=e548]:
+            - text: "132KV OKENE TS_33KV OSOSO FDR_PL_PL Availability: 2.5"
+            - img [ref=e550]
+            - text: 13.31%
+          - generic [ref=e552]:
+            - text: "132KV SHIRORO TS_33KV ERENA FDR_PL_PL Availability: 0"
+            - img [ref=e554]
+            - text: 0%
+          - generic [ref=e556]:
+            - text: "132KV SHIRORO TS_33KV GWADA FDR_PL_PL Availability: 1.5"
+            - img [ref=e558]
+            - text: 29.26%
+          - generic [ref=e560]:
+            - text: "132KV SULEJA T/S_T1_PL_PL Availability: 0"
+            - img [ref=e562]
+            - text: 0%
+          - generic [ref=e564]:
+            - text: "132KV SULEJA TS_33KV ABUJA STEEL FDR_PL_PL Availability: 0"
+            - img [ref=e566]
+            - text: 50.87%
+          - generic [ref=e568]:
+            - text: "132KV SULEJA TS_33KV FIELDBASE FDR_PL_PL Availability: 0"
+            - img [ref=e570]
+            - text: 51.88%
+          - generic [ref=e572]:
+            - text: "132KV SULEJA TS_33KV GOODA_PLUSTECH FDR_PL_PL Availability: 0"
+            - img [ref=e574]
+            - text: 0%
+          - generic [ref=e576]:
+            - text: "132KV SULEJA TS_33KV INDUSTRIAL FDR_PL_PL Availability: 11.5"
+            - img [ref=e578]
+            - text: 30.93%
+          - generic [ref=e580]:
+            - text: "132KV SULEJA TS_33KV JERE FDR_PL_PL Availability: 0"
+            - img [ref=e582]
+            - text: 37.09%
+          - generic [ref=e584]:
+            - text: "132KV SULEJA TS_33KV JIWA FDR_PL_PL Availability: 11.5"
+            - img [ref=e586]
+            - text: 43.10%
+          - generic [ref=e588]:
+            - text: "132KV SULEJA TS_33KV SULEJA FDR_PL_PL Availability: 11.5"
+            - img [ref=e590]
+            - text: 3.75%
+          - generic [ref=e592]:
+            - text: "132KV TEGINA TS_33KV KAGARA FDR_PL_PL Availability: 10.5"
+            - img [ref=e594]
+            - text: 20.05%
+          - generic [ref=e596]:
+            - text: "132KV TEGINA TS_33KV MARIGA FDR_PL_PL Availability: 11.5"
+            - img [ref=e598]
+            - text: 0.81%
+          - generic [ref=e600]:
+            - text: "132KV_SULEJA(132KV)_PL_PL Availability: 0"
+            - img [ref=e602]
+            - text: 0%
+          - generic [ref=e604]:
+            - text: "330KV AJAOKUTA TS_132KV AJAOKUTA TS_132KV ITAKPE IRON ORE MINING COMPANY_PL_PL Availability: 0"
+            - img [ref=e606]
+            - text: 0%
+          - generic [ref=e608]:
+            - text: "33OKV APIR-LAFIA LINE 1&2_132KV LAFIA TS_33KV FDR A1_PL_PL Availability: 11.5"
+            - img [ref=e610]
+            - text: 9.57%
+          - generic [ref=e612]:
+            - text: "33OKV APIR-LAFIA LINE 1&2_132KV LAFIA TS_33KV FDR A2_PL_PL Availability: 1"
+            - img [ref=e614]
+            - text: 9.43%
+          - generic [ref=e616]:
+            - text: "33OKV APIR-LAFIA LINE 1&2_132KV LAFIA TS_33KV FDR A5_PL_PL Availability: 3.5"
+            - img [ref=e618]
+            - text: 24.65%
+          - generic [ref=e620]:
+            - text: "F33KV-DUP II Availability: 0"
+            - img [ref=e622]
+            - text: 0%
+          - generic [ref=e624]:
+            - text: "FEEDER 33 QA Availability: 0"
+            - img [ref=e626]
+            - text: 0%
+          - generic [ref=e628]:
+            - text: "FEEDER 33 TEST FOR CIM Availability: 0"
+            - img [ref=e630]
+            - text: 0%
+          - generic [ref=e632]:
+            - text: "MSN DUPLICATE INSTANCE 1 Availability: 0"
+            - img [ref=e634]
+            - text: 0%
+          - generic [ref=e636]:
+            - text: "NEW MSN INST II Availability: 0"
+            - img [ref=e638]
+            - text: 0%
+          - generic [ref=e640]:
+            - text: "132KV APO TS_33KV FDR H35_7.5MVA_RESETTLEMENT_2 Availability: null"
+            - img [ref=e642]
+            - text: 0%
+          - generic [ref=e644]:
+            - text: "132KV BIDA TS_T3_BIDA_ARMY BARRACK Availability: 0"
+            - img [ref=e646]
+            - text: 71.46%
+          - generic [ref=e648]:
+            - text: "132KV BIDA TS_T3_BIDA_FD4 Availability: 0"
+            - img [ref=e650]
+            - text: 20.01%
+          - generic [ref=e652]:
+            - text: "132KV BIDA TS_T3_BIDA_TOWN FDR Availability: 0"
+            - img [ref=e654]
+            - text: 8.55%
+          - generic [ref=e656]:
+            - text: "132KV BIDA TS_T4_BIDA_GRA FDR Availability: 0"
+            - img [ref=e658]
+            - text: 16.31%
+          - generic [ref=e660]:
+            - text: "132KV MINNA TS_T4_TS_PARLIAMENTARY Availability: 11.5"
+            - img [ref=e662]
+            - text: 55.91%
+          - generic [ref=e664]:
+            - text: "132KV MINNA TS_T4_TS_SHIRORO Availability: 0"
+            - img [ref=e666]
+            - text: 5.33%
+          - generic [ref=e668]:
+            - text: "132KV SULEJA TS_T1_TS_DIKKO Availability: 0"
+            - img [ref=e670]
+            - text: 54.18%
+          - generic [ref=e672]:
+            - text: "132KV SULEJA TS_T1_TS_GAURAKA Availability: 7"
+            - img [ref=e674]
+            - text: 46.66%
+          - generic [ref=e676]:
+            - text: "132KV SULEJA TS_T1_TS_MINNA ROAD Availability: 0"
+            - img [ref=e678]
+            - text: 5.80%
+          - generic [ref=e680]:
+            - text: "132KV SULEJA TS_T1_TS_NNPC Availability: null"
+            - img [ref=e682]
+            - text: 0%
+          - generic [ref=e684]:
+            - text: "FEEDER 11 TEST FOR CIM Availability: 0"
+            - img [ref=e686]
+            - text: 0%
+          - generic [ref=e688]:
+            - text: "132KV AJAOKUTA TS_33KV ADOGO FDR_PL_PL Availability: 11.5"
+            - img [ref=e690]
+            - text: 11.66%
+          - generic [ref=e692]:
+            - text: "132KV AJAOKUTA TS_33KV ANYIGBA FDR_PL_PL Availability: 0"
+            - img [ref=e694]
+            - text: 0%
+          - generic [ref=e696]:
+            - text: "132KV AJAOKUTA TS_33KV CONFLUENCE FDR_PL_PL Availability: 0"
+            - img [ref=e698]
+            - text: 0%
+          - generic [ref=e700]:
+            - text: "132KV AJAOKUTA TS_33KV STEEL PLANT FDR_PL_PL Availability: 9.5"
+            - img [ref=e702]
+            - text: 4.50%
+          - generic [ref=e704]:
+            - text: "132KV AKWANGA TS_33KV FDR 1 (AKWANGA FDR)_PL_PL Availability: 0"
+            - img [ref=e706]
+            - text: 0%
+          - generic [ref=e708]:
+            - text: "132KV AKWANGA TS_33KV FDR 1 (AKWANGA FDR)_PL_PL_2 Availability: 11.5"
+            - img [ref=e710]
+            - text: 7.00%
+          - generic [ref=e712]:
+            - text: "132KV AKWANGA TS_33KV FDR 2 (LAFIA)_PL_PL Availability: 0"
+            - img [ref=e714]
+            - text: 9.76%
+          - generic [ref=e716]:
+            - text: "132KV AKWANGA TS_33KV FDR 3(WATERBOARD)_PL_PL Availability: 11.5"
+            - img [ref=e718]
+            - text: 21.15%
+          - generic [ref=e720]:
+            - text: "132KV APO TS_33KV FDR H23_PL_PL Availability: 11.5"
+            - img [ref=e722]
+            - text: 6.75%
+          - generic [ref=e724]:
+            - text: "132KV APO TS_33KV FDR H1_PL_PL Availability: 10"
+            - img [ref=e726]
+            - text: 9.62%
+          - generic [ref=e728]:
+            - text: "132KV APO TS_33KV FDR H11_PL_PL Availability: 11.5"
+            - img [ref=e730]
+            - text: 6.71%
+          - generic [ref=e732]:
+            - text: "132KV APO TS_33KV FDR H13 (JICA)_PL_PL Availability: 0"
+            - img [ref=e734]
+            - text: 0%
+          - generic [ref=e736]:
+            - text: "132KV APO TS_33KV FDR H15_PL_PL Availability: 11.5"
+            - img [ref=e738]
+            - text: 5.09%
+          - generic [ref=e740]:
+            - text: "132KV APO TS_33KV FDR H2_PL_PL Availability: 11.5"
+            - img [ref=e742]
+            - text: 1.47%
+          - generic [ref=e744]:
+            - text: "132KV APO TS_33KV FDR H21_PL_PL Availability: 11.5"
+            - img [ref=e746]
+            - text: 1.17%
+          - generic [ref=e748]:
+            - text: "132KV APO TS_33KV FDR H3_PL_PL Availability: 11.5"
+            - img [ref=e750]
+            - text: 9.57%
+          - generic [ref=e752]:
+            - text: "132KV APO TS_33KV FDR H31_PL_PL Availability: 11.5"
+            - img [ref=e754]
+            - text: 7.02%
+          - generic [ref=e756]:
+            - text: "132KV APO TS_33KV FDR H33_PL_PL Availability: 2.5"
+            - img [ref=e758]
+            - text: 1.37%
+          - generic [ref=e760]:
+            - text: "132KV APO TS_33KV FDR H35_PL_PL Availability: 11.5"
+            - img [ref=e762]
+            - text: 13.18%
+          - generic [ref=e764]:
+            - text: "132KV APO TS_33KV FDR H37_PL_PL Availability: 0"
+            - img [ref=e766]
+            - text: 0%
+          - generic [ref=e768]:
+            - text: "132KV APO TS_33KV FDR H5_PL_PL Availability: 11.5"
+            - img [ref=e770]
+            - text: 9.02%
+          - generic [ref=e772]:
+            - text: "132KV APO TS_33KV FDR H7_PL_PL Availability: 0"
+            - img [ref=e774]
+            - text: 0%
+          - generic [ref=e776]:
+            - text: "132KV BIDA TS_33KV AGAIE FDR_PL_PL Availability: 0"
+            - img [ref=e778]
+            - text: 71.15%
+          - generic [ref=e780]:
+            - text: "132KV BIDA TS_33KV DOKO FDR_PL_PL Availability: 0"
+            - img [ref=e782]
+            - text: 5.88%
+          - generic [ref=e784]:
+            - text: "132KV BIDA TS_33KV KUTIGI FDR_PL_PL Availability: 0"
+            - img [ref=e786]
+            - text: 35.80%
+          - generic [ref=e788]:
+            - text: "132KV BIDA TS_33KV LEMU FDR_PL_PL Availability: 0"
+            - img [ref=e790]
+            - text: 3.14%
+          - generic [ref=e792]:
+            - text: "132KV BIDA TS_33KV NEW AGAIE FDR_PL_PL Availability: 0"
+            - img [ref=e794]
+            - text: 100%
+          - generic [ref=e796]:
+            - text: "132KV BIDA TS_T3_PL_PL Availability: 0"
+            - img [ref=e798]
+            - text: 0%
+          - generic [ref=e800]:
+            - text: "132KV BIDA TS_T4_PL_PL Availability: 0"
+            - img [ref=e802]
+            - text: 0%
+          - generic [ref=e804]:
+            - text: "132KV CENTRAL AREA TS_33KV FDR 2_PL_PL Availability: 11.5"
+            - img [ref=e806]
+            - text: 1.20%
+          - generic [ref=e808]:
+            - text: "132KV CENTRAL AREA TS_33KV FDR 3_PL_PL Availability: 11.5"
+            - img [ref=e810]
+            - text: 2.89%
+          - generic [ref=e812]:
+            - text: "132KV CENTRAL AREA TS_33KV FDR 4_PL_PL Availability: 11.5"
+            - img [ref=e814]
+            - text: 5.75%
+          - generic [ref=e816]:
+            - text: "132KV CENTRAL AREA TS_33KV FDR 5_PL_PL Availability: 11.5"
+            - img [ref=e818]
+            - text: 21.23%
+          - generic [ref=e820]:
+            - text: "132KV CENTRAL AREA TS_33KV FDR 6_PL_PL Availability: 11.5"
+            - img [ref=e822]
+            - text: 0%
+          - generic [ref=e824]:
+            - text: "132KV CENTRAL AREA TS_33KV FDR 8_PL_PL Availability: 11.5"
+            - img [ref=e826]
+            - text: 6.37%
+          - generic [ref=e828]:
+            - text: "132KV GIS DAWAKI FDR_33KV FDR D6_PL_PL Availability: 0"
+            - img [ref=e830]
+            - text: 38.82%
+          - generic [ref=e832]:
+            - text: "132KV GIS DAWAKI TS_33KV FDR D1_PL_PL Availability: 11.5"
+            - img [ref=e834]
+            - text: 4.16%
+          - generic [ref=e836]:
+            - text: "132KV GIS DAWAKI TS_33KV FDR D2_PL_PL Availability: 0"
+            - img [ref=e838]
+            - text: 100%
+          - generic [ref=e840]:
+            - text: "132KV GIS DAWAKI TS_33KV FDR D5_PL_PL Availability: 0"
+            - img [ref=e842]
+            - text: 0%
+          - generic [ref=e844]:
+            - text: "132KV GIS DAWAKI TS_33KV FDR D6_PL_PL Availability: 0"
+            - img [ref=e846]
+            - text: 0%
+          - generic [ref=e848]:
+            - text: "132KV GWAGWALADA TS_33KV FDR L31_PL_PL Availability: 11.5"
+            - img [ref=e850]
+            - text: 8.04%
+          - generic [ref=e852]:
+            - text: "132KV GWAGWALADA TS_33KV FDR L32_PL_PL Availability: 0"
+            - img [ref=e854]
+            - text: 10.17%
+          - generic [ref=e856]:
+            - text: "132KV GWAGWALADA TS_33KV FDR L34_PL_PL Availability: 0"
+            - img [ref=e858]
+            - text: 11.68%
+          - generic [ref=e860]:
+            - text: "132KV GWAGWALADA TS_33KV FDR L35_PL_PL Availability: 11.5"
+            - img [ref=e862]
+            - text: 31.46%
+          - generic [ref=e864]:
+            - text: "132KV GWAGWALADA TS_33KV FDR L36_PL_PL Availability: 0"
+            - img [ref=e866]
+            - text: 0%
+          - generic [ref=e868]:
+            - text: "132KV KARU TS_33KV FDR K1_PL_PL Availability: 10.5"
+            - img [ref=e870]
+            - text: 7.67%
+          - generic [ref=e872]:
+            - text: "132KV KARU TS_33KV FDR K2_PL_PL Availability: 8.5"
+            - img [ref=e874]
+            - text: 3.03%
+          - generic [ref=e876]:
+            - text: "132KV KARU TS_33KV FDR K3_PL_PL Availability: 0"
+            - img [ref=e878]
+            - text: 31.77%
+          - generic [ref=e880]:
+            - text: "132KV KARU TS_33KV FDR K4_PL_PL Availability: 5.5"
+            - img [ref=e882]
+            - text: 38.35%
+          - generic [ref=e884]:
+            - text: "132KV KARU TS_33KV FDR K5_PL_PL Availability: 5.5"
+            - img [ref=e886]
+            - text: 35.11%
+          - generic [ref=e888]:
+            - text: "132KV KARU TS_33KV FDR K6_PL_PL Availability: 6"
+            - img [ref=e890]
+            - text: 7.44%
+          - generic [ref=e892]:
+            - text: "132KV KATAMPE 1 TS_33KV 9MOBILE FDR_PL_PL Availability: 11.5"
+            - img [ref=e894]
+            - text: 0.96%
+          - generic [ref=e896]:
+            - text: "132KV KATAMPE 1 TS_33KV GWARINPA FDR_PL_PL Availability: 10.5"
+            - img [ref=e898]
+            - text: 4.50%
+          - generic [ref=e900]:
+            - text: "132KV KATAMPE 1 TS_33KV JABI FDR_PL_PL Availability: 0"
+            - img [ref=e902]
+            - text: 11.48%
+          - generic [ref=e904]:
+            - text: "132KV KATAMPE 1 TS_33KV LIFECAMP FDR_PL_PL Availability: 11.5"
+            - img [ref=e906]
+            - text: 8.05%
+          - generic [ref=e908]:
+            - text: "132KV KATAMPE 1 TS_33KV WUSE II FDR_PL_PL Availability: 0"
+            - img [ref=e910]
+            - text: 0%
+          - generic [ref=e912]:
+            - text: "132KV KATAMPE 2 TS_33KV JAHI FDR_PL_PL Availability: 0"
+            - img [ref=e914]
+            - text: 43.13%
+          - generic [ref=e916]:
+            - text: "132KV KATAMPE 2 TS_33KV MAITAMA FDR_PL_PL Availability: 0"
+            - img [ref=e918]
+            - text: 63.61%
+          - generic [ref=e920]:
+            - text: "132KV KATAMPE 2 TS_33KV MPAPE FDR_PL_PL Availability: 11.5"
+            - img [ref=e922]
+            - text: 21.32%
+          - generic [ref=e924]:
+            - text: "132KV KEFFI TS_33KV AVATAR FDR_PL_PL Availability: 0"
+            - img [ref=e926]
+            - text: 0%
+          - generic [ref=e928]:
+            - text: "132KV KEFFI TS_33KV GRA FDR_PL_PL Availability: 2.5"
+            - img [ref=e930]
+            - text: 8.84%
+          - generic [ref=e932]:
+            - text: "132KV KEFFI TS_33KV KEFFI FDR_PL_PL Availability: 11.5"
+            - img [ref=e934]
+            - text: 13.54%
+          - generic [ref=e936]:
+            - text: "132KV KEFFI TS_33KV NASARAWA FDR_PL_PL Availability: 8.5"
+            - img [ref=e938]
+            - text: 10.55%
+          - generic [ref=e940]:
+            - text: "132KV KEFFI TS_33KV SMART FDR_PL_PL Availability: 0"
+            - img [ref=e942]
+            - text: 0%
+          - generic [ref=e944]:
+            - text: "132KV KEFFI TS_33KV UKE/MASAKA FDR_PL_PL Availability: 4"
+            - img [ref=e946]
+            - text: 54.22%
+          - generic [ref=e948]:
+            - text: "132KV KONTAGORA TS_33KV ARMY BARRACKS FDR_PL_PL Availability: 11.5"
+            - img [ref=e950]
+            - text: 8.11%
+          - generic [ref=e952]:
+            - text: "132KV KONTAGORA TS_33KV MASUGA FDR_PL_PL Availability: 9"
+            - img [ref=e954]
+            - text: 3.81%
+          - generic [ref=e956]:
+            - text: "132KV KONTAGORA TS_33KV TOWN FDR_PL_PL Availability: 11.5"
+            - img [ref=e958]
+            - text: 2.89%
+          - generic [ref=e960]:
+            - text: "132KV KONTAGORA TS_33KV WATER WORKS FDR_PL_PL Availability: 5.5"
+            - img [ref=e962]
+            - text: 16.36%
+          - generic [ref=e964]:
+            - text: "132KV KUBWA TS_33KV BWARI FDR_PL_PL Availability: 11.5"
+            - img [ref=e966]
+            - text: 84.11%
+          - generic [ref=e968]:
+            - text: "132KV KUBWA TS_33KV DAM FDR_PL_PL Availability: 11.5"
+            - img [ref=e970]
+            - text: 2.76%
+          - generic [ref=e972]:
+            - text: "132KV KUBWA TS_33KV DAWAKI FDR_PL_PL Availability: 11.5"
+            - img [ref=e974]
+            - text: 2.57%
+          - generic [ref=e976]:
+            - text: "132KV KUBWA TS_33KV DEIDEI FDR_PL_PL Availability: 2.5"
+            - img [ref=e978]
+            - text: 1.04%
+          - generic [ref=e980]:
+            - text: "132KV KUBWA TS_33KV KUBWA FDR_PL_PL Availability: 0"
+            - img [ref=e982]
+            - text: 19.33%
+          - generic [ref=e984]:
+            - text: "132KV KUBWA TS_33KV NIPP FDR_PL_PL Availability: 11.5"
+            - img [ref=e986]
+            - text: 18.22%
+          - generic [ref=e988]:
+            - text: "132KV KUKWABA TS_33KV FDR L31_PL_PL Availability: 2.5"
+            - img [ref=e990]
+            - text: 11.11%
+          - generic [ref=e992]:
+            - text: "132KV KUKWABA TS_33KV FDR L32_PL_PL Availability: 10"
+            - img [ref=e994]
+            - text: 26.53%
+          - generic [ref=e996]:
+            - text: "132KV KUKWABA TS_33KV FDR L33_PL_PL Availability: 11.5"
+            - img [ref=e998]
+            - text: 8.69%
+          - generic [ref=e1000]:
+            - text: "132KV KUKWABA TS_33KV FDR L34_PL_PL Availability: 11.5"
+            - img [ref=e1002]
+            - text: 11.78%
+          - generic [ref=e1004]:
+            - text: "132KV KUKWABA TS_33KV FDR L35_PL_PL Availability: 11"
+            - img [ref=e1006]
+            - text: 2.23%
+          - generic [ref=e1008]:
+            - text: "132KV KUKWABA TS_33KV FDR L36_PL_PL Availability: 0"
+            - img [ref=e1010]
+            - text: 20.95%
+          - generic [ref=e1012]:
+            - text: "132KV LOKOJA T/S_33KV FDR 1_KOTO_GEGU_PL_PL Availability: 0"
+            - img [ref=e1014]
+            - text: 0%
+          - generic [ref=e1016]:
+            - text: "132KV LOKOJA TS_33KV FDR 1_PL_PL Availability: 2"
+            - img [ref=e1018]
+            - text: 1.42%
+          - generic [ref=e1020]:
+            - text: "132KV LOKOJA TS_33KV FDR 2_PL_PL Availability: 11.5"
+            - img [ref=e1022]
+            - text: 40.33%
+          - generic [ref=e1024]:
+            - text: "132KV LOKOJA TS_33KV FDR 3 CBN_PL_PL Availability: 7"
+            - img [ref=e1026]
+            - text: 14.29%
+          - generic [ref=e1028]:
+            - text: "132KV MINNA TS_33KV BIRGI FDR_PL_PL_HIGH POINT Availability: 0"
+            - img [ref=e1030]
+            - text: 0%
+          - generic [ref=e1032]:
+            - text: "132KV MINNA TS_33KV BIRIGI FDR_PL_PL Availability: 4"
+            - img [ref=e1034]
+            - text: 19.33%
+          - generic [ref=e1036]:
+            - text: "132KV MINNA TS_33KV FUT FDR_PL_PL Availability: 11.5"
+            - img [ref=e1038]
+            - text: 0.39%
+          - generic [ref=e1040]:
+            - text: "132KV MINNA TS_33KV KATAREGI FDR_PL_PL Availability: 0"
+            - img [ref=e1042]
+            - text: 5.59%
+          - generic [ref=e1044]:
+            - text: "132KV MINNA TS_33KV LAPAI FDR_PL_PL Availability: 2"
+            - img [ref=e1046]
+            - text: 2.33%
+          - generic [ref=e1048]:
+            - text: "132KV MINNA TS_33KV MAIKUNKELE FDR_PL_PL Availability: 0"
+            - img [ref=e1050]
+            - text: 0%
+          - generic [ref=e1052]:
+            - text: "132KV MINNA TS_33KV NNPC FDR_PL_PL Availability: 11.5"
+            - img [ref=e1054]
+            - text: 7.67%
+          - generic [ref=e1056]:
+            - text: "132KV MINNA TS_33KV POWER HOUSE FDR_PL_PL Availability: 0"
+            - img [ref=e1058]
+            - text: 0%
+          - generic [ref=e1060]:
+            - text: "132KV MINNA TS_33KV T4_PL_PL Availability: 0"
+            - img [ref=e1062]
+            - text: 0%
+          - generic [ref=e1064]:
+            - text: "132KV MINNA TS_33KV ZARUMAI FDR_PL_PL Availability: 11.5"
+            - img [ref=e1066]
+            - text: 7.48%
+          - generic [ref=e1068]:
+            - text: "132KV OKENE TS_33KV IKARE FDR_PL_PL Availability: 3"
+            - img [ref=e1070]
+            - text: 25.96%
+          - generic [ref=e1072]:
+            - text: "132KV OKENE TS_33KV ISANLU FDR_PL_PL Availability: 1.5"
+            - img [ref=e1074]
+            - text: 10.19%
+          - generic [ref=e1076]:
+            - text: "132KV OKENE TS_33KV OKENE 2 FDR_PL_PL Availability: 0.5"
+            - img [ref=e1078]
+            - text: 23.28%
+          - generic [ref=e1080]:
+            - text: "132KV OKENE TS_33KV OKENE FDR_PL_PL Availability: 0"
+            - img [ref=e1082]
+            - text: 100%
+          - generic [ref=e1084]:
+            - text: "132KV OKENE TS_33KV OSOSO FDR_PL_PL Availability: 2.5"
+            - img [ref=e1086]
+            - text: 13.31%
+          - generic [ref=e1088]:
+            - text: "132KV SHIRORO TS_33KV ERENA FDR_PL_PL Availability: 0"
+            - img [ref=e1090]
+            - text: 0%
+          - generic [ref=e1092]:
+            - text: "132KV SHIRORO TS_33KV GWADA FDR_PL_PL Availability: 1.5"
+            - img [ref=e1094]
+            - text: 29.26%
+          - generic [ref=e1096]:
+            - text: "132KV SULEJA T/S_T1_PL_PL Availability: 0"
+            - img [ref=e1098]
+            - text: 0%
+          - generic [ref=e1100]:
+            - text: "132KV SULEJA TS_33KV ABUJA STEEL FDR_PL_PL Availability: 0"
+            - img [ref=e1102]
+            - text: 50.87%
+          - generic [ref=e1104]:
+            - text: "132KV SULEJA TS_33KV FIELDBASE FDR_PL_PL Availability: 0"
+            - img [ref=e1106]
+            - text: 51.88%
+          - generic [ref=e1108]:
+            - text: "132KV SULEJA TS_33KV GOODA_PLUSTECH FDR_PL_PL Availability: 0"
+            - img [ref=e1110]
+            - text: 0%
+          - generic [ref=e1112]:
+            - text: "132KV SULEJA TS_33KV INDUSTRIAL FDR_PL_PL Availability: 11.5"
+            - img [ref=e1114]
+            - text: 30.93%
+          - generic [ref=e1116]:
+            - text: "132KV SULEJA TS_33KV JERE FDR_PL_PL Availability: 0"
+            - img [ref=e1118]
+            - text: 37.09%
+          - generic [ref=e1120]:
+            - text: "132KV SULEJA TS_33KV JIWA FDR_PL_PL Availability: 11.5"
+            - img [ref=e1122]
+            - text: 43.10%
+          - generic [ref=e1124]:
+            - text: "132KV SULEJA TS_33KV SULEJA FDR_PL_PL Availability: 11.5"
+            - img [ref=e1126]
+            - text: 3.75%
+          - generic [ref=e1128]:
+            - text: "132KV TEGINA TS_33KV KAGARA FDR_PL_PL Availability: 10.5"
+            - img [ref=e1130]
+            - text: 20.05%
+          - generic [ref=e1132]:
+            - text: "132KV TEGINA TS_33KV MARIGA FDR_PL_PL Availability: 11.5"
+            - img [ref=e1134]
+            - text: 0.81%
+          - generic [ref=e1136]:
+            - text: "132KV_SULEJA(132KV)_PL_PL Availability: 0"
+            - img [ref=e1138]
+            - text: 0%
+          - generic [ref=e1140]:
+            - text: "330KV AJAOKUTA TS_132KV AJAOKUTA TS_132KV ITAKPE IRON ORE MINING COMPANY_PL_PL Availability: 0"
+            - img [ref=e1142]
+            - text: 0%
+          - generic [ref=e1144]:
+            - text: "33OKV APIR-LAFIA LINE 1&2_132KV LAFIA TS_33KV FDR A1_PL_PL Availability: 11.5"
+            - img [ref=e1146]
+            - text: 9.57%
+          - generic [ref=e1148]:
+            - text: "33OKV APIR-LAFIA LINE 1&2_132KV LAFIA TS_33KV FDR A2_PL_PL Availability: 1"
+            - img [ref=e1150]
+            - text: 9.43%
+          - generic [ref=e1152]:
+            - text: "33OKV APIR-LAFIA LINE 1&2_132KV LAFIA TS_33KV FDR A5_PL_PL Availability: 3.5"
+            - img [ref=e1154]
+            - text: 24.65%
+          - generic [ref=e1156]:
+            - text: "F33KV-DUP II Availability: 0"
+            - img [ref=e1158]
+            - text: 0%
+          - generic [ref=e1160]:
+            - text: "FEEDER 33 QA Availability: 0"
+            - img [ref=e1162]
+            - text: 0%
+          - generic [ref=e1164]:
+            - text: "FEEDER 33 TEST FOR CIM Availability: 0"
+            - img [ref=e1166]
+            - text: 0%
+          - generic [ref=e1168]:
+            - text: "MSN DUPLICATE INSTANCE 1 Availability: 0"
+            - img [ref=e1170]
+            - text: 0%
+          - generic [ref=e1172]:
+            - text: "NEW MSN INST II Availability: 0"
+            - img [ref=e1174]
+            - text: 0%
+          - generic [ref=e1176]:
+            - text: "132KV APO TS_33KV FDR H35_7.5MVA_RESETTLEMENT_2 Availability: null"
+            - img [ref=e1178]
+            - text: 0%
+          - generic [ref=e1180]:
+            - text: "132KV BIDA TS_T3_BIDA_ARMY BARRACK Availability: 0"
+            - img [ref=e1182]
+            - text: 71.46%
+          - generic [ref=e1184]:
+            - text: "132KV BIDA TS_T3_BIDA_FD4 Availability: 0"
+            - img [ref=e1186]
+            - text: 20.01%
+          - generic [ref=e1188]:
+            - text: "132KV BIDA TS_T3_BIDA_TOWN FDR Availability: 0"
+            - img [ref=e1190]
+            - text: 8.55%
+          - generic [ref=e1192]:
+            - text: "132KV BIDA TS_T4_BIDA_GRA FDR Availability: 0"
+            - img [ref=e1194]
+            - text: 16.31%
+          - generic [ref=e1196]:
+            - text: "132KV MINNA TS_T4_TS_PARLIAMENTARY Availability: 11.5"
+            - img [ref=e1198]
+            - text: 55.91%
+          - generic [ref=e1200]:
+            - text: "132KV MINNA TS_T4_TS_SHIRORO Availability: 0"
+            - img [ref=e1202]
+            - text: 5.33%
+          - generic [ref=e1204]:
+            - text: "132KV SULEJA TS_T1_TS_DIKKO Availability: 0"
+            - img [ref=e1206]
+            - text: 54.18%
+          - generic [ref=e1208]:
+            - text: "132KV SULEJA TS_T1_TS_GAURAKA Availability: 7"
+            - img [ref=e1210]
+            - text: 46.66%
+          - generic [ref=e1212]:
+            - text: "132KV SULEJA TS_T1_TS_MINNA ROAD Availability: 0"
+            - img [ref=e1214]
+            - text: 5.80%
+          - generic [ref=e1216]:
+            - text: "132KV SULEJA TS_T1_TS_NNPC Availability: null"
+            - img [ref=e1218]
+            - text: 0%
+          - generic [ref=e1220]:
+            - text: "FEEDER 11 TEST FOR CIM Availability: 0"
+            - img [ref=e1222]
+            - text: 0%
+        - generic [ref=e1224]:
+          - generic [ref=e1226]:
+            - generic [ref=e1228]: Quick Navigation
+            - list [ref=e1230]:
+              - listitem [ref=e1231] [cursor=pointer]: Overview
+              - listitem [ref=e1232] [cursor=pointer]: Energy Attribution
+              - listitem [ref=e1233] [cursor=pointer]: Communication
+              - listitem [ref=e1234] [cursor=pointer]: Communication By Bands
+              - listitem [ref=e1235] [cursor=pointer]: Asset Compliance
+              - listitem [ref=e1236] [cursor=pointer]: Outage Duration
+              - listitem [ref=e1237] [cursor=pointer]: Outage Request
+              - listitem [ref=e1238] [cursor=pointer]: Outage Requests & Rev.
+              - listitem [ref=e1239] [cursor=pointer]: Energy Distribution
+              - listitem [ref=e1240] [cursor=pointer]: Asset Distribution
+              - listitem [ref=e1241] [cursor=pointer]: Load Analysis
+          - generic [ref=e1242]:
+            - generic [ref=e1243]:
+              - generic [ref=e1244]:
+                - generic [ref=e1245]: Prepaid Analysis
+                - generic [ref=e1246]:
+                  - generic [ref=e1247]: Filter by CBO
+                  - combobox [ref=e1249] [cursor=pointer]:
+                    - option "All" [selected]
+                    - option "Unassigned"
+                    - option /
+                    - option "CBO-APO"
+                    - option "CBO-GARKI"
+                    - option "CBO-KOGI"
+                    - option "CBO-NASARAWA"
+                    - option "CBO-NIGER"
+                    - option "CBO-WUSE"
+                    - option "DUMMYREGION"
+                    - option "FCT CENTRAL"
+                    - option "FCT EAST"
+                    - option "FCT NORTH"
+                    - option "FCT NORTH/WEST"
+                    - option "FCT SOUTH EAST"
+                    - option "FCT SOUTH EAST/CENTRAL"
+                    - option "FCT SOUTH SOUTH"
+                    - option "FCT WEST"
+                    - option "HQ REGION"
+                    - option "JAYDEE"
+                    - option "KOGI"
+                    - option "NASARAWA"
+                    - option "NIGER"
+              - generic [ref=e1250]:
+                - generic [ref=e1253]:
+                  - generic [ref=e1254]:
+                    - generic [ref=e1255]:
+                      - text: MTD Offtake
+                      - img [ref=e1257]
+                    - generic [ref=e1259]: 35,066.4 MWh
+                  - generic [ref=e1261]:
+                    - generic [ref=e1262]:
+                      - generic [ref=e1263]: Exp. Revenue
+                      - generic [ref=e1266]: N/A
+                    - generic [ref=e1267]:
+                      - generic [ref=e1268]: Trend this month
+                      - generic [ref=e1271]:
+                        - text: "-2.677 %"
+                        - img [ref=e1273]
+                - generic [ref=e1279]:
+                  - generic [ref=e1280]:
+                    - generic [ref=e1281]:
+                      - text: Vended Energy
+                      - img [ref=e1283]
+                    - generic [ref=e1285]: 16,905.783 MWh
+                  - generic [ref=e1287]:
+                    - generic [ref=e1288]:
+                      - generic [ref=e1289]: Exp. Revenue
+                      - generic [ref=e1292]: N/A
+                    - generic [ref=e1293]:
+                      - generic [ref=e1294]: Percentage Offtake
+                      - generic [ref=e1297]:
+                        - text: 48.211 %
+                        - img [ref=e1299]
+                    - generic [ref=e1301]:
+                      - generic [ref=e1302]: Trend this month
+                      - generic [ref=e1305]:
+                        - text: 16.635 %
+                        - img [ref=e1307]
+                - generic [ref=e1313]:
+                  - generic [ref=e1314]:
+                    - generic [ref=e1315]:
+                      - text: Vended Collection
+                      - img [ref=e1317]
+                    - generic [ref=e1319]: 2,455,332,436.204 NGN
+                  - generic [ref=e1322]:
+                    - generic [ref=e1323]: Trend this month
+                    - generic [ref=e1326]:
+                      - text: 15.508 %
+                      - img [ref=e1328]
+                - generic [ref=e1334]:
+                  - generic [ref=e1335]:
+                    - generic [ref=e1336]:
+                      - text: Energy Shortfall
+                      - img [ref=e1338]
+                    - generic [ref=e1340]: 18,160.617 MWh
+                  - generic [ref=e1342]:
+                    - generic [ref=e1343]:
+                      - generic [ref=e1344]: Exp. Revenue
+                      - generic [ref=e1347]: N/A
+                    - generic [ref=e1348]:
+                      - generic [ref=e1349]: Shortfall this month
+                      - generic [ref=e1352]:
+                        - text: "-15.675 %"
+                        - img [ref=e1354]
+              - generic [ref=e1358]:
+                - generic [ref=e1359]: Postpaid Analysis
+                - generic [ref=e1360]:
+                  - generic [ref=e1361]: Filter by CBO
+                  - combobox [ref=e1363] [cursor=pointer]:
+                    - option "All" [selected]
+                    - option "Unassigned"
+                    - option /
+                    - option "CBO-APO"
+                    - option "CBO-GARKI"
+                    - option "CBO-KOGI"
+                    - option "CBO-NASARAWA"
+                    - option "CBO-NIGER"
+                    - option "CBO-WUSE"
+                    - option "DUMMYREGION"
+                    - option "FCT CENTRAL"
+                    - option "FCT EAST"
+                    - option "FCT NORTH"
+                    - option "FCT NORTH/WEST"
+                    - option "FCT SOUTH EAST"
+                    - option "FCT SOUTH EAST/CENTRAL"
+                    - option "FCT SOUTH SOUTH"
+                    - option "FCT WEST"
+                    - option "HQ REGION"
+                    - option "JAYDEE"
+                    - option "KOGI"
+                    - option "NASARAWA"
+                    - option "NIGER"
+              - generic [ref=e1364]:
+                - generic [ref=e1367]:
+                  - generic [ref=e1368]:
+                    - generic [ref=e1369]:
+                      - text: Energy Shortfall
+                      - img [ref=e1371]
+                    - generic [ref=e1373]: 18,160.617 MWh
+                  - generic [ref=e1375]:
+                    - generic [ref=e1376]:
+                      - generic [ref=e1377]: Rev. Shortfall
+                      - generic [ref=e1380]: N/A
+                    - generic [ref=e1381]:
+                      - generic [ref=e1382]: Shortfall this month
+                      - generic [ref=e1385]:
+                        - text: "-15.675 %"
+                        - img [ref=e1387]
+                - generic [ref=e1393]:
+                  - generic [ref=e1394]:
+                    - generic [ref=e1395]:
+                      - text: Total Billed Energy
+                      - img [ref=e1397]
+                    - generic [ref=e1399]: 0 MWh
+                  - generic [ref=e1401]:
+                    - generic [ref=e1402]:
+                      - generic [ref=e1403]: Total Customers Billed
+                      - generic [ref=e1406]: "0"
+                    - generic [ref=e1407]:
+                      - generic [ref=e1408]: Total Amount Billed
+                      - generic [ref=e1411]: N/A
+                    - generic [ref=e1412]:
+                      - generic [ref=e1413]: Average Consumption
+                      - generic [ref=e1416]: N/A
+                - generic [ref=e1421]:
+                  - generic [ref=e1422]:
+                    - generic [ref=e1423]:
+                      - text: TotalPayment Collection
+                      - img [ref=e1425]
+                    - generic [ref=e1427]: 0 NGN
+                  - generic [ref=e1429]:
+                    - generic [ref=e1430]:
+                      - generic [ref=e1431]: Total Unique Customers
+                      - generic [ref=e1434]: "0"
+                    - generic [ref=e1435]:
+                      - generic [ref=e1436]: Average Customer Payments
+                      - generic [ref=e1439]: 0 NGN
+                - generic [ref=e1444]:
+                  - generic [ref=e1445]:
+                    - generic [ref=e1446]:
+                      - text: ATC&C
+                      - img [ref=e1448]
+                    - generic [ref=e1450]: 59.772 %
+                  - generic [ref=e1453]:
+                    - generic [ref=e1454]: Trend this month
+                    - generic [ref=e1457]:
+                      - text: 0 %
+                      - img [ref=e1459]
+              - generic [ref=e1463]:
+                - generic [ref=e1465]: Energy Attribution by Bands
+                - generic [ref=e1466]:
+                  - generic [ref=e1468]:
+                    - generic [ref=e1469]: Total
+                    - generic [ref=e1470]: 34,506 MWh
+                  - generic [ref=e1473]:
+                    - generic [ref=e1475]:
+                      - generic [ref=e1476]: Band A
+                      - generic [ref=e1478]:
+                        - generic [ref=e1479]:
+                          - generic [ref=e1480]: 18,533.14 MWh
+                          - generic [ref=e1481]: 53.70 %
+                        - generic [ref=e1482]:
+                          - generic [ref=e1483]: VAR
+                          - generic [ref=e1484]:
+                            - generic [ref=e1485]: 114,706.50 MWh
+                            - generic [ref=e1486]: 52.00 %
+                    - generic [ref=e1488]:
+                      - generic [ref=e1489]: Band B
+                      - generic [ref=e1491]:
+                        - generic [ref=e1492]:
+                          - generic [ref=e1493]: 11,534.04 MWh
+                          - generic [ref=e1494]: 33.42 %
+                        - generic [ref=e1495]:
+                          - generic [ref=e1496]: VAR
+                          - generic [ref=e1497]:
+                            - generic [ref=e1498]: 73,117.56 MWh
+                            - generic [ref=e1499]: 33.15 %
+                    - generic [ref=e1501]:
+                      - generic [ref=e1502]: Band C
+                      - generic [ref=e1504]:
+                        - generic [ref=e1505]:
+                          - generic [ref=e1506]: 2,326.90 MWh
+                          - generic [ref=e1507]: 6.74 %
+                        - generic [ref=e1508]:
+                          - generic [ref=e1509]: VAR
+                          - generic [ref=e1510]:
+                            - generic [ref=e1511]: 14,391.14 MWh
+                            - generic [ref=e1512]: 6.52 %
+                    - generic [ref=e1514]:
+                      - generic [ref=e1515]: Band D
+                      - generic [ref=e1517]:
+                        - generic [ref=e1518]:
+                          - generic [ref=e1519]: 2,111.92 MWh
+                          - generic [ref=e1520]: 6.12 %
+                        - generic [ref=e1521]:
+                          - generic [ref=e1522]: VAR
+                          - generic [ref=e1523]:
+                            - generic [ref=e1524]: 18,332.50 MWh
+                            - generic [ref=e1525]: 8.31 %
+                    - generic [ref=e1527]:
+                      - generic [ref=e1528]: Band E
+                      - generic [ref=e1530]:
+                        - generic [ref=e1531]:
+                          - generic [ref=e1532]: 0 MWh
+                          - generic [ref=e1533]: 0 %
+                        - generic [ref=e1534]:
+                          - generic [ref=e1535]: VAR
+                          - generic [ref=e1536]:
+                            - generic [ref=e1537]: 0 MWh
+                            - generic [ref=e1538]: 0 %
+                    - generic [ref=e1540]:
+                      - generic [ref=e1541]: Unassigned
+                      - generic [ref=e1542]:
+                        - generic [ref=e1543]:
+                          - generic [ref=e1544]: 0 MWh
+                          - generic [ref=e1545]: 0 %
+                        - generic [ref=e1546]:
+                          - generic [ref=e1547]: VAR
+                          - generic [ref=e1548]:
+                            - generic [ref=e1549]: 0 MWh
+                            - generic [ref=e1550]: 0 %
+              - generic [ref=e1551]:
+                - generic [ref=e1553]: Asset Communicating and Non-communicating Analysis
+                - generic [ref=e1554]:
+                  - generic [ref=e1556]:
+                    - generic [ref=e1557]:
+                      - generic [ref=e1558]: 33KV Feeders
+                      - generic [ref=e1559]: "122"
+                    - generic [ref=e1560]:
+                      - generic [ref=e1561]:
+                        - generic [ref=e1562]: Communicating
+                        - generic [ref=e1563]: "84"
+                      - generic [ref=e1564] [cursor=pointer]:
+                        - generic [ref=e1565]: Non Communicating
+                        - generic [ref=e1566]: "38"
+                  - generic [ref=e1568]:
+                    - generic [ref=e1569]:
+                      - generic [ref=e1570]: 11KV Feeders
+                      - generic [ref=e1571]: "401"
+                    - generic [ref=e1572]:
+                      - generic [ref=e1573]:
+                        - generic [ref=e1574]: Communicating
+                        - generic [ref=e1575]: "276"
+                      - generic [ref=e1576] [cursor=pointer]:
+                        - generic [ref=e1577]: Non Communicating
+                        - generic [ref=e1578]: "125"
+                  - generic [ref=e1580]:
+                    - generic [ref=e1581]:
+                      - generic [ref=e1582]: Distribution Transformers
+                      - generic [ref=e1583]: "16758"
+                    - generic [ref=e1584]:
+                      - generic [ref=e1586]:
+                        - generic [ref=e1587]:
+                          - generic [ref=e1588]: 33Kv DTs
+                          - generic [ref=e1589]: "9002"
+                        - generic [ref=e1590]:
+                          - generic [ref=e1591]: 11Kv DTs
+                          - generic [ref=e1592]: "7753"
+                      - generic [ref=e1593]:
+                        - generic [ref=e1594]:
+                          - generic [ref=e1595]: Communicating
+                          - generic [ref=e1596]: "162"
+                        - generic [ref=e1597] [cursor=pointer]:
+                          - generic [ref=e1598]: Non Communicating
+                          - generic [ref=e1599]: "16596"
+              - generic [ref=e1600]:
+                - generic [ref=e1602]: Communicating and Non-communicating by Bands
+                - generic [ref=e1603]:
+                  - generic [ref=e1605]:
+                    - generic [ref=e1606]:
+                      - generic [ref=e1607]: 33KV Feeders
+                      - generic [ref=e1608]: "122"
+                    - generic [ref=e1609]:
+                      - generic [ref=e1610]:
+                        - generic [ref=e1611]: Communicating
+                        - generic [ref=e1612]: "84"
+                      - generic [ref=e1613]:
+                        - generic [ref=e1616]:
+                          - generic [ref=e1617]: Band A
+                          - generic [ref=e1618]: 4654.76%
+                        - generic [ref=e1621]:
+                          - generic [ref=e1622]: Band B
+                          - generic [ref=e1623]: 2630.95%
+                        - generic [ref=e1626]:
+                          - generic [ref=e1627]: Band C
+                          - generic [ref=e1628]: 67.14%
+                        - generic [ref=e1631]:
+                          - generic [ref=e1632]: Band D
+                          - generic [ref=e1633]: 55.95%
+                        - generic [ref=e1636]:
+                          - generic [ref=e1637]: Band E
+                          - generic [ref=e1638]: 11.19%
+                    - generic [ref=e1639]:
+                      - generic [ref=e1640]:
+                        - generic [ref=e1641]: Non Communicating
+                        - generic [ref=e1642]: "38"
+                      - generic [ref=e1643]:
+                        - generic [ref=e1646]:
+                          - generic [ref=e1647]: Band A
+                          - generic [ref=e1648]: 1539.47%
+                        - generic [ref=e1651]:
+                          - generic [ref=e1652]: Band B
+                          - generic [ref=e1653]: 25.26%
+                        - generic [ref=e1656]:
+                          - generic [ref=e1657]: Band C
+                          - generic [ref=e1658]: 25.26%
+                        - generic [ref=e1661]:
+                          - generic [ref=e1662]: Band D
+                          - generic [ref=e1663]: 615.79%
+                        - generic [ref=e1666]:
+                          - generic [ref=e1667]: Band E
+                          - generic [ref=e1668]: 00.00%
+                  - generic [ref=e1670]:
+                    - generic [ref=e1671]:
+                      - generic [ref=e1672]: 11KV Feeders
+                      - generic [ref=e1673]: "401"
+                    - generic [ref=e1674]:
+                      - generic [ref=e1675]:
+                        - generic [ref=e1676]: Communicating
+                        - generic [ref=e1677]: "276"
+                      - generic [ref=e1678]:
+                        - generic [ref=e1681]:
+                          - generic [ref=e1682]: Band A
+                          - generic [ref=e1683]: 15556.16%
+                        - generic [ref=e1686]:
+                          - generic [ref=e1687]: Band B
+                          - generic [ref=e1688]: 6925.00%
+                        - generic [ref=e1691]:
+                          - generic [ref=e1692]: Band C
+                          - generic [ref=e1693]: 279.78%
+                        - generic [ref=e1696]:
+                          - generic [ref=e1697]: Band D
+                          - generic [ref=e1698]: 238.33%
+                        - generic [ref=e1701]:
+                          - generic [ref=e1702]: Band E
+                          - generic [ref=e1703]: 00.00%
+                    - generic [ref=e1704]:
+                      - generic [ref=e1705]:
+                        - generic [ref=e1706]: Non Communicating
+                        - generic [ref=e1707]: "125"
+                      - generic [ref=e1708]:
+                        - generic [ref=e1711]:
+                          - generic [ref=e1712]: Band A
+                          - generic [ref=e1713]: 1915.20%
+                        - generic [ref=e1716]:
+                          - generic [ref=e1717]: Band B
+                          - generic [ref=e1718]: 1411.20%
+                        - generic [ref=e1721]:
+                          - generic [ref=e1722]: Band C
+                          - generic [ref=e1723]: 86.40%
+                        - generic [ref=e1726]:
+                          - generic [ref=e1727]: Band D
+                          - generic [ref=e1728]: 2217.60%
+                        - generic [ref=e1731]:
+                          - generic [ref=e1732]: Band E
+                          - generic [ref=e1733]: 00.00%
+                  - generic [ref=e1735]:
+                    - generic [ref=e1736]:
+                      - generic [ref=e1737]: Distribution Transformers
+                      - generic [ref=e1738]: "16758"
+                    - generic [ref=e1739]:
+                      - generic [ref=e1740]:
+                        - generic [ref=e1741]: Communicating
+                        - generic [ref=e1742]: "162"
+                      - generic [ref=e1743]:
+                        - generic [ref=e1746]:
+                          - generic [ref=e1747]: Band A
+                          - generic [ref=e1748]: 00.00%
+                        - generic [ref=e1751]:
+                          - generic [ref=e1752]: Band B
+                          - generic [ref=e1753]: 10.62%
+                        - generic [ref=e1756]:
+                          - generic [ref=e1757]: Band C
+                          - generic [ref=e1758]: 00.00%
+                        - generic [ref=e1761]:
+                          - generic [ref=e1762]: Band D
+                          - generic [ref=e1763]: 00.00%
+                        - generic [ref=e1766]:
+                          - generic [ref=e1767]: Band E
+                          - generic [ref=e1768]: 00.00%
+                    - generic [ref=e1769]:
+                      - generic [ref=e1770]:
+                        - generic [ref=e1771]: Non Communicating
+                        - generic [ref=e1772]: "16596"
+                      - generic [ref=e1773]:
+                        - generic [ref=e1776]:
+                          - generic [ref=e1777]: Band A
+                          - generic [ref=e1778]: 140.08%
+                        - generic [ref=e1781]:
+                          - generic [ref=e1782]: Band B
+                          - generic [ref=e1783]: 30.02%
+                        - generic [ref=e1786]:
+                          - generic [ref=e1787]: Band C
+                          - generic [ref=e1788]: 50.03%
+                        - generic [ref=e1791]:
+                          - generic [ref=e1792]: Band D
+                          - generic [ref=e1793]: 10.01%
+                        - generic [ref=e1796]:
+                          - generic [ref=e1797]: Band E
+                          - generic [ref=e1798]: 20.01%
+              - generic [ref=e1799]:
+                - generic [ref=e1801]: Asset Compliance and Non-compliance Analysis
+                - generic [ref=e1803]:
+                  - generic [ref=e1804]: Compliant
+                  - generic [ref=e1805]: Non-Compliant
+                - generic [ref=e1806]:
+                  - generic [ref=e1808]:
+                    - generic [ref=e1809]:
+                      - generic [ref=e1810]: 33KV Feeders
+                      - generic [ref=e1811]: "43"
+                    - generic [ref=e1812]:
+                      - generic [ref=e1814]:
+                        - generic [ref=e1815]: Band A
+                        - generic [ref=e1816]: "27"
+                      - generic [ref=e1818]:
+                        - generic [ref=e1819]: Band B
+                        - generic [ref=e1820]: "11"
+                      - generic [ref=e1822]:
+                        - generic [ref=e1823]: Band C
+                        - generic [ref=e1824]: "1"
+                      - generic [ref=e1826]:
+                        - generic [ref=e1827]: Band D
+                        - generic [ref=e1828]: "3"
+                      - generic [ref=e1830]:
+                        - generic [ref=e1831]: Band E
+                        - generic [ref=e1832]: "1"
+                  - generic [ref=e1834]:
+                    - generic [ref=e1835]:
+                      - generic [ref=e1836]: 11KV Feeders
+                      - generic [ref=e1837]: "83"
+                    - generic [ref=e1838]:
+                      - generic [ref=e1840]:
+                        - generic [ref=e1841]: Band A
+                        - generic [ref=e1842]: "55"
+                      - generic [ref=e1844]:
+                        - generic [ref=e1845]: Band B
+                        - generic [ref=e1846]: "27"
+                      - generic [ref=e1848]:
+                        - generic [ref=e1849]: Band C
+                        - generic [ref=e1850]: "0"
+                      - generic [ref=e1852]:
+                        - generic [ref=e1853]: Band D
+                        - generic [ref=e1854]: "1"
+                      - generic [ref=e1856]:
+                        - generic [ref=e1857]: Band E
+                        - generic [ref=e1858]: "0"
+                  - generic [ref=e1860]:
+                    - generic [ref=e1861]:
+                      - generic [ref=e1862]: Distribution Transformers
+                      - generic [ref=e1863]: "2"
+                    - generic [ref=e1864]:
+                      - generic [ref=e1866]:
+                        - generic [ref=e1867]: Band A
+                        - generic [ref=e1868]: "0"
+                      - generic [ref=e1870]:
+                        - generic [ref=e1871]: Band B
+                        - generic [ref=e1872]: "0"
+                      - generic [ref=e1874]:
+                        - generic [ref=e1875]: Band C
+                        - generic [ref=e1876]: "0"
+                      - generic [ref=e1878]:
+                        - generic [ref=e1879]: Band D
+                        - generic [ref=e1880]: "0"
+                      - generic [ref=e1882]:
+                        - generic [ref=e1883]: Band E
+                        - generic [ref=e1884]: "2"
+            - generic [ref=e1885]:
+              - generic [ref=e1886]:
+                - generic [ref=e1887]: Outage Duration
+                - generic [ref=e1888]:
+                  - generic [ref=e1889] [cursor=pointer]: By CBO
+                  - generic [ref=e1890] [cursor=pointer]: By Band
+              - generic [ref=e1895]:
+                - generic [ref=e1896]:
+                  - generic [ref=e1897]: Total
+                  - generic [ref=e1898]: 2,814.00 HRS
+                - generic [ref=e1901]:
+                  - generic [ref=e1902]:
+                    - generic [ref=e1903]: CBO-APO
+                    - generic [ref=e1905]:
+                      - generic [ref=e1906]: 519.50 HRS
+                      - generic [ref=e1907]: 18.5%
+                  - generic [ref=e1908]:
+                    - generic [ref=e1909]: CBO-NASARAWA
+                    - generic [ref=e1911]:
+                      - generic [ref=e1912]: 353.50 HRS
+                      - generic [ref=e1913]: 12.6%
+                  - generic [ref=e1914]:
+                    - generic [ref=e1915]: CBO-GARKI
+                    - generic [ref=e1917]:
+                      - generic [ref=e1918]: 437.00 HRS
+                      - generic [ref=e1919]: 15.5%
+                  - generic [ref=e1920]:
+                    - generic [ref=e1921]: CBO-KOGI
+                    - generic [ref=e1923]:
+                      - generic [ref=e1924]: 373.50 HRS
+                      - generic [ref=e1925]: 13.3%
+                  - generic [ref=e1926]:
+                    - generic [ref=e1927]: CBO-WUSE
+                    - generic [ref=e1929]:
+                      - generic [ref=e1930]: 514.00 HRS
+                      - generic [ref=e1931]: 18.3%
+                  - generic [ref=e1932]:
+                    - generic [ref=e1933]: CBO-NIGER
+                    - generic [ref=e1935]:
+                      - generic [ref=e1936]: 611.00 HRS
+                      - generic [ref=e1937]: 21.7%
+                  - generic [ref=e1938]:
+                    - generic [ref=e1939]: FCT CENTRAL
+                    - generic [ref=e1941]:
+                      - generic [ref=e1942]: 5.50 HRS
+                      - generic [ref=e1943]: 0.2%
+            - generic [ref=e1944]:
+              - generic [ref=e1945]:
+                - generic [ref=e1946]: Outage Request
+                - generic [ref=e1947]:
+                  - generic [ref=e1948] [cursor=pointer]: By CBO
+                  - generic [ref=e1949] [cursor=pointer]: By Band
+              - generic [ref=e1950]:
+                - generic [ref=e1952]:
+                  - generic [ref=e1953]: Total
+                  - generic [ref=e1954]: "2"
+                - generic [ref=e1958]:
+                  - generic [ref=e1959]: CBO-APO
+                  - generic [ref=e1961]:
+                    - generic [ref=e1962]: "2"
+                    - generic [ref=e1963]: 100%
+            - generic [ref=e1964]:
+              - generic [ref=e1966]: Outage Request & Revenue Associated by CBO
+              - generic [ref=e1967]:
+                - generic [ref=e1969]:
+                  - generic [ref=e1970]: Total
+                  - generic [ref=e1971]:
+                    - generic [ref=e1972]: "2"
+                    - generic [ref=e1973]: 0 NGN
+                - generic [ref=e1977]:
+                  - generic [ref=e1978]: CBO-APO
+                  - generic [ref=e1980]:
+                    - generic [ref=e1981]: "2"
+                    - generic [ref=e1982]: 0 NGN
+                    - generic [ref=e1983]: 100%
+            - generic [ref=e1984]:
+              - generic [ref=e1986]: Total Energy Distribution vs Losses by CBO
+              - generic [ref=e1992]:
+                - generic [ref=e1993]: MTD Offtake
+                - generic [ref=e1995]: Vended Energy
+                - generic [ref=e1997]: Energy Shortfall
+              - generic [ref=e2000]:
+                - generic [ref=e2001]:
+                  - generic [ref=e2002]: MTD Offtake
+                  - generic [ref=e2003]: 35,066.40 MWH
+                - generic [ref=e2004]:
+                  - generic [ref=e2005]: Vended Energy
+                  - generic [ref=e2006]:
+                    - generic [ref=e2007]: 4.90%
+                    - text: 1,718.33 MWH
+                - generic [ref=e2008]:
+                  - generic [ref=e2009]: Energy Shortfall
+                  - generic [ref=e2010]:
+                    - generic [ref=e2011]: 95.09%
+                    - text: 33,348.06 MWH
+            - generic [ref=e2012]:
+              - generic [ref=e2014]: Total Asset Distribution By CBO
+              - generic [ref=e2020]:
+                - generic [ref=e2021]: 33KV Feeders
+                - generic [ref=e2023]: 11KV Feeders
+                - generic [ref=e2025]: Distribution Transformers
+                - generic [ref=e2027]: Customers
+              - generic [ref=e2030]:
+                - generic [ref=e2031]:
+                  - generic [ref=e2032]: Total Asset Distribution
+                  - generic [ref=e2033]: 78,606
+                - generic [ref=e2034]:
+                  - generic [ref=e2035]:
+                    - text: Total 33KV Feeder
+                    - generic [ref=e2036]:
+                      - generic [ref=e2037]: "88"
+                      - generic [ref=e2038]: 0.11%
+                  - generic [ref=e2039]:
+                    - text: Total 11KV Feeder
+                    - generic [ref=e2040]:
+                      - generic [ref=e2041]: "400"
+                      - generic [ref=e2042]: 0.50%
+                  - generic [ref=e2043]:
+                    - text: Total DT
+                    - generic [ref=e2044]:
+                      - generic [ref=e2045]: 16,755
+                      - generic [ref=e2046]: 21.31%
+                  - generic [ref=e2047]:
+                    - text: Total Customers
+                    - generic [ref=e2048]:
+                      - generic [ref=e2049]: 61,363
+                      - generic [ref=e2050]: 78.06%
+            - generic [ref=e2051]:
+              - generic [ref=e2052]:
+                - generic [ref=e2053]: Load Analysis
+                - generic [ref=e2061] [cursor=pointer]: Add Filter
+              - generic [ref=e2064]:
+                - generic [ref=e2068]:
+                  - generic [ref=e2069]:
+                    - generic [ref=e2070] [cursor=pointer]: 1D
+                    - generic [ref=e2071] [cursor=pointer]: 1W
+                    - generic [ref=e2072] [cursor=pointer]: 1M
+                    - generic [ref=e2073] [cursor=pointer]: 1Y
+                  - generic [ref=e2074]: Load
+                - generic [ref=e2076]:
+                  - generic [ref=e2077]:
+                    - generic [ref=e2078]: 132KV AJAOKUTA TS_33KV ADOGO FDR_PL_PL
+                    - generic [ref=e2079]: 26.10 MWh
+                  - generic [ref=e2080]:
+                    - generic [ref=e2081]:
+                      - generic [ref=e2082]: Maximum Load
+                      - generic [ref=e2083]: 2.70 MWh
+                    - generic [ref=e2084]:
+                      - generic [ref=e2085]: Average Load
+                      - generic [ref=e2086]: 1.13 MWh
+                    - generic [ref=e2087]:
+                      - generic [ref=e2088]: Minimum Load
+                      - generic [ref=e2089]: 0 MWh
+```

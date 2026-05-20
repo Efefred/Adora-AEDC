@@ -1,0 +1,176 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - img "Cancel" [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e10]: You have been dormant for too long
+      - generic [ref=e11]: "You will be logged out in : 30"
+    - generic [ref=e12]:
+      - button "Stay logged in" [ref=e13] [cursor=pointer]
+      - button "Log out" [ref=e14] [cursor=pointer]
+  - generic [ref=e16]:
+    - generic [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e21] [cursor=pointer]:
+          - img [ref=e22]
+          - generic [ref=e24]: Dashboard
+        - generic [ref=e26] [cursor=pointer]:
+          - img [ref=e27]
+          - generic [ref=e29]: Administrative Dashboard
+        - generic [ref=e31] [cursor=pointer]:
+          - img [ref=e32]
+          - generic [ref=e34]: Summary Executive Dashboard
+        - generic [ref=e36] [cursor=pointer]:
+          - img [ref=e37]
+          - generic [ref=e39]: Executive Dashboard
+        - generic [ref=e41] [cursor=pointer]:
+          - img [ref=e42]
+          - generic [ref=e44]: Managerial Dashboard
+        - generic [ref=e46] [cursor=pointer]:
+          - img [ref=e47]
+          - generic [ref=e49]: System Reliability Indices
+        - generic [ref=e51] [cursor=pointer]:
+          - img [ref=e52]
+          - generic [ref=e54]: Grid Energy Profile
+          - img "arrow icon" [ref=e55]
+        - generic [ref=e57] [cursor=pointer]:
+          - img [ref=e58]
+          - generic [ref=e60]: CIM Grid Energy Profile
+          - img "arrow icon" [ref=e61]
+        - generic [ref=e63] [cursor=pointer]:
+          - img [ref=e64]
+          - generic [ref=e66]: Outage & Availability
+          - img "arrow icon" [ref=e67]
+        - generic [ref=e69]:
+          - generic [ref=e70] [cursor=pointer]:
+            - img [ref=e71]
+            - generic [ref=e73]: Unplanned Outage Schedule
+          - generic [active]:
+            - img
+            - generic: Planned Outage Schedule
+          - generic [ref=e74] [cursor=pointer]:
+            - img [ref=e75]
+            - generic [ref=e77]: Asset Availability Report
+          - generic [ref=e78] [cursor=pointer]:
+            - img [ref=e79]
+            - generic [ref=e81]: Communicating
+          - generic [ref=e82] [cursor=pointer]:
+            - img [ref=e83]
+            - generic [ref=e85]: Non Communicating
+        - generic [ref=e87] [cursor=pointer]:
+          - img [ref=e88]
+          - generic [ref=e90]: Trend Analysis
+          - img "arrow icon" [ref=e91]
+        - generic [ref=e93] [cursor=pointer]:
+          - img [ref=e94]
+          - generic [ref=e96]: Watch List
+        - generic [ref=e98] [cursor=pointer]:
+          - img [ref=e99]
+          - generic [ref=e101]: Assets Load Forecast
+        - generic [ref=e103] [cursor=pointer]:
+          - img [ref=e104]
+          - generic [ref=e106]: Settings
+          - img "arrow icon" [ref=e107]
+        - generic [ref=e109] [cursor=pointer]:
+          - img [ref=e110]
+          - generic [ref=e112]: Reports
+      - generic [ref=e113]:
+        - generic [ref=e114]:
+          - img "Network Management" [ref=e116]
+          - generic [ref=e117]:
+            - generic [ref=e118]: Module
+            - generic [ref=e119]: Network Management
+          - generic [ref=e120] [cursor=pointer]: Switch Module
+        - generic [ref=e123] [cursor=pointer]:
+          - generic [ref=e124]: Logout
+          - img "Logout icon" [ref=e125]
+    - generic [ref=e128]:
+      - generic [ref=e129]:
+        - img "Left Alignment icon" [ref=e130] [cursor=pointer]
+        - img "Header icon" [ref=e131] [cursor=pointer]
+      - generic [ref=e132]:
+        - button "English" [ref=e133] [cursor=pointer]
+        - button "French" [ref=e134] [cursor=pointer]
+        - generic [ref=e135] [cursor=pointer]:
+          - generic [ref=e136]:
+            - img "Network Management" [ref=e137]
+            - text: Network Management
+          - generic [ref=e138]:
+            - text: Switch
+            - img "Chevron right" [ref=e139]
+        - img "Header Notification icon" [ref=e141] [cursor=pointer]
+        - button "BA BPS AEDC" [ref=e143] [cursor=pointer]:
+          - generic [ref=e145]: BA
+          - generic [ref=e147]: BPS AEDC
+          - img [ref=e148]
+    - main [ref=e151]:
+      - main [ref=e154]:
+        - generic [ref=e155]:
+          - generic [ref=e157]: Planned Outage Schedule
+          - generic [ref=e160]:
+            - generic [ref=e161]: Outage Request
+            - generic [ref=e162] [cursor=pointer]: HQ/Regional Control Center
+            - generic [ref=e163] [cursor=pointer]: Pending SG Card
+            - generic [ref=e164] [cursor=pointer]: Confirmed Outage
+            - generic [ref=e165] [cursor=pointer]: Active Outage
+            - generic [ref=e166] [cursor=pointer]: Suspended Outage
+            - generic [ref=e167] [cursor=pointer]: Cancelled Outage
+            - generic [ref=e168] [cursor=pointer]: Resolved Outage
+          - generic [ref=e169]:
+            - generic [ref=e170]:
+              - generic [ref=e175] [cursor=pointer]: Add Filter
+              - generic [ref=e178] [cursor=pointer]:
+                - generic [ref=e179]:
+                  - img [ref=e180]
+                  - generic [ref=e182]: Period
+                - generic [ref=e183]:
+                  - textbox "Select date range" [ref=e184]: 11/04/26 - 11/05/26
+                  - img [ref=e185]
+              - generic [ref=e188]:
+                - img [ref=e189] [cursor=pointer]
+                - textbox "Search by Asset Name or Number or Coverage Area" [ref=e191] [cursor=pointer]
+            - generic [ref=e192]:
+              - button "Download Report" [ref=e194] [cursor=pointer]:
+                - generic [ref=e195]: Download Report
+                - img [ref=e196]
+              - button "Create New Outage" [ref=e198] [cursor=pointer]
+          - generic [ref=e199]:
+            - generic [ref=e204]:
+              - generic [ref=e205]: Total New Outage
+              - generic [ref=e206]: "2"
+            - generic [ref=e211]:
+              - generic [ref=e212]: Total New 33KV Outage
+              - generic [ref=e213]: "0"
+            - generic [ref=e218]:
+              - generic [ref=e219]: Total New 11KV Outage
+              - generic [ref=e220]: "0"
+            - generic [ref=e225]:
+              - generic [ref=e226]: Total New DT Outage
+              - generic [ref=e227]: "2"
+          - generic [ref=e228]:
+            - main [ref=e229]:
+              - generic:
+                - table:
+                  - rowgroup
+                  - rowgroup
+            - navigation "Page navigation example" [ref=e232]:
+              - list [ref=e233]:
+                - generic [ref=e234]: Page 1 of 0
+                - generic [ref=e235]:
+                  - listitem:
+                    - generic:
+                      - img "<<"
+                  - listitem:
+                    - generic:
+                      - img "<"
+                  - listitem:
+                    - generic: "1"
+                  - listitem:
+                    - generic:
+                      - img ">"
+                  - listitem:
+                    - generic:
+                      - img ">>"
+```
