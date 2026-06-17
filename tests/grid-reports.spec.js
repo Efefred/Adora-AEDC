@@ -44,7 +44,8 @@ test.describe('Grid Reports Download', () => {
       await loginPage.login(testData.login.username, testData.login.password);
     });
 
-    await test.step('Navigate to Grid Energy Profile page', async () => {
+    // await test.step('Navigate to Grid Energy Profile page', async () => {
+    await test.step('Navigate to Energy Management page', async () => { 
       await landingPage.assertLoaded();
       await landingPage.openNetworkManagement();
       await dashboardPage.assertLoaded();

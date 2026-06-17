@@ -1,1 +1,4 @@
 playwright/.auth
+
+allure-results/
+allure-report/

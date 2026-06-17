@@ -23,9 +23,9 @@ export default defineConfig({
   },
   reporter: [
   ['list'],
-  ['html'],
-  ['allure-playwright']
+  ['html', { open: 'never' }]
 ],
+
   projects: [
   {
     name: 'setup',
