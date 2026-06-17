@@ -4,7 +4,7 @@ class DashboardPage {
   constructor(page) {
     this.page = page;
 
-    this.gridEnergyProfileMenu = page.getByText('Grid Energy Profile', { exact: true }).first();
+    this.gridEnergyProfileMenu = page.getByText('Energy Management', { exact: true }).first();
     this.nodeEnergyAnalysisSubmenu = page.getByText('Node Energy Analysis', { exact: true }).first();
   }
 

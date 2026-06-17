@@ -1,0 +1,58 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - img "Cancel" [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e10]: You have been dormant for too long
+      - generic [ref=e11]: "You will be logged out in : 30"
+    - generic [ref=e12]:
+      - button "Stay logged in" [ref=e13] [cursor=pointer]
+      - button "Log out" [ref=e14] [cursor=pointer]
+  - generic [ref=e15]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - img "Header icon" [ref=e20] [cursor=pointer]
+        - generic [ref=e21]: Adora
+      - generic [ref=e22]:
+        - button "English" [ref=e23] [cursor=pointer]
+        - button "French" [ref=e24] [cursor=pointer]
+        - img "Header Notification icon" [ref=e26] [cursor=pointer]
+        - button "BA BPS AEDC" [ref=e28] [cursor=pointer]:
+          - generic [ref=e30]: BA
+          - generic [ref=e32]: BPS AEDC
+          - img [ref=e33]
+    - generic [ref=e36]:
+      - generic [ref=e37]: What would you like to do today?
+      - generic [ref=e40]:
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - text: Network
+            - text: Management
+          - generic [ref=e49]: Real-time network tracking, outage reports, and energy supply visibility for efficient grid management.
+        - generic [ref=e57]:
+          - generic [ref=e58]: DERMS
+          - generic [ref=e59]: DERMS Summary
+        - generic [ref=e67]:
+          - generic [ref=e68]: Commercial
+          - generic [ref=e69]: Simplify revenue management, customer interactions, and billing with our comprehensive commercial module.
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - text: Meter Data
+            - text: Management System
+          - generic [ref=e79]: Aggregates and analyzes meter data for asset and customer insights.
+        - generic [ref=e87]:
+          - generic [ref=e88]:
+            - text: Field
+            - text: Operations
+          - generic [ref=e89]: Streamlined fault logging, real-time tracking & optimized asset maintenance.
+        - generic [ref=e97]:
+          - generic [ref=e98]:
+            - text: Head-End
+            - text: System
+          - generic [ref=e99]: The Adora Meter Head End System (HES) centralizes smart meter management.
+    - contentinfo [ref=e101]:
+      - generic [ref=e102]: Powered by
+      - generic [ref=e103]: Beacon Power Services
+```

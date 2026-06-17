@@ -1,0 +1,171 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - img "Cancel" [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e10]: You have been dormant for too long
+      - generic [ref=e11]: "You will be logged out in : 30"
+    - generic [ref=e12]:
+      - button "Stay logged in" [ref=e13] [cursor=pointer]
+      - button "Log out" [ref=e14] [cursor=pointer]
+  - generic [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e20]:
+          - generic [ref=e21]:
+            - generic:
+              - img
+              - generic: Dashboard
+          - generic [ref=e23] [cursor=pointer]:
+            - img [ref=e24]
+            - generic [ref=e26]: Energy Management
+            - img "arrow icon" [ref=e27]
+          - generic [ref=e29] [cursor=pointer]:
+            - img [ref=e30]
+            - generic [ref=e32]: Outage Management
+            - img "arrow icon" [ref=e33]
+          - generic [ref=e35] [cursor=pointer]:
+            - img [ref=e36]
+            - generic [ref=e38]: Analytics
+            - img "arrow icon" [ref=e39]
+          - generic [ref=e41] [cursor=pointer]:
+            - img [ref=e42]
+            - generic [ref=e44]: Settings
+            - img "arrow icon" [ref=e45]
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - img "Network Management" [ref=e49]
+            - generic [ref=e50]:
+              - generic [ref=e51]: Module
+              - generic [ref=e52]: Network Management
+            - generic [ref=e53] [cursor=pointer]: Switch Module
+          - generic [ref=e56] [cursor=pointer]:
+            - generic [ref=e57]: Logout
+            - img "Logout icon" [ref=e58]
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - img "Left Alignment icon" [ref=e63] [cursor=pointer]
+          - img "Header icon" [ref=e64] [cursor=pointer]
+        - generic [ref=e65]:
+          - button "English" [ref=e66] [cursor=pointer]
+          - button "French" [ref=e67] [cursor=pointer]
+          - generic [ref=e68] [cursor=pointer]:
+            - generic [ref=e69]:
+              - img "Network Management" [ref=e70]
+              - text: Network Management
+            - generic [ref=e71]:
+              - text: Switch
+              - img "Chevron right" [ref=e72]
+          - img "Header Notification icon" [ref=e74] [cursor=pointer]
+          - button "BA BPS AEDC" [ref=e76] [cursor=pointer]:
+            - generic [ref=e78]: BA
+            - generic [ref=e80]: BPS AEDC
+            - img [ref=e81]
+      - main [ref=e84]:
+        - generic [ref=e85]:
+          - generic [ref=e86]:
+            - generic [ref=e87]:
+              - generic [ref=e88]: Network Management Dashboard
+              - generic [ref=e92]:
+                - generic [ref=e93]: Network
+                - generic [ref=e94] [cursor=pointer]: Organisation
+            - generic [ref=e95]:
+              - generic [ref=e96] [cursor=pointer]:
+                - generic [ref=e97]: All Main Substation
+                - img
+              - generic [ref=e98] [cursor=pointer]:
+                - generic [ref=e99]: All Primary Substation
+                - img
+              - generic [ref=e102] [cursor=pointer]:
+                - generic [ref=e103]: Period
+                - img [ref=e104]
+          - generic [ref=e106]:
+            - generic [ref=e108]:
+              - generic [ref=e109]:
+                - generic "Energy at TS Outgoing" [ref=e110]
+                - img [ref=e112]:
+                  - generic [ref=e114]: "?"
+              - generic [ref=e115]: 0 MWH
+              - generic [ref=e116]:
+                - img [ref=e117]
+                - generic [ref=e119]: "-100%"
+                - generic [ref=e120]: (0 MWH)
+            - generic [ref=e122]:
+              - generic [ref=e123]:
+                - generic "TS Outgoing Less Point Load DTs" [ref=e124]
+                - img [ref=e126]:
+                  - generic [ref=e128]: "?"
+              - generic [ref=e129]: 0 MWH
+              - generic [ref=e130]:
+                - img [ref=e131]
+                - generic [ref=e133]: "-100%"
+                - generic [ref=e134]: (0 MWH)
+            - generic [ref=e136]:
+              - generic [ref=e137]:
+                - generic "Energy at ISS Outgoing" [ref=e138]
+                - img [ref=e140]:
+                  - generic [ref=e142]: "?"
+              - generic [ref=e143]: 0 MWH
+              - generic [ref=e144]:
+                - generic [ref=e145]: "T&D Loss:"
+                - img [ref=e146]
+                - generic [ref=e148]: 0%
+                - generic [ref=e149]: (0 MWH)
+            - generic [ref=e151]:
+              - generic [ref=e152]:
+                - generic "Energy at All DTs" [ref=e153]
+                - img [ref=e155]:
+                  - generic [ref=e157]: "?"
+              - generic [ref=e158]: 0 MWH
+              - generic [ref=e159]:
+                - generic [ref=e160]: "T&D Loss:"
+                - img [ref=e161]
+                - generic [ref=e163]: 0%
+                - generic [ref=e164]: (0 MWH)
+            - generic [ref=e166]:
+              - generic [ref=e167]:
+                - generic "Total Retailed Energy" [ref=e168]
+                - img [ref=e170]:
+                  - generic [ref=e172]: "?"
+              - generic [ref=e173]: 0 MWH
+              - generic [ref=e174]:
+                - generic [ref=e175]: "Dist. Loss:"
+                - img [ref=e176]
+                - generic [ref=e178]: 0%
+                - generic [ref=e179]: (0 MWH)
+            - generic [ref=e181]:
+              - generic [ref=e182]:
+                - generic "Global T&D Losses" [ref=e183]
+                - img [ref=e185]:
+                  - generic [ref=e187]: "?"
+              - generic [ref=e188]: 0 MWH
+              - generic [ref=e189]:
+                - generic [ref=e190]: "T&D Percentage Loss:"
+                - img [ref=e191]
+                - generic [ref=e193]: 0%
+          - generic [ref=e195]:
+            - button "Analytics" [ref=e196] [cursor=pointer]:
+              - text: Analytics
+              - img [ref=e197]
+            - generic [ref=e200]:
+              - button "Layers" [ref=e201] [cursor=pointer]:
+                - img [ref=e202]
+              - button "Fullscreen" [ref=e209] [cursor=pointer]:
+                - img [ref=e210]
+              - button "+" [ref=e215] [cursor=pointer]
+              - button "−" [ref=e216] [cursor=pointer]
+            - generic:
+              - generic:
+                - generic: Online
+              - generic:
+                - generic: Offline
+            - generic [ref=e221]:
+              - region "Map" [ref=e222]
+              - iframe [ref=e297]:
+                
+    - button "ChatBot" [ref=e299] [cursor=pointer]:
+      - img [ref=e300]:
+        - img [ref=e301]
+```

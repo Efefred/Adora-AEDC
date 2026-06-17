@@ -39,7 +39,8 @@ class PlannedOutagePage {
   }
 
   async openPlannedOutageSchedule() {
-    await this.page.getByText('Outage & Availability', { exact: true }).click();
+    // await this.page.getByText('Outage & Availability', { exact: true }).click();
+    await this.page.getByText('Outage Management', { exact: true }).click();
 
     await this.page
       .getByText('Planned Outage Schedule', { exact: true })

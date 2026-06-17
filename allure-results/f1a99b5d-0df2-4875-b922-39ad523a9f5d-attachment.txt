@@ -1,0 +1,12 @@
+[AVAILABILITY DOWNLOAD VERIFIED] Outgoing 33KV Feeders
+Availability File: DailyAvailabilityF33_63915_b8170f55-06ff-44bd-a45d-9147d07f1a75.xlsx
+[REPORT DOWNLOAD VERIFIED] Outgoing 33KV Feeders
+Report File: report-undefined-1779713910485.xlsx
+[AVAILABILITY DOWNLOAD VERIFIED] Outgoing 11KV Feeders
+Availability File: DailyAvailabilityF11_63915_bf2f083b-ddea-44e5-b397-e28b194af7b4.xlsx
+[REPORT DOWNLOAD VERIFIED] Outgoing 11KV Feeders
+Report File: report-undefined-1779713918562.xlsx
+[AVAILABILITY DOWNLOAD VERIFIED] Distribution Transformer
+Availability File: DailyAvailabilityDT_63915_78e009e1-469f-4248-92d8-bfb0884714b2.xlsx
+[REPORT DOWNLOAD VERIFIED] Distribution Transformer
+Report File: report-undefined-1779713951937.xlsx

@@ -1,0 +1,3 @@
+Asset - 33KV Feeders: Communicating: 88, Non Communicating: 34, Total: 122
+Asset - 11KV Feeders: Communicating: 271, Non Communicating: 131, Total: 402
+Asset - Distribution Transformers: Communicating: 404, Non Communicating: 16404, Total: 16808

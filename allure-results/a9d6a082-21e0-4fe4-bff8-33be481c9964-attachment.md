@@ -1,0 +1,748 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - img "Cancel" [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e10]: You have been dormant for too long
+      - generic [ref=e11]: "You will be logged out in : 30"
+    - generic [ref=e12]:
+      - button "Stay logged in" [ref=e13] [cursor=pointer]
+      - button "Log out" [ref=e14] [cursor=pointer]
+  - generic [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e20]:
+          - generic [ref=e22] [cursor=pointer]:
+            - img [ref=e23]
+            - generic [ref=e25]: Dashboard
+          - generic [ref=e27] [cursor=pointer]:
+            - img [ref=e28]
+            - generic [ref=e30]: Energy Management
+            - img "arrow icon" [ref=e31]
+          - generic [ref=e33] [cursor=pointer]:
+            - img [ref=e34]
+            - generic [ref=e36]: Outage Management
+            - img "arrow icon" [ref=e37]
+          - generic [ref=e39]:
+            - generic [ref=e41] [cursor=pointer]: Unplanned Outage
+            - generic:
+              - generic: Planned Outage Schedule
+            - generic [ref=e43] [cursor=pointer]: Asset Availability Report
+            - generic [ref=e45] [cursor=pointer]: Communicating
+            - generic [ref=e47] [cursor=pointer]: Non Communicating
+          - generic [ref=e49] [cursor=pointer]:
+            - img [ref=e50]
+            - generic [ref=e52]: Analytics
+            - img "arrow icon" [ref=e53]
+          - generic [ref=e55] [cursor=pointer]:
+            - img [ref=e56]
+            - generic [ref=e58]: Settings
+            - img "arrow icon" [ref=e59]
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - img "Network Management" [ref=e63]
+            - generic [ref=e64]:
+              - generic [ref=e65]: Module
+              - generic [ref=e66]: Network Management
+            - generic [ref=e67] [cursor=pointer]: Switch Module
+          - generic [ref=e70] [cursor=pointer]:
+            - generic [ref=e71]: Logout
+            - img "Logout icon" [ref=e72]
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - img "Left Alignment icon" [ref=e77] [cursor=pointer]
+          - img "Header icon" [ref=e78] [cursor=pointer]
+        - generic [ref=e79]:
+          - button "English" [ref=e80] [cursor=pointer]
+          - button "French" [ref=e81] [cursor=pointer]
+          - generic [ref=e82] [cursor=pointer]:
+            - generic [ref=e83]:
+              - img "Network Management" [ref=e84]
+              - text: Network Management
+            - generic [ref=e85]:
+              - text: Switch
+              - img "Chevron right" [ref=e86]
+          - img "Header Notification icon" [ref=e88] [cursor=pointer]
+          - button "BA BPS AEDC" [ref=e90] [cursor=pointer]:
+            - generic [ref=e92]: BA
+            - generic [ref=e94]: BPS AEDC
+            - img [ref=e95]
+      - main [ref=e98]:
+        - generic [ref=e101]:
+          - generic [ref=e102]:
+            - img [ref=e104] [cursor=pointer]
+            - generic [ref=e106]: Back
+          - generic [ref=e107]:
+            - generic [ref=e108]:
+              - heading "Select Asset Type" [level=2] [ref=e109]
+              - generic [ref=e110]:
+                - generic [ref=e111] [cursor=pointer]:
+                  - radio "DT" [checked] [ref=e112]
+                  - generic [ref=e113]: DT
+                - generic [ref=e114] [cursor=pointer]:
+                  - radio "11KV Network" [ref=e115]
+                  - generic [ref=e116]: 11KV Network
+                - generic [ref=e117] [cursor=pointer]:
+                  - radio "33KV Network" [ref=e118]
+                  - generic [ref=e119]: 33KV Network
+                - generic [ref=e120] [cursor=pointer]:
+                  - radio "11/132Kv Network" [ref=e121]
+                  - generic [ref=e122]: 11/132Kv Network
+                - generic [ref=e123] [cursor=pointer]:
+                  - radio "330Kv Network" [ref=e124]
+                  - generic [ref=e125]: 330Kv Network
+                - generic [ref=e126] [cursor=pointer]:
+                  - radio "Transmission Station" [ref=e127]
+                  - generic [ref=e128]: Transmission Station
+                - generic [ref=e129] [cursor=pointer]:
+                  - radio "Substation" [ref=e130]
+                  - generic [ref=e131]: Substation
+            - generic [ref=e132]:
+              - heading "Outage Owner" [level=2] [ref=e133]
+              - generic [ref=e134]:
+                - generic [ref=e135] [cursor=pointer]:
+                  - radio "AEDC" [checked] [ref=e136]
+                  - generic [ref=e137]: AEDC
+                - generic [ref=e138] [cursor=pointer]:
+                  - radio "TCN" [ref=e139]
+                  - generic [ref=e140]: TCN
+                - generic [ref=e141] [cursor=pointer]:
+                  - radio "GENCO" [ref=e142]
+                  - generic [ref=e143]: GENCO
+              - generic [ref=e144]:
+                - generic [ref=e145]:
+                  - heading "Select type of Outage" [level=2] [ref=e146]
+                  - combobox [ref=e147]:
+                    - option "Emergency Outage" [selected]
+                    - option "Asset Maintenance"
+                    - option "Load Shedding"
+                - generic [ref=e148]:
+                  - heading "Select Outage Indication" [level=2] [ref=e149]
+                  - combobox [ref=e150]:
+                    - option "Earth Fault" [selected]
+                    - option "Overcurrent"
+                    - option "Overcurrent & Earth Fault"
+                    - option "Instantaneous Earth Fault"
+                    - option "Instantaneous Overcurrent"
+                    - option "Instantaneous Overcurrent & Earth Fault"
+                    - option "Broken Conductor"
+                    - option "Maintenance"
+              - generic [ref=e151]:
+                - generic [ref=e152]:
+                  - heading "Reason for Outage" [level=2] [ref=e153]
+                  - textbox "Enter Reason for Outage" [active] [ref=e154]: BPS AEDC AEDC
+                - generic [ref=e157] [cursor=pointer]:
+                  - img "Upload Icon" [ref=e158]
+                  - paragraph [ref=e159]:
+                    - text: Upload Image Before Outage
+                    - text: JPG, PNG, PDF (5MB Max)
+            - generic [ref=e160]:
+              - generic [ref=e161]:
+                - generic [ref=e162]:
+                  - heading "Affected Business Unit" [level=2] [ref=e163]
+                  - combobox [ref=e164]:
+                    - option "Select" [disabled]
+                    - option /
+                    - option "CBO-APO"
+                    - option "CBO-GARKI"
+                    - option "CBO-KOGI"
+                    - option "CBO-NASARAWA"
+                    - option "CBO-NIGER"
+                    - option "CBO-WUSE" [selected]
+                    - option "DUMMYREGION"
+                    - option "FCT CENTRAL"
+                    - option "FCT EAST"
+                    - option "FCT NORTH"
+                    - option "FCT NORTH/WEST"
+                    - option "FCT SOUTH EAST"
+                    - option "FCT SOUTH EAST/CENTRAL"
+                    - option "FCT SOUTH SOUTH"
+                    - option "FCT WEST"
+                    - option "HQ REGION"
+                    - option "JAYDEE"
+                    - option "KOGI"
+                    - option "NASARAWA"
+                    - option "NIGER"
+                - generic [ref=e165]:
+                  - heading "Undertaking Office" [level=2] [ref=e166]
+                  - combobox [ref=e167]:
+                    - option "Select" [disabled]
+                    - option "Bwari"
+                    - option "Dawaki 1"
+                    - option "DAWAKI_FDR D2_PL_PL"
+                    - option "Gbazango Area Office"
+                    - option "Gwarimpa"
+                    - option "Gwarimpa 1"
+                    - option "Gwarimpa 2"
+                    - option "Gwarimpa- AT4 Dawaki"
+                    - option "Gwarimpa-Dawaki D1"
+                    - option "GWARINPA"
+                    - option "HQ - AREA"
+                    - option "JIWA"
+                    - option "Jiwa Area Office"
+                    - option "Katampe"
+                    - option "Kubwa"
+                    - option "Maitama"
+                    - option "Mpape"
+                    - option "Wuse"
+                    - option "Wuse 2" [selected]
+              - generic [ref=e168]:
+                - generic [ref=e169]:
+                  - heading "Affected DT" [level=2] [ref=e170]
+                  - combobox [ref=e171]:
+                    - option "Select" [disabled]
+                    - option "109 PLAZA DT (ADETOKUNBO ADEMOLA)" [selected]
+                    - option "1ST FORTY HOTEL DT"
+                    - option "411 COMPACT DT"
+                    - option "4U SUPERMARKET"
+                    - option "6 DURBAN STREET PRIVATE DT (WHITE HOUSE)"
+                    - option "7 MADIANA CLOSE SS"
+                    - option "9MOBILE HOUSE (8 AMINU KANO CRESCENT)"
+                    - option "A_CLASS EVENT CENTER DT"
+                    - option "A&K COMPANY DT"
+                    - option "A&K DT 2"
+                    - option "Abuja Preparatory School (95 Aminu Kano Crescent)"
+                    - option "ACCESS BANK (54 AMINU KANO CRESCENT)"
+                    - option "Access bank DT (117 Ademola Adetokunbo)"
+                    - option "Access Bank Private DT"
+                    - option "ACCESS PENSION"
+                    - option "ADUVE MONTESSORI"
+                    - option "ADZOPE COMPACT DT"
+                    - option "AEDC OFFICE"
+                    - option "AGADES 1 (50 AGADES STREET BY KFC"
+                    - option "AGADES 2 (37 AGADES STREET)"
+                    - option "AGADES 3 (20 AGADES STREET)"
+                    - option "AGADES 4 (IN FRONT OF MUDASSIR AND BROTHERS)"
+                    - option "AGAPE REGENCY HOTEL DT"
+                    - option "Airtel DT"
+                    - option "AIRTEL MASK"
+                    - option "Airtel Switch DT (Toamasina Street)"
+                    - option "AIRWAVE ANNEX COMPACT DT (DURBAN STREET)"
+                    - option "AL NOOR PLAZA"
+                    - option "AL NOOR MOSQUE"
+                    - option "Al-Noor Mosque Public DT"
+                    - option "ALAO AKALA"
+                    - option "ALEX IBRU COMPLEX"
+                    - option "ALH SAMAILA"
+                    - option "ALHAJI GARUBA AHMED DT (6 ELDORET CLOSE OFF AMINU KANO CRESCENT)"
+                    - option "Alibert (60 ADETOKUNBO ADEMOLA CRESCENT)"
+                    - option "ALL PURPOSE MALL DT"
+                    - option "ALPHA MORGAN BANK"
+                    - option "AMAL COURT DT"
+                    - option "AMAZING APARTMENT"
+                    - option "AMCON"
+                    - option "American specialist hospital"
+                    - option "AMSALCO PLAZA"
+                    - option "ANGES Plaza 200 KVA (4 SEFADU CLOSE)"
+                    - option "AP PLAZA (100 Adetokunbo Ademola)"
+                    - option "APC HQ DT (BLANTYRE)"
+                    - option "ARIS COURT"
+                    - option "Art tech district"
+                    - option "ASCON FILLING STATION (ETERNA FILLING STATION)"
+                    - option "ASG PLAZA DT"
+                    - option "Atiku presidential campaign organization building DT"
+                    - option "AUA PLAZA"
+                    - option "Australian Embassy DT"
+                    - option "Avenue 21"
+                    - option "AZBA PLAZA"
+                    - option "B.N.B HUB PLAZA"
+                    - option "B5 INJECTION S/S"
+                    - option "B52 INJECTION S/S"
+                    - option "BABA GATUKO DT (155 ADETOKUNBO ADEMOLA)"
+                    - option "BABCOOK GUEST HOUSE DT (11/13 HOMBORI STREET)"
+                    - option "BANEX JUNCTION COMPACT DT"
+                    - option "Banex villa"
+                    - option "Banex Villa DT"
+                    - option "Bangui 1"
+                    - option "Bangui 2"
+                    - option "Bannex Von DT"
+                    - option "Barcelona hotel Dt"
+                    - option "Barcelona Residence (14 BLANTYRE STREET)"
+                    - option "BARR KELECHI"
+                    - option "BAYELSA COMPACT DT"
+                    - option "BEFORE ACCESS BANK PLAZA"
+                    - option "BEN GATE PLAZA DT"
+                    - option "BERGER COLOUR WORLD DT"
+                    - option "BERGER PAINT PLAZA"
+                    - option "BESIDE BOLEK NIG"
+                    - option "BESIDE INSPIRE"
+                    - option "BEVERLY HILL HOTEL"
+                    - option "BIMINI ISLAND DT"
+                    - option "Birao 1"
+                    - option "Birao 2"
+                    - option "Birao 3"
+                    - option "Blantyre 2 (14, Blantyre street)"
+                    - option "BLUE PLAZA/QUEEN FEM"
+                    - option "BOCONCEPT DT (37/37B ADETOKUN ADEMOLA CRESCENT)"
+                    - option "BOLEK NIG LTD"
+                    - option "BOMZI"
+                    - option "Bon Hotel Elvis"
+                    - option "Bond Plaza"
+                    - option "BREEZE RESTAURANT DT"
+                    - option "BRENDFORT HOTEL (4 MAMUO CLOSE)"
+                    - option "BRICK HOUSE DT (5 MADIANA STREET BESIDE OPEN UNIVERSITY)"
+                    - option "BRISTISH VILLAGE"
+                    - option "BRITISH QUARTER NDJAMENA DT"
+                    - option "BRITISH VILLAGE II"
+                    - option "BUA COURT DT"
+                    - option "Buchanan 2 DT"
+                    - option "Buchanan 3 DT"
+                    - option "Buchanan DT"
+                    - option "BUJUMBURA DT (10 BUJUMBURA STREET)"
+                    - option "BURGER KING"
+                    - option "C.V.S PLAZA DT (145B ADETOKUNBO ADEMOLA)"
+                    - option "CAIRO 1 (6 CAIRO STREET)"
+                    - option "CAPPADOR CENTER (BESIDE OLD BANEX)"
+                    - option "CAPPADOR'S PLACE DT (OFF ADEMOLA ADETOKUNBO)"
+                    - option "CAPPADORE MALL"
+                    - option "CASABLANCA DT"
+                    - option "CASALAVORO WUSE 2"
+                    - option "CASALINDA HOTEL"
+                    - option "CBN ITI GUEST HOUSE DT"
+                    - option "CBN QTRS 5"
+                    - option "CBN QUARTER 1"
+                    - option "CBN QUARTER DT 7"
+                    - option "CBN QUARTER DT8"
+                    - option "CBN Quarters 2"
+                    - option "CBN Quarters 3"
+                    - option "CBN quarters 4"
+                    - option "CBN quarters DT 6"
+                    - option "CBN_QTRS_DT9"
+                    - option "CEC AFRICAN COMPACT"
+                    - option "CENTER POINT PLAZA DT WUSE"
+                    - option "CHAYIM DIAGNOTICS"
+                    - option "CHECK IN HOTEL (37 DURBAN STREET)"
+                    - option "CHECK INN SIGNATURE HOTEL"
+                    - option "CHELSEA HOTEL DT"
+                    - option "CHICKEN REPUBLIC (114 AMINU KANO CRESCENT BESIDE KFC)"
+                    - option "CHICKEN REPUBLIC BANEX"
+                    - option "Chicken Republic by banex"
+                    - option "CHILDREN AFFAIRS (3 KOLDA STREET)"
+                    - option "CHOCOLATE MALL COMPACT"
+                    - option "CIL GOBAL ENTERPRISE LIMITED (3 KUMASI CRESCENT)"
+                    - option "CLOVER HOSPITAL DT"
+                    - option "COLOR DT"
+                    - option "COMMODOR COMPACT DT"
+                    - option "COMPACT DT BY SWITZERLAND EMBASSY (157 ADETOKUMBO ADEMOLA CRESCENT)"
+                    - option "COMPACT DT BY TURKISH JUNCTION (AHMADU BELLO WAY)"
+                    - option "COMPACT DT OPPOSITE HYDE FILLING STATION (AMINU KANO CRESCENT)"
+                    - option "COMPACT S/S BY NO 9 KAMPALA STREET WUSE 2"
+                    - option "COMPACT S/S BY TAPETA BY NO 2 SEGUELA"
+                    - option "COMPACT/BANEX MOSQUES"
+                    - option "Compact/Blue Plaza DT (167 ADETOKUNBO ADEMOLA)"
+                    - option "COMPACT/MABUCHI STREETLIGHT"
+                    - option "Custom quarters 1"
+                    - option "Custom Quarters DT (12 NDJAMENA CRESCENT)"
+                    - option "Customer quarter's 2"
+                    - option "DA BRAS HOTEL"
+                    - option "DAHAM DT( LUXURY LIGHT PLAZA)"
+                    - option "Dakala DT"
+                    - option "DALHATU BAYERO ESTATE DT"
+                    - option "DANTATA DT (MORIJA CLOSE)"
+                    - option "DARE SALAAM dt"
+                    - option "DBM COMPACT DT"
+                    - option "DBM PLAZA"
+                    - option "DEDICATED SUBST SAHAM PLAZA"
+                    - option "DEDICATED S/S STALLION PROP 1"
+                    - option "DEDICATED S/S STALLION PROP 2"
+                    - option "DEDICATED SUBSTATION EMAB PLAZA"
+                    - option "DEDICATED TRANSFORMER BY DISCOVERY MALL"
+                    - option "DEDICATED TRANSFORMER BY EASTLY PARK PLAZA"
+                    - option "DEEP TRUSTINVEST LTD"
+                    - option "DENNIS HOTEL (19 NDJAMENA CRESCENT)"
+                    - option "DEVELOPMENT BANK OF NIGERIA"
+                    - option "DILIC HOTEL"
+                    - option "Djibouti crescent DT"
+                    - option "DOCTOR WADA"
+                    - option "DOMINO'S COMPACT DT"
+                    - option "DOMINOS PIZZA (EAT N GO) DT 52 KUMASI CRESCENT"
+                    - option "DONALD DT (15C NDJAMENA CRESCENT)"
+                    - option "DOSPOROS"
+                    - option "DR BAMIDELE OYELEDE DT"
+                    - option "DRIP MALL DT (70 AMINU KANO CRESCENT BESIDE UNION BANK)"
+                    - option "DRIVE 5 MB 105"
+                    - option "DRIVE 6 MB 103"
+                    - option "DRIVE 9 MD 106 DT"
+                    - option "DRIXY CHICKEN DT (50 LIBREVILLE STREET)"
+                    - option "DRUMSTICKS"
+                    - option "Durban 1 (16 DURBAN STREET)"
+                    - option "DURBAN 4 (42 DURBAN STREET)"
+                    - option "EATRITE"
+                    - option "ECHO LAB RADIOLOGY SERVICE (11 EMBU STREET)"
+                    - option "ECO FITNESS (WUSE 2) DT"
+                    - option "Ecobank Cadastral Branch (Public) DT"
+                    - option "ECOBANK DT (CADASTRAL BRANCH)"
+                    - option "ECOWAS DT"
+                    - option "ECOWAS Transformer DT"
+                    - option "ECWA COMPACT DT"
+                    - option "ECWA DT"
+                    - option "EDEN PLACE DT"
+                    - option "EKWERE NMADU DT"
+                    - option "EL PASO (Opposite 9, Freetown Street)"
+                    - option "EMAB PLAZA"
+                    - option "Embu compact DT"
+                    - option "EMBU/MAKURU CLOSE (2 MAKURU STREET JUNCTION)"
+                    - option "EMMANUEL BWACHA"
+                    - option "EXCLUSIVE APTMT"
+                    - option "EXCLUSIVE STORE (PLOT 1201 ADETOKUNBO ADEMOLA)"
+                    - option "Fadama House"
+                    - option "FAITH MIRACLE CENTER (PLOT 1246 BLANTYRE STREET)"
+                    - option "FANDRIANA 2 DT"
+                    - option "FARM CITY"
+                    - option "FCDA COMPACT 2"
+                    - option "FCDA QUARTER DT 8 NDJAMENA CRESCENT"
+                    - option "FCDA QUARTERS DT 1 (KASHIM IBRAHIM WAY)"
+                    - option "FCDA QUARTERS (PLOT 182 AMINU KANO CRESCENT BY KUMASI CRESCENT)"
+                    - option "FCDA Quarters 1 DT"
+                    - option "FCDA Quarters 2 DT"
+                    - option "FCDA QUARTERS 46 Aminu Kano Crescent"
+                    - option "FCDA QUARTERS DT 2 (KASHIM IBRAHIM WAY)"
+                    - option "FCMB transformer 200KVA (1 Cairo Street)"
+                    - option "FEPA QUARTER PRIVATE DT"
+                    - option "FERMA HEAD QUARTERS DT (163 AMINU KANO CRESCENT OPPOSITE SUNTRUST BANK)"
+                    - option "FERMA HQ ANNEX BUILDING DT 7(ELDORET CLOSE OFF AMINU KANO CRESCENT)"
+                    - option "FEZ COMPACT DT"
+                    - option "FIRS DT"
+                    - option "FIRST BANK (126B Adetokunbo Ademola)"
+                    - option "FIRST BANK (6 LIBREVILLE STREET)"
+                    - option "FIRST BANK BENEX"
+                    - option "FLOW PLAZA"
+                    - option "FORMER CBN GOVERNOR (DARESALAM STREET)"
+                    - option "FORMER ROAD SAFETY DT"
+                    - option "FORMER SPEAKER"
+                    - option "FREETOWN COMPACT"
+                    - option "Furniture house compact"
+                    - option "Furniture house DT"
+                    - option "FURNITURE SQUARE DT"
+                    - option "GALAXY BACKBONE"
+                    - option "Garkida Press DT"
+                    - option "GENERAL BONDED WARE HOUSE"
+                    - option "GEVILING COMPACT"
+                    - option "Gilmore DT"
+                    - option "GITUA PLAZA"
+                    - option "GLOBACOM DT (115 Aminu Kano Crescent)"
+                    - option "Globacom Regional Office (13 KOLDA LINK)"
+                    - option "Globus Bank (45 ADETOKUNBO ADEMOLA CRESCENT)"
+                    - option "GLORY MOJEC PLAZA"
+                    - option "GLOVIS MALL DT"
+                    - option "GOMBE JEWEL HOTEL (22 NDJAMENA CRESCENT)"
+                    - option "GOVERNMENT DAY SECONDARY SCHOOL (152 ADETOKUNBO ADEMOLA)"
+                    - option "GRACE COURT"
+                    - option "GREECE EMBASSY (6 SEGUELA STREET)"
+                    - option "GREY HOUSE (TAKWA)"
+                    - option "GTCO DT (30 NDJAMENA CRESCENT)"
+                    - option "Gwadal center (FRIA CLOSE)"
+                    - option "H-MEDIX DT"
+                    - option "H.MEDIX"
+                    - option "HAJI KHADIJAT DT"
+                    - option "HARED PROPERTY"
+                    - option "Health Trust DT (38 Lingu Crescent)"
+                    - option "HERITAGE ACADEMY"
+                    - option "HIGH COURT JUDGE"
+                    - option "HILLSIDE EVENT CENTER"
+                    - option "HILLTOP APARTMENTS DT (3 PAKALI CLOSE)"
+                    - option "HILLTOP VILLA DT"
+                    - option "Hisense DT (117 Aminu Kano Crescent)"
+                    - option "HJFMRI"
+                    - option "Hombori street DT"
+                    - option "Hotel de horizon DT"
+                    - option "HRH DR ELUMAYA CLATUS"
+                    - option "ICICE CONSTRUCTION DT"
+                    - option "IHS AIRTEL DT"
+                    - option "IHS DT"
+                    - option "IHS MAST DT"
+                    - option "IHS MTN"
+                    - option "ILUOBE DT"
+                    - option "IMMACULATE DIAMOND HOTEL (110 ADETOKUNBO ADEMOLA)"
+                    - option "IMMACULATE PLATINIUM LUXURY RESORTS (24 LOBITO)"
+                    - option "INEC"
+                    - option "INEC DT"
+                    - option "INSPIRE ACADEMY"
+                    - option "INTER-CELLULAR PRIVATE DT (30 DURBAN STREET)"
+                    - option "ISRAEL PLAZA (NITEL JUNCTION)"
+                    - option "JUDGES QUARTER ZONE 2"
+                    - option "JUDGES QUARTERS ZONE 1"
+                    - option "JUDGES QUARTERS ZONE 3"
+                    - option "K CITY PLAZA (52 AMINU KANO CRSCENT)"
+                    - option "Kandi close DT"
+                    - option "KATAMPE HEIGHT"
+                    - option "KATAPE HIGT"
+                    - option "Keystone bank dt"
+                    - option "KFC"
+                    - option "KOKKOIES MALL DT (ADETOKUNBO ADEMOLA)"
+                    - option "Kolda Link 2 (10 Kolda Link)"
+                    - option "KUDANG DT"
+                    - option "LIBREVILLE DT 2 (34 LIBREVILLE STREET)"
+                    - option "LIBREVILLE DT 1 ( NO 52 LIBREVILLE STREET)"
+                    - option "LIBREVILLE DT 3 (18LIBREVILLE STREET)"
+                    - option "Lingu 2 compact DT"
+                    - option "Lobito 2"
+                    - option "Lobito 3"
+                    - option "LOBITO MALL DT"
+                    - option "LOBITO MALL WUSE"
+                    - option "LUNGI 2 DT"
+                    - option "M & G PLAZA (ADETOKUNBO ADEMOLA CRESCENT)"
+                    - option "M.I AHAMAD PLAZA (ADETOKUNBO ADEMOLA)"
+                    - option "MAFOTI COMPACT DT"
+                    - option "Mahamud and co law firm (9 BOZOUM STREET)"
+                    - option "MAHEY RASHEED DT"
+                    - option "MALL 55 DT"
+                    - option "MALL@18 DT"
+                    - option "MAP U INVESTMENT DT (PLOT 95 AMINU KANO)"
+                    - option "MARRAKESH COMPACT DT"
+                    - option "MARYNOUS MALL"
+                    - option "MATABELA GARDEN"
+                    - option "MATILDA ROZI"
+                    - option "MB104 DT"
+                    - option "MD101 DT"
+                    - option "MEDALLION COMM"
+                    - option "MERRY MAKERS"
+                    - option "Mines and Steels"
+                    - option "MISRATAH 1 DT"
+                    - option "MISRATAH 2 DT"
+                    - option "MODISH FORMALS"
+                    - option "MONROVIA DT (2 MOROVIA STREET OPPOSITE BON HOTEL)"
+                    - option "Monrovia DT 2"
+                    - option "Monrovia transformer 4"
+                    - option "MR JOHNNY MATANI"
+                    - option "MTN MAST WUSE MKT"
+                    - option "Multilinks private DT"
+                    - option "MUSARDA HOTEL"
+                    - option "N0.10 DJIBOUTI POLEMOUNTED"
+                    - option "NAIROBI 1 DT"
+                    - option "NANA PLAZA DT ( NO 78 AMINU KANO CRESENT)"
+                    - option "National open university office dt"
+                    - option "NCC NO37 KUMASI"
+                    - option "NDJAMENA DT (BESIDE GCL PLAZA)"
+                    - option "NEMSAS ( NHIS Anne's)"
+                    - option "NENAB VILLA DT"
+                    - option "NEW APARTMENT"
+                    - option "NEW BUILDING"
+                    - option "NEW SHERIFF PLAZA"
+                    - option "NEWTON PARK HOTEL DT"
+                    - option "NIEFOUNKE PUBLIC"
+                    - option "Nigerian tulip international college( NTIC PRIVATE DT)"
+                    - option "Nipco Gas DT"
+                    - option "NITEL QTRS 2"
+                    - option "NITEL QUARTER DT 1 (3a DURBAN STREET)"
+                    - option "NITEL QUARTER DT 2 (3a DURBAN STREET)"
+                    - option "NNPC pension fund"
+                    - option "NO 12, PARAKOU STREET DT"
+                    - option "NO DETAILS"
+                    - option "No_18_Djibuti-New"
+                    - option "NO. 11 BART NNAJI DT"
+                    - option "NO. 26 AHMADU FINTIRI DT"
+                    - option "No. 27 LOBITO"
+                    - option "NO. 45 LOBITO WUSE 2"
+                    - option "NO.11 DURBAN"
+                    - option "NO.14 DJIBOUTI POLEMOUNTED"
+                    - option "NO.16 DJIBOUTI POLEMOUNTED"
+                    - option "NO37 KUMASI"
+                    - option "NOTAB"
+                    - option "NSCDC BRANCH KUMASI CRESCENT"
+                    - option "NURNBERGER PLAZA (ADETOKUNBO ADEOMOLA)"
+                    - option "OBEJ_PLAZA_NEW"
+                    - option "OBUM PLAZA DT"
+                    - option "OCEAN HOUSE TCN DT (PLOT 1226 AMINU KANO CRESCENT)"
+                    - option "Oceanic Catering DT (2 Kolda link Street)"
+                    - option "OFF IHS"
+                    - option "OGUNS PLAZA"
+                    - option "OLD BANEX PLAZA"
+                    - option "Old Sterling Bank Compact DT (Wuse Market )"
+                    - option "OLIVE PLAZA (11 Alexandria Crescent)"
+                    - option "OLIVE PLAZA WUSE 2"
+                    - option "OMEGA CENTRE PLAZA"
+                    - option "Omicron property DT (Plot 1193 Takwa Crescent)"
+                    - option "OROBEBE ESTATE"
+                    - option "OSAS & OSEJI PLAZA DT"
+                    - option "OTI CARPET PRIVATE DT (142 ADETOKUNBO ADEMOLA)"
+                    - option "Pakali DT"
+                    - option "Parakou 2 DT"
+                    - option "PARALLEX BANK"
+                    - option "PAUL JAMES MAHANAN"
+                    - option "PEKA CLOSE"
+                    - option "PEN COURT ESTATE (29B NDJAMENA CRESCENT)"
+                    - option "Pencom ( private TR)"
+                    - option "Pencom Compact DT"
+                    - option "Peniel Apartments"
+                    - option "Philgal Empire DT"
+                    - option "Photo gallery DT (47 ADETOKUNBO ADEMOLA)"
+                    - option "PILOT QUATERS DT"
+                    - option "PITTERS BURG DT"
+                    - option "PLOT 1230 ASABE STREET"
+                    - option "Polaris (100 AMINU KANO CRESCENT)"
+                    - option "PON BLISS APARTMENT"
+                    - option "POPE JOHN PAUL 11"
+                    - option "PORT ELIZABETH DT"
+                    - option "PREMIER SCHOOL (NDJAMENA CRESCENT)"
+                    - option "PRIME ARCADE"
+                    - option "PRIME ESTATE (Opposite 1 Garawe street off Freetown)"
+                    - option "PRIME PLAZA"
+                    - option "PRINCESS TERIESTER ESTATE (25 NDJAMENA CRESCENT)"
+                    - option "PRIXAIR HOTEL"
+                    - option "PROVIDUS BANK"
+                    - option "PTF QTRS I"
+                    - option "PTF QTRS II"
+                    - option "PUBLIC TRANSFORMER"
+                    - option "RABERTO SCHOOL"
+                    - option "RCCG HOLY GHOST CENTER DT"
+                    - option "Redeemer's Private School"
+                    - option "REGENT ESTATE DT"
+                    - option "RESIDENT AT FARMILA"
+                    - option "RETHRO BREFORD DT"
+                    - option "RIZOR SHARP COLLECTION (2 Libreville street)"
+                    - option "Rock view classic 1"
+                    - option "Rock view classic 2"
+                    - option "Rock view Royal hotel 1"
+                    - option "Rock view Royal hotel 2"
+                    - option "Rock view Royal hotel 3"
+                    - option "Rock view Royal hotel 4"
+                    - option "ROCKVIEW APARTMENT"
+                    - option "ROPP HOUSE ETISALAT"
+                    - option "RT.COM LTD"
+                    - option "Ruby private DT"
+                    - option "Rural Electrification Agency (22 Freetown street)"
+                    - option "SAAFI HOTEL"
+                    - option "SABC"
+                    - option "Saidi Homes (20 KOLDA LINK)"
+                    - option "SAKETE COMPACT DT (28 KAMPALA STREET)"
+                    - option "Sakono 1 (12 SAKONO STREET)"
+                    - option "Sakono 2"
+                    - option "Salatu Royal Estate 1"
+                    - option "Salatu Royal Estate 2"
+                    - option "SALINI GUEST HOUSE"
+                    - option "SAMMIES RESTAURANT S/S"
+                    - option "SAMSUNG OFFICE WUSE 2"
+                    - option "SANTANA COMPACT DT"
+                    - option "SAUDI APARTMENT"
+                    - option "Sen_Patricia_DT"
+                    - option "SEN. DAVID MARK DT"
+                    - option "SENATOR ISA COMPACT"
+                    - option "SFCEXPRESS DT( NO 49 LIBREVILLE STREET)"
+                    - option "SHARON PROPERTY (10 AMINU KANO CRESCENT)"
+                    - option "SHEHU DT(100kva pole)"
+                    - option "SHERIFF COMPACT DT"
+                    - option "SIDEWELL PRINTING PRESS"
+                    - option "SIMS ESTATE."
+                    - option "SKY LINE ESTATE"
+                    - option "SMART RESIDENCES DT"
+                    - option "SOLINA GROUP (8 Libreville street)"
+                    - option "Southern Fried Chicken (4 KOLDA STREET)"
+                    - option "SPAR PARK & SHOP DT 1"
+                    - option "SPAR PARK & SHOP DT 2"
+                    - option "SPEAKER COMPACT DT"
+                    - option "Spectranet DT"
+                    - option "STALLION COURT (BLANTYRE STREET)"
+                    - option "Standard Chartered Bank"
+                    - option "STARTIMES DT (8 ELDORET CLOSE OFF AMINU KANO CRESCENT)"
+                    - option "STICK & STONE 100KVA (GTCO0"
+                    - option "STICK & STONE 500KVA"
+                    - option "STREET 3 MQ"
+                    - option "SUN TRUST BANK DT"
+                    - option "SUNSET PLACE (OFF ADEMOLA ADETOKUNBO)"
+                    - option "TAJ BANK DT"
+                    - option "TAJ BANK PRIVATE DT (PLOT 625 AMINU KANO CRESCENT)"
+                    - option "TAKUM TOWER DT (14 SEGUELA STREET)"
+                    - option "THE PLACE"
+                    - option "THE ULTIMATE MALL ( ADETOKUNBO ADEMOLA)"
+                    - option "Traffic Light DT Ademola Adetunkobo"
+                    - option "TRANSFORMER BY GCL PLAZA"
+                    - option "TRANSPORT QUARTERS (3 Youkou Street)"
+                    - option "TRCN DT"
+                    - option "TROLLEY DT"
+                    - option "TULIP PLAZA DT"
+                    - option "TULIP PRESS RESIDENTIAL"
+                    - option "Twenty One Park"
+                    - option "TY DANJUMA DT 1 (12 DAR ES SALAAM STREET)"
+                    - option "UBA bank (18 Adetokunbo Ademola Crescent)"
+                    - option "UBA DT(104 Aminu kano crescent)"
+                    - option "UNION BANK (122 AMINU KANO CRESCENT)"
+                    - option "UNION BANK AMINU KANO CRESCENT"
+                    - option "UNIQUE APARTMENT"
+                    - option "Upigham DT (3 Luanda crescent)"
+                    - option "URBAN SHELTER"
+                    - option "USMAN BIN AFFAN DT"
+                    - option "Valencia Hotels"
+                    - option "VALENCIA II"
+                    - option "Venus Medicare DT"
+                    - option "VILLA THE PARADISE DT"
+                    - option "Villa- U hotel DT"
+                    - option "VINTAGE HUBB DT (135 ADETOKUN ADEMOLA CRESCENT)"
+                    - option "VINTAGE VILLAS"
+                    - option "Von Dt"
+                    - option "WEMA BANK DT AMIMU KANO CRESCENT"
+                    - option "WHITE DIAMOND ESTATE"
+                    - option "White House 1014 DT (FRIA CLOSE)"
+                    - option "WHITE HOUSE DT (OPP MUTUAL TRUST MICROFINANCE BANK)"
+                    - option "WORKS AND HOUSING COMPACT"
+                    - option "WORLD AID DT"
+                    - option "YALINGA 2"
+                    - option "Yalinga DT1"
+                    - option "YASUHA PLAZA (BOZOUM CLOSE)"
+                    - option "Zenith Bank (65 Adetokunbo Ademola)"
+                    - option "Zenith Bank (plot 168 Aminu Kano)"
+                    - option "Zenith Bank (Plot 1722 Adetokunbo Ademola)"
+                    - option "Zenith Bank DT (Plot 100 Lingu Street)"
+                    - option "Zenith bank DT(116 aminu kano crescent)"
+                    - option "ZENITH INSURANCE (CADASTRAL BRANCH)"
+                    - option "ZION COURT"
+                    - option "ZOOM SWITCH (8 TOMASINA STREET)"
+                - generic [ref=e172]:
+                  - heading "Connected Feeder" [level=2] [ref=e173]
+                  - textbox [disabled] [ref=e174]: 132KV KATAMPE TS_33KV WUSE II FDR_B5_3B
+            - generic [ref=e175]:
+              - generic [ref=e176]:
+                - generic [ref=e177]:
+                  - heading "Permit Holder Name" [level=2] [ref=e178]
+                  - textbox "Select" [ref=e181] [cursor=pointer]
+                - generic [ref=e182]:
+                  - heading "Permit Holder Email" [level=2] [ref=e183]
+                  - textbox [disabled] [ref=e184]
+              - generic [ref=e186]:
+                - heading "Permit Holder Designation" [level=2] [ref=e187]
+                - textbox [disabled] [ref=e188]
+            - generic [ref=e190]:
+              - generic [ref=e191]:
+                - generic [ref=e192]: Outage Start (Date and Time)
+                - generic [ref=e195] [cursor=pointer]:
+                  - img [ref=e197]
+                  - textbox [ref=e200]
+              - generic [ref=e201]:
+                - generic [ref=e202]: Outage End (Date and Time)
+                - generic [ref=e205] [cursor=pointer]:
+                  - img [ref=e207]
+                  - textbox [ref=e210]
+              - generic [ref=e211]:
+                - heading "Duration" [level=2] [ref=e212]
+                - textbox [disabled] [ref=e213]
+            - generic [ref=e214]:
+              - generic [ref=e215]:
+                - generic [ref=e216]:
+                  - heading "Weather" [level=2] [ref=e217]
+                  - combobox [ref=e218]:
+                    - option "Sunny/Hot" [selected]
+                    - option "Cloudy"
+                    - option "Windy"
+                    - option "Rainy"
+                    - option "Stormy"
+                    - option "Clear Sky"
+                - generic [ref=e219]:
+                  - heading "Load Loss (MW)" [level=2] [ref=e220]
+                  - spinbutton [ref=e221]
+                - generic [ref=e222]:
+                  - heading "Number of Customers Affected" [level=2] [ref=e223]
+                  - spinbutton [ref=e224]: "42"
+              - generic [ref=e225]:
+                - generic [ref=e226]:
+                  - heading "Areas Affected" [level=2] [ref=e227]
+                  - textbox [disabled] [ref=e228]: AMIGO SUPERMART, ALBERT FURNITURE, BARCELONA HOTEL, HAMPTON APARTMENTS, DURBAN STREET, OTI CARPET, WUSE AREA OFFICE
+                - generic [ref=e229]:
+                  - heading "Message to Affected Customers" [level=2] [ref=e230]
+                  - textbox "Enter Message to Affected Customers" [ref=e231]
+          - button "Submit" [ref=e233] [cursor=pointer]
+    - button "ChatBot" [ref=e235] [cursor=pointer]:
+      - img [ref=e236]:
+        - img [ref=e237]
+```

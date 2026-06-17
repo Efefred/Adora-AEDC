@@ -121,27 +121,6 @@ class OutageAvailabilityPage {
     );
   }
 
-  // async downloadUnplannedOutageReport() {
-  //   await this.waitForOutageGridToStabilize();
-
-  //   const [response] = await Promise.all([
-  //     this.page.waitForResponse(
-  //       (res) => this.isOutageExcelDocumentResponse(res),
-  //       { timeout: 120_000 }
-  //     ),
-  //     this.clickDownloadReport()
-  //   ]);
-
-  //   const buffer = await response.body();
-
-  //   return {
-  //     buffer,
-  //     headers: response.headers(),
-  //     url: response.url(),
-  //     status: response.status()
-  //   };
-  // }
-
         async downloadUnplannedOutageReport() {
   // wait for page to fully settle (CRITICAL)
   await this.waitForOutageGridToStabilize();

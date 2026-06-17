@@ -1,0 +1,6 @@
+[AVAILABILITY DOWNLOAD VERIFIED] Outgoing 33KV Feeders
+Availability File: DailyAvailabilityF33_63914_74fc36dd-8309-4873-b3a9-74672f4b47fa.xlsx
+[REPORT DOWNLOAD VERIFIED] Outgoing 33KV Feeders
+Report File: Monthly33KvFeeder_63914_03ea65b2-bb42-4926-9be6-12c3e6da9e33.xlsx
+[AVAILABILITY DOWNLOAD VERIFIED] Outgoing 11KV Feeders
+Availability File: DailyAvailabilityF11_63914_e98c68ca-0562-4408-bfb6-24717d8ade0e.xlsx

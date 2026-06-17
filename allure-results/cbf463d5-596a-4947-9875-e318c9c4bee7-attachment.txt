@@ -1,0 +1,13 @@
+
+[NODE ENERGY ANALYSIS RESULT]
+Outgoing 11KV Feeders
+Feeder 11 No             : 210800445403
+LAR                     : 12756.4
+PAR                     : 12779.2
+Energy Delta            : 22.800
+MF                      : 1
+Energy Received         : 22.800
+Retailed Energy         : null
+Losses                  : -105.832
+Loss %                  : -464.176
+Custom HTML report generated: C:\BPS_Automation\ADORA_AEDC_AUTOMATION\test-results\custom-reports\node-energy-analysis-report.html

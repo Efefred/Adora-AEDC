@@ -2,7 +2,7 @@
   "login": {
     "urlPath": "/login",
     "username": "bpsuseraedc@bpsafrica.com",
-    "password": "Adora!!12345",
+    "password": "Adorauser!!123",
     "invalidUsername": "invaliduser@adora.com",
     "invalidPassword": "WrongPassword",
     "whitespaceUsername": "   ",

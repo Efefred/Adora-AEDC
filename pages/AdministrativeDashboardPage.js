@@ -4,10 +4,33 @@ class AdministrativeDashboardPage {
   constructor(page) {
     this.page = page;
 
-    this.administrativeDashboardMenu = page.getByText('Administrative Dashboard', { exact: true });
-    this.communicationQuickNav = page.getByText('Communication', { exact: true });
-    this.communicationByBandsQuickNav = page.getByText('Communication By Bands', { exact: true });
+    // Analytics menu
+    this.analyticsMenu = page.locator(
+      'div.menu-item:has(span:text-is("Analytics"))'
+    );
 
+    // First Performance Console under Analytics
+    this.performanceConsoleMenu = page
+      .locator('div.dropmenu-item')
+      .filter({
+        has: page.locator('span', {
+          hasText: /^Performance Console$/
+        })
+      })
+      .first();
+
+    // Quick Navigation
+    this.communicationQuickNav = page.getByText(
+      'Communication',
+      { exact: true }
+    );
+
+    this.communicationByBandsQuickNav = page.getByText(
+      'Communication By Bands',
+      { exact: true }
+    );
+
+    // Section Headers
     this.assetSectionHeader = page.getByText(
       'Asset Communicating and Non-communicating Analysis',
       { exact: true }
@@ -20,34 +43,63 @@ class AdministrativeDashboardPage {
   }
 
   async openAdministrativeDashboard() {
-    await expect(this.administrativeDashboardMenu).toBeVisible({ timeout: 90_000 });
-    await this.administrativeDashboardMenu.click();
-
-    await expect(this.page).toHaveURL(/\/network-management\/administrative-dashboard/i, {
-      timeout: 90_000
+    await expect(this.analyticsMenu).toBeVisible({
+      timeout: 90000
     });
+
+    // Expand Analytics if collapsed
+    if (!(await this.performanceConsoleMenu.isVisible().catch(() => false))) {
+      await this.analyticsMenu.click();
+    }
+
+    await this.performanceConsoleMenu.waitFor({
+      state: 'visible',
+      timeout: 90000
+    });
+
+    await this.performanceConsoleMenu.click();
+
+    await expect(this.page).toHaveURL(
+      /\/network-management\/administrative-dashboard/i,
+      {
+        timeout: 90000
+      }
+    );
   }
 
   async assertLoaded() {
-    await expect(this.page).toHaveURL(/\/network-management\/administrative-dashboard/i, {
-      timeout: 90_000
-    });
+    await expect(this.page).toHaveURL(
+      /\/network-management\/administrative-dashboard/i,
+      {
+        timeout: 90000
+      }
+    );
   }
 
   async openCommunicationSection() {
-    await expect(this.communicationQuickNav).toBeVisible({ timeout: 90_000 });
+    await expect(this.communicationQuickNav).toBeVisible({
+      timeout: 90000
+    });
+
     await this.communicationQuickNav.scrollIntoViewIfNeeded();
     await this.communicationQuickNav.click();
 
-    await expect(this.assetSectionHeader).toBeVisible({ timeout: 90_000 });
+    await expect(this.assetSectionHeader).toBeVisible({
+      timeout: 90000
+    });
   }
 
   async openCommunicationByBandsSection() {
-    await expect(this.communicationByBandsQuickNav).toBeVisible({ timeout: 90_000 });
+    await expect(this.communicationByBandsQuickNav).toBeVisible({
+      timeout: 90000
+    });
+
     await this.communicationByBandsQuickNav.scrollIntoViewIfNeeded();
     await this.communicationByBandsQuickNav.click();
 
-    await expect(this.communicationByBandsSectionHeader).toBeVisible({ timeout: 90_000 });
+    await expect(this.communicationByBandsSectionHeader).toBeVisible({
+      timeout: 90000
+    });
   }
 
   getAssetSection() {
@@ -81,13 +133,22 @@ class AdministrativeDashboardPage {
   }
 
   async readNumber(locator, errorMessage) {
-    await expect(locator).toBeVisible({ timeout: 30_000 });
+    await expect(locator).toBeVisible({
+      timeout: 30000
+    });
 
     const text = (await locator.textContent())?.trim() || '';
-    const value = Number(text.replace(/,/g, '').replace('%', ''));
+
+    const value = Number(
+      text
+        .replace(/,/g, '')
+        .replace('%', '')
+    );
 
     if (Number.isNaN(value)) {
-      throw new Error(`${errorMessage}. Found text: "${text}"`);
+      throw new Error(
+        `${errorMessage}. Found text: "${text}"`
+      );
     }
 
     return value;
@@ -95,22 +156,38 @@ class AdministrativeDashboardPage {
 
   async getTotalFromCard(card) {
     const totalLocator = card.locator('.header span.value').first();
-    return this.readNumber(totalLocator, 'Could not read total value');
+    return this.readNumber(
+      totalLocator,
+      'Could not read total value'
+    );
   }
 
   async getValueByLabel(card, labelText) {
     const label = card
       .locator('span.name')
-      .filter({ hasText: new RegExp(`^${labelText}$`) })
+      .filter({
+        hasText: new RegExp(`^${labelText}$`)
+      })
       .first();
 
-    await expect(label).toBeVisible({ timeout: 30_000 });
+    await expect(label).toBeVisible({
+      timeout: 30000
+    });
 
-    const row = label.locator('xpath=ancestor::div[contains(@class,"justify-content-between")][1]');
-    await expect(row).toBeVisible({ timeout: 30_000 });
+    const row = label.locator(
+      'xpath=ancestor::div[contains(@class,"justify-content-between")][1]'
+    );
+
+    await expect(row).toBeVisible({
+      timeout: 30000
+    });
 
     const valueLocator = row.locator('span.value').first();
-    return this.readNumber(valueLocator, `Could not read ${labelText} value`);
+
+    return this.readNumber(
+      valueLocator,
+      `Could not read ${labelText} value`
+    );
   }
 
   async getCommunicatingFromCard(card) {
@@ -123,19 +200,30 @@ class AdministrativeDashboardPage {
 
   async waitForCardMetricsToLoad(title) {
     const card = this.getCardByTitle(title);
-    await expect(card).toBeVisible({ timeout: 90_000 });
+
+    await expect(card).toBeVisible({
+      timeout: 90000
+    });
 
     await expect(async () => {
       const total = await this.getTotalFromCard(card);
       const communicating = await this.getCommunicatingFromCard(card);
-      const nonCommunicating = await this.getNonCommunicatingFromCard(card);
+      const nonCommunicating =
+        await this.getNonCommunicatingFromCard(card);
 
       expect(Number.isNaN(total)).toBeFalsy();
       expect(Number.isNaN(communicating)).toBeFalsy();
       expect(Number.isNaN(nonCommunicating)).toBeFalsy();
 
-      expect(total === 0 && communicating === 0 && nonCommunicating === 0).toBeFalsy();
-    }).toPass({ timeout: 90_000, intervals: [1000, 2000, 3000] });
+      expect(
+        total === 0 &&
+        communicating === 0 &&
+        nonCommunicating === 0
+      ).toBeFalsy();
+    }).toPass({
+      timeout: 90000,
+      intervals: [1000, 2000, 3000]
+    });
   }
 
   async getCardMetrics(title) {
@@ -155,14 +243,18 @@ class AdministrativeDashboardPage {
     return {
       feeders33: await this.getCardMetrics('33KV Feeders'),
       feeders11: await this.getCardMetrics('11KV Feeders'),
-      distributionTransformers: await this.getCardMetrics('Distribution Transformers')
+      distributionTransformers: await this.getCardMetrics(
+        'Distribution Transformers'
+      )
     };
   }
 
   async getBandCountAndPercentage(card, groupClass, bandName) {
     const groupBlock = card
       .locator(`.${groupClass}`)
-      .locator('xpath=ancestor::div[contains(@class,"col-12")][1]');
+      .locator(
+        'xpath=ancestor::div[contains(@class,"col-12")][1]'
+      );
 
     const bandRow = groupBlock
       .locator('.communicating-border .ng-star-inserted')
@@ -173,11 +265,21 @@ class AdministrativeDashboardPage {
       })
       .first();
 
-    await expect(bandRow).toBeVisible({ timeout: 30_000 });
+    await expect(bandRow).toBeVisible({
+      timeout: 30000
+    });
 
-    const countText = (await bandRow.locator('span.mr-3').first().textContent())?.trim() || '';
+    const countText =
+      (await bandRow
+        .locator('span.mr-3')
+        .first()
+        .textContent())?.trim() || '';
+
     const percentageText =
-      (await bandRow.locator('span.percent-value').first().textContent())?.trim() || '';
+      (await bandRow
+        .locator('span.percent-value')
+        .first()
+        .textContent())?.trim() || '';
 
     return {
       count: Number(countText.replace(/,/g, '')),
@@ -187,8 +289,12 @@ class AdministrativeDashboardPage {
   }
 
   async getCommunicationByBandsCardMetrics(title) {
-    const card = this.getCommunicationByBandsCardByTitle(title);
-    await expect(card).toBeVisible({ timeout: 90_000 });
+    const card =
+      this.getCommunicationByBandsCardByTitle(title);
+
+    await expect(card).toBeVisible({
+      timeout: 90000
+    });
 
     const total = await this.getTotalFromCard(card);
 
@@ -202,23 +308,31 @@ class AdministrativeDashboardPage {
       `Could not read ${title} non communicating value`
     );
 
-    const bandNames = ['Band A', 'Band B', 'Band C', 'Band D', 'Band E'];
+    const bandNames = [
+      'Band A',
+      'Band B',
+      'Band C',
+      'Band D',
+      'Band E'
+    ];
 
     const communicatingBands = {};
     const nonCommunicatingBands = {};
 
     for (const bandName of bandNames) {
-      communicatingBands[bandName] = await this.getBandCountAndPercentage(
-        card,
-        'communicating',
-        bandName
-      );
+      communicatingBands[bandName] =
+        await this.getBandCountAndPercentage(
+          card,
+          'communicating',
+          bandName
+        );
 
-      nonCommunicatingBands[bandName] = await this.getBandCountAndPercentage(
-        card,
-        'non-communicating',
-        bandName
-      );
+      nonCommunicatingBands[bandName] =
+        await this.getBandCountAndPercentage(
+          card,
+          'non-communicating',
+          bandName
+        );
     }
 
     return {
@@ -233,13 +347,24 @@ class AdministrativeDashboardPage {
 
   async getAllCommunicationByBandsMetrics() {
     return {
-      feeders33: await this.getCommunicationByBandsCardMetrics('33KV Feeders'),
-      feeders11: await this.getCommunicationByBandsCardMetrics('11KV Feeders'),
-      distributionTransformers: await this.getCommunicationByBandsCardMetrics(
-        'Distribution Transformers'
-      )
+      feeders33:
+        await this.getCommunicationByBandsCardMetrics(
+          '33KV Feeders'
+        ),
+
+      feeders11:
+        await this.getCommunicationByBandsCardMetrics(
+          '11KV Feeders'
+        ),
+
+      distributionTransformers:
+        await this.getCommunicationByBandsCardMetrics(
+          'Distribution Transformers'
+        )
     };
   }
 }
 
-module.exports = { AdministrativeDashboardPage };
+module.exports = {
+  AdministrativeDashboardPage
+};

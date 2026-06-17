@@ -1,0 +1,7 @@
+[AVAILABILITY DOWNLOAD VERIFIED] Outgoing 33KV Feeders
+Availability File: DailyAvailabilityF33_63915_682ec2df-e58c-411a-9043-a67449c65afb.xlsx
+[REPORT DOWNLOAD VERIFIED] Outgoing 33KV Feeders
+Report File: Monthly33KvFeeder_63915_3d7626a5-ec39-416c-87cf-2983c5e5b61b.xlsx
+[AVAILABILITY DOWNLOAD VERIFIED] Outgoing 11KV Feeders
+Availability File: DailyAvailabilityF11_63915_d089c449-df1b-4d6d-a39f-a5591250b76a.xlsx
+[INFO] Native download event not detected for undefined. Trying popup flow...

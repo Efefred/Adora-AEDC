@@ -1,0 +1,183 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - img "Cancel" [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e10]: You have been dormant for too long
+      - generic [ref=e11]: "You will be logged out in : 30"
+    - generic [ref=e12]:
+      - button "Stay logged in" [ref=e13] [cursor=pointer]
+      - button "Log out" [ref=e14] [cursor=pointer]
+  - generic [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e20]:
+          - generic [ref=e21]:
+            - generic:
+              - img
+              - generic: Dashboard
+          - generic [ref=e23] [cursor=pointer]:
+            - img [ref=e24]
+            - generic [ref=e26]: Energy Management
+            - img "arrow icon" [ref=e27]
+          - generic [ref=e29] [cursor=pointer]:
+            - img [ref=e30]
+            - generic [ref=e32]: Outage Management
+            - img "arrow icon" [ref=e33]
+          - generic [ref=e35] [cursor=pointer]:
+            - img [ref=e36]
+            - generic [ref=e38]: Analytics
+            - img "arrow icon" [ref=e39]
+          - generic [ref=e41]:
+            - generic [ref=e43] [cursor=pointer]: Performance Console
+            - generic [ref=e45] [cursor=pointer]: Performance Console
+            - generic [ref=e47] [cursor=pointer]: Performance Console
+            - generic [ref=e49] [cursor=pointer]: Managerial Dashboard
+            - generic [ref=e51] [cursor=pointer]: System Reliability Indices
+            - generic [ref=e53] [cursor=pointer]: Grid Losses Trend
+            - generic [ref=e55] [cursor=pointer]: Energy Distribution
+            - generic [ref=e57] [cursor=pointer]: Outage Analysis
+            - generic [ref=e59] [cursor=pointer]: Energy Distribution
+            - generic [ref=e61] [cursor=pointer]: Asset Comparison
+            - generic [ref=e63] [cursor=pointer]: Watch List
+          - generic [ref=e65] [cursor=pointer]:
+            - img [ref=e66]
+            - generic [ref=e68]: Settings
+            - img "arrow icon" [ref=e69]
+        - generic [ref=e70]:
+          - generic [ref=e71]:
+            - img "Network Management" [ref=e73]
+            - generic [ref=e74]:
+              - generic [ref=e75]: Module
+              - generic [ref=e76]: Network Management
+            - generic [ref=e77] [cursor=pointer]: Switch Module
+          - generic [ref=e80] [cursor=pointer]:
+            - generic [ref=e81]: Logout
+            - img "Logout icon" [ref=e82]
+      - generic [ref=e85]:
+        - generic [ref=e86]:
+          - img "Left Alignment icon" [ref=e87] [cursor=pointer]
+          - img "Header icon" [ref=e88] [cursor=pointer]
+        - generic [ref=e89]:
+          - button "English" [ref=e90] [cursor=pointer]
+          - button "French" [ref=e91] [cursor=pointer]
+          - generic [ref=e92] [cursor=pointer]:
+            - generic [ref=e93]:
+              - img "Network Management" [ref=e94]
+              - text: Network Management
+            - generic [ref=e95]:
+              - text: Switch
+              - img "Chevron right" [ref=e96]
+          - img "Header Notification icon" [ref=e98] [cursor=pointer]
+          - button "BA BPS AEDC" [ref=e100] [cursor=pointer]:
+            - generic [ref=e102]: BA
+            - generic [ref=e104]: BPS AEDC
+            - img [ref=e105]
+      - main [ref=e108]:
+        - generic [ref=e109]:
+          - generic [ref=e110]:
+            - generic [ref=e111]:
+              - generic [ref=e112]: Network Management Dashboard
+              - generic [ref=e116]:
+                - generic [ref=e117]: Network
+                - generic [ref=e118] [cursor=pointer]: Organisation
+            - generic [ref=e119]:
+              - generic [ref=e120] [cursor=pointer]:
+                - generic [ref=e121]: All Main Substation
+                - img
+              - generic [ref=e122] [cursor=pointer]:
+                - generic [ref=e123]: All Primary Substation
+                - img
+              - generic [ref=e126] [cursor=pointer]:
+                - generic [ref=e127]: Period
+                - img [ref=e128]
+          - generic [ref=e130]:
+            - generic [ref=e132]:
+              - generic [ref=e133]:
+                - generic "Energy at TS Outgoing" [ref=e134]
+                - img [ref=e136]:
+                  - generic [ref=e138]: "?"
+              - generic [ref=e139]: 0 MWH
+              - generic [ref=e140]:
+                - img [ref=e141]
+                - generic [ref=e143]: "-100%"
+                - generic [ref=e144]: (0 MWH)
+            - generic [ref=e146]:
+              - generic [ref=e147]:
+                - generic "TS Outgoing Less Point Load DTs" [ref=e148]
+                - img [ref=e150]:
+                  - generic [ref=e152]: "?"
+              - generic [ref=e153]: 0 MWH
+              - generic [ref=e154]:
+                - img [ref=e155]
+                - generic [ref=e157]: "-100%"
+                - generic [ref=e158]: (0 MWH)
+            - generic [ref=e160]:
+              - generic [ref=e161]:
+                - generic "Energy at ISS Outgoing" [ref=e162]
+                - img [ref=e164]:
+                  - generic [ref=e166]: "?"
+              - generic [ref=e167]: 0 MWH
+              - generic [ref=e168]:
+                - generic [ref=e169]: "T&D Loss:"
+                - img [ref=e170]
+                - generic [ref=e172]: 0%
+                - generic [ref=e173]: (0 MWH)
+            - generic [ref=e175]:
+              - generic [ref=e176]:
+                - generic "Energy at All DTs" [ref=e177]
+                - img [ref=e179]:
+                  - generic [ref=e181]: "?"
+              - generic [ref=e182]: 0 MWH
+              - generic [ref=e183]:
+                - generic [ref=e184]: "T&D Loss:"
+                - img [ref=e185]
+                - generic [ref=e187]: 0%
+                - generic [ref=e188]: (0 MWH)
+            - generic [ref=e190]:
+              - generic [ref=e191]:
+                - generic "Total Retailed Energy" [ref=e192]
+                - img [ref=e194]:
+                  - generic [ref=e196]: "?"
+              - generic [ref=e197]: 0 MWH
+              - generic [ref=e198]:
+                - generic [ref=e199]: "Dist. Loss:"
+                - img [ref=e200]
+                - generic [ref=e202]: 0%
+                - generic [ref=e203]: (0 MWH)
+            - generic [ref=e205]:
+              - generic [ref=e206]:
+                - generic "Global T&D Losses" [ref=e207]
+                - img [ref=e209]:
+                  - generic [ref=e211]: "?"
+              - generic [ref=e212]: 0 MWH
+              - generic [ref=e213]:
+                - generic [ref=e214]: "T&D Percentage Loss:"
+                - img [ref=e215]
+                - generic [ref=e217]: 0%
+          - generic [ref=e219]:
+            - button "Analytics" [ref=e220] [cursor=pointer]:
+              - text: Analytics
+              - img [ref=e221]
+            - generic [ref=e224]:
+              - button "Layers" [ref=e225] [cursor=pointer]:
+                - img [ref=e226]
+              - button "Fullscreen" [ref=e233] [cursor=pointer]:
+                - img [ref=e234]
+              - button "+" [ref=e239] [cursor=pointer]
+              - button "−" [ref=e240] [cursor=pointer]
+            - generic:
+              - generic:
+                - generic: Online
+              - generic:
+                - generic: Offline
+            - generic [ref=e245]:
+              - region "Map" [ref=e246]
+              - iframe [ref=e321]:
+                
+    - button "ChatBot" [ref=e323] [cursor=pointer]:
+      - img [ref=e324]:
+        - img [ref=e325]
+```

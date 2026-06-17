@@ -8,7 +8,7 @@ export default defineConfig({
   timeout: 180_000,
   fullyParallel: false,
   retries: 1,
-  reporter: [['html', { open: 'never' }], ['list']],
+  // reporter: [['html', { open: 'never' }], ['list']],
   expect: {
     timeout: 20_000
   },
@@ -27,16 +27,23 @@ export default defineConfig({
   ['allure-playwright']
 ],
   projects: [
-    {
-      name: 'setup',
-      testMatch: /auth\.setup\.js/
+  {
+    name: 'setup',
+    testMatch: /auth\.setup\.js/
+  },
+
+  {
+    name: 'login',
+    testMatch: /login\.spec\.js/
+  },
+
+  {
+    name: 'chromium',
+    testIgnore: /login\.spec\.js/,
+    use: {
+      storageState: 'playwright/.auth/user.json'
     },
-    {
-      name: 'chromium',
-      use: {
-        storageState: 'playwright/.auth/user.json'
-      },
-      dependencies: ['setup']
-    }
-  ]
+    dependencies: ['setup']
+  }
+]
 });

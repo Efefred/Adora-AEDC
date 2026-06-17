@@ -1,0 +1,222 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - img "Cancel" [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e10]: You have been dormant for too long
+      - generic [ref=e11]: "You will be logged out in : 30"
+    - generic [ref=e12]:
+      - button "Stay logged in" [ref=e13] [cursor=pointer]
+      - button "Log out" [ref=e14] [cursor=pointer]
+  - generic [ref=e16]:
+    - generic [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - generic:
+            - img
+            - generic: Dashboard
+        - generic [ref=e22] [cursor=pointer]:
+          - img [ref=e23]
+          - generic [ref=e25]: Work Order Management
+        - generic [ref=e27] [cursor=pointer]:
+          - img [ref=e28]
+          - generic [ref=e30]: Asset Performance
+        - generic [ref=e32] [cursor=pointer]:
+          - img [ref=e33]
+          - generic [ref=e35]: Predictive Analytics
+        - generic [ref=e37] [cursor=pointer]:
+          - img [ref=e38]
+          - generic [ref=e40]: Predictive Analytics AI
+        - generic [ref=e42] [cursor=pointer]:
+          - img [ref=e43]
+          - generic [ref=e45]: Settings
+          - img "arrow icon" [ref=e46]
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - img "Field Operations" [ref=e50]
+          - generic [ref=e51]:
+            - generic [ref=e52]: Module
+            - generic [ref=e53]: Field Operations
+          - generic [ref=e54] [cursor=pointer]: Switch Module
+        - generic [ref=e57] [cursor=pointer]:
+          - generic [ref=e58]: Logout
+          - img "Logout icon" [ref=e59]
+    - generic [ref=e62]:
+      - generic [ref=e63]:
+        - img "Left Alignment icon" [ref=e64] [cursor=pointer]
+        - img "Header icon" [ref=e65] [cursor=pointer]
+      - generic [ref=e66]:
+        - button "English" [ref=e67] [cursor=pointer]
+        - button "French" [ref=e68] [cursor=pointer]
+        - generic [ref=e69] [cursor=pointer]:
+          - generic [ref=e70]:
+            - img "Field Operations" [ref=e71]
+            - text: Field Operations
+          - generic [ref=e72]:
+            - text: Switch
+            - img "Chevron right" [ref=e73]
+        - img "Header Notification icon" [ref=e75] [cursor=pointer]
+        - button "BA BPS AEDC" [ref=e77] [cursor=pointer]:
+          - generic [ref=e79]: BA
+          - generic [ref=e81]: BPS AEDC
+          - img [ref=e82]
+    - generic [ref=e84]:
+      - img "Close" [ref=e89]
+      - main [ref=e90]:
+        - generic [ref=e91]:
+          - generic [ref=e92]:
+            - generic [ref=e93]: Dashboard
+            - button "Report" [ref=e94] [cursor=pointer]:
+              - text: Report
+              - img [ref=e96]
+          - generic [ref=e99]:
+            - generic [ref=e101]: Work Order Management
+            - generic [ref=e102]:
+              - generic [ref=e107]:
+                - generic [ref=e109]: Ongoing
+                - generic [ref=e110]:
+                  - generic [ref=e111]: N\A
+                  - text: 0 Overdue
+                  - generic [ref=e112] [cursor=pointer]: View Details >
+              - generic [ref=e117]:
+                - generic [ref=e119]: Unassigned
+                - generic [ref=e120]:
+                  - generic [ref=e121]: N\A
+                  - generic [ref=e122] [cursor=pointer]: View Details >
+              - generic [ref=e127]:
+                - generic [ref=e129]: Completed
+                - generic [ref=e130]:
+                  - generic [ref=e131]: "4"
+                  - generic [ref=e132] [cursor=pointer]: View Details >
+              - generic [ref=e137]:
+                - generic [ref=e139]: Canceled
+                - generic [ref=e140]:
+                  - generic [ref=e141]: "1"
+                  - generic [ref=e142] [cursor=pointer]: View Details >
+          - generic [ref=e143]:
+            - generic [ref=e144]: Summary Analytics on Predictive Asset Maintenance Logs
+            - list [ref=e145]:
+              - button "33KV Feeders 108" [ref=e146] [cursor=pointer]:
+                - text: 33KV Feeders
+                - generic [ref=e147]: "108"
+              - button "11KV Feeders 58" [ref=e148] [cursor=pointer]:
+                - text: 11KV Feeders
+                - generic [ref=e149]: "58"
+              - button "DTS 589" [ref=e150] [cursor=pointer]:
+                - text: DTS
+                - generic [ref=e151]: "589"
+            - generic [ref=e152]:
+              - table [ref=e153]:
+                - rowgroup [ref=e154]:
+                  - row "TS NAME EXCESSIVE VOLTAGE DROP CURRENT LOSS POWER LOSS ABNORMAL OPERATING TEMP EXCESSIVE SOUND TOTAL" [ref=e155]:
+                    - columnheader "TS NAME" [ref=e156]
+                    - columnheader "EXCESSIVE VOLTAGE DROP" [ref=e157]
+                    - columnheader "CURRENT LOSS" [ref=e158]
+                    - columnheader "POWER LOSS" [ref=e159]
+                    - columnheader "ABNORMAL OPERATING TEMP" [ref=e160]
+                    - columnheader "EXCESSIVE SOUND" [ref=e161]
+                    - columnheader "TOTAL" [ref=e162]
+                - rowgroup [ref=e163]:
+                  - row "AJAOKUTA 4 0 1 4 0 9" [ref=e164]:
+                    - cell "AJAOKUTA" [ref=e165]
+                    - cell "4" [ref=e166]
+                    - cell "0" [ref=e167]
+                    - cell "1" [ref=e168]
+                    - cell "4" [ref=e169]
+                    - cell "0" [ref=e170]
+                    - cell "9" [ref=e171]
+                  - row "AKURBA 0 0 0 0 0 0" [ref=e172]:
+                    - cell "AKURBA" [ref=e173]
+                    - cell "0" [ref=e174]
+                    - cell "0" [ref=e175]
+                    - cell "0" [ref=e176]
+                    - cell "0" [ref=e177]
+                    - cell "0" [ref=e178]
+                    - cell "0" [ref=e179]
+                  - row "AT2 0 0 0 0 0 0" [ref=e180]:
+                    - cell "AT2" [ref=e181]
+                    - cell "0" [ref=e182]
+                    - cell "0" [ref=e183]
+                    - cell "0" [ref=e184]
+                    - cell "0" [ref=e185]
+                    - cell "0" [ref=e186]
+                    - cell "0" [ref=e187]
+                  - row "AT3 12 0 2 12 0 26" [ref=e188]:
+                    - cell "AT3" [ref=e189]
+                    - cell "12" [ref=e190]
+                    - cell "0" [ref=e191]
+                    - cell "2" [ref=e192]
+                    - cell "12" [ref=e193]
+                    - cell "0" [ref=e194]
+                    - cell "26" [ref=e195]
+                  - row "AT4 6 0 0 6 0 12" [ref=e196]:
+                    - cell "AT4" [ref=e197]
+                    - cell "6" [ref=e198]
+                    - cell "0" [ref=e199]
+                    - cell "0" [ref=e200]
+                    - cell "6" [ref=e201]
+                    - cell "0" [ref=e202]
+                    - cell "12" [ref=e203]
+                  - row "AT5 6 0 0 6 0 12" [ref=e204]:
+                    - cell "AT5" [ref=e205]
+                    - cell "6" [ref=e206]
+                    - cell "0" [ref=e207]
+                    - cell "0" [ref=e208]
+                    - cell "6" [ref=e209]
+                    - cell "0" [ref=e210]
+                    - cell "12" [ref=e211]
+                  - row "AT6 6 0 2 6 0 14" [ref=e212]:
+                    - cell "AT6" [ref=e213]
+                    - cell "6" [ref=e214]
+                    - cell "0" [ref=e215]
+                    - cell "2" [ref=e216]
+                    - cell "6" [ref=e217]
+                    - cell "0" [ref=e218]
+                    - cell "14" [ref=e219]
+                  - row "AT7 3 0 0 3 0 6" [ref=e220]:
+                    - cell "AT7" [ref=e221]
+                    - cell "3" [ref=e222]
+                    - cell "0" [ref=e223]
+                    - cell "0" [ref=e224]
+                    - cell "3" [ref=e225]
+                    - cell "0" [ref=e226]
+                    - cell "6" [ref=e227]
+                  - row "AT8 5 0 0 5 0 10" [ref=e228]:
+                    - cell "AT8" [ref=e229]
+                    - cell "5" [ref=e230]
+                    - cell "0" [ref=e231]
+                    - cell "0" [ref=e232]
+                    - cell "5" [ref=e233]
+                    - cell "0" [ref=e234]
+                    - cell "10" [ref=e235]
+                  - row "AT9 6 0 0 6 0 12" [ref=e236]:
+                    - cell "AT9" [ref=e237]
+                    - cell "6" [ref=e238]
+                    - cell "0" [ref=e239]
+                    - cell "0" [ref=e240]
+                    - cell "6" [ref=e241]
+                    - cell "0" [ref=e242]
+                    - cell "12" [ref=e243]
+              - navigation "Page navigation example" [ref=e246]:
+                - list [ref=e247]:
+                  - generic [ref=e248]: Page 1 of 3
+                  - generic [ref=e249]:
+                    - listitem:
+                      - generic:
+                        - img "<<"
+                    - listitem:
+                      - generic:
+                        - img "<"
+                    - listitem:
+                      - generic: "1"
+                    - listitem [ref=e250] [cursor=pointer]:
+                      - generic [ref=e251]: "2"
+                    - listitem [ref=e252] [cursor=pointer]:
+                      - generic [ref=e253]: "3"
+                    - listitem [ref=e254] [cursor=pointer]:
+                      - img ">" [ref=e256]
+                    - listitem [ref=e257] [cursor=pointer]:
+                      - img ">>" [ref=e259]
+```

@@ -7,7 +7,7 @@ class GridEnergyProfilePage {
     this.page = page;
     this.currentMode = null;
 
-    this.pageHeader = page.getByRole('main').getByText('Grid Energy Profile', { exact: true });
+    this.pageHeader = page.getByRole('main').getByText('Energy Management', { exact: true });
 
     this.distributionTransformerTab = page.getByText('Distribution Transformer', { exact: true });
     this.outgoing33KvFeedersTab = page.getByText('Outgoing 33KV Feeders', { exact: true });
@@ -105,38 +105,85 @@ class GridEnergyProfilePage {
     await this.downloadReportButton.click();
   }
 
-  async downloadFile(triggerMethod) {
-    await this.waitForGridToStabilize();
 
-    const [download] = await Promise.all([
-      this.page.waitForEvent('download', { timeout: 120_000 }),
-      triggerMethod()
-    ]);
+async downloadFile(triggerMethod) {
+  return await triggerMethod();
+}
 
-    const fileName = download.suggestedFilename();
-    const downloadDir = 'test-results/downloads';
+async downloadAvailabilityReport() {
+  await this.waitForGridToStabilize();
 
-    await this.page.waitForTimeout(2000);
+  const [download] = await Promise.all([
+    this.page.waitForEvent('download', { timeout: 120_000 }),
+    this.clickDownloadAvailability()
+  ]);
 
-    await download.saveAs(`${downloadDir}/${fileName}`);
+  const fileName = download.suggestedFilename();
 
-    return {
-      fileName,
-      filePath: `${downloadDir}/${fileName}`
-    };
-  }
+  const fs = require('fs');
 
-  async downloadAvailabilityReport() {
-    return await this.downloadFile(async () => {
-      await this.clickDownloadAvailability();
-    });
-  }
+  const downloadDir = 'test-results/downloads';
 
-  async downloadNodeEnergyReport() {
-    return await this.downloadFile(async () => {
+  fs.mkdirSync(downloadDir, { recursive: true });
+
+  const filePath = `${downloadDir}/${fileName}`;
+
+  await download.saveAs(filePath);
+
+  return {
+    fileName,
+    filePath
+  };
+}
+
+async downloadNodeEnergyReport(mode) {
+  return await this.downloadFile(
+    async () => {
+      const responsePromise = this.page.waitForResponse(
+        async (response) => {
+          const url = response.url().toLowerCase();
+
+          return (
+            response.status() === 200 &&
+            (
+              url.includes('report') ||
+              url.includes('monthly') ||
+              url.includes('feeder') ||
+              url.includes('transformer') ||
+              url.includes('xlsx') ||
+              url.includes('excel')
+            )
+          );
+        },
+        { timeout: 120_000 }
+      );
+
       await this.clickDownloadReport();
-    });
-  }
+
+      const response = await responsePromise;
+
+      const buffer = await response.body();
+
+      const fs = require('fs');
+
+      const fileName = `report-${mode}-${Date.now()}.xlsx`;
+      const downloadDir = 'test-results/downloads';
+
+      fs.mkdirSync(downloadDir, { recursive: true });
+
+      const filePath = `${downloadDir}/${fileName}`;
+
+      fs.writeFileSync(filePath, buffer);
+
+      return {
+        fileName,
+        filePath
+      };
+    },
+    `report-${mode}`
+  );
+}
+
 
   getSearchInput(mode) {
     if (mode === 'dt') return this.dtSearchInput;
@@ -493,24 +540,28 @@ class GridEnergyProfilePage {
   }
 
   async getBandValues() {
-    const text = this.normalizeText(await this.page.locator('body').innerText());
+  const text = this.normalizeText(
+    await this.page.locator('body').innerText()
+  );
 
-    const match = text.match(
-      /Band A\s*(\d+).*Band B\s*(\d+).*Band C\s*(\d+).*Band D\s*(\d+).*Band E\s*(\d+)/i
-    );
+  const bandValues = {};
 
-    if (!match) {
-      throw new Error(`Unable to parse band values from page text: "${text}"`);
-    }
+  const matches = [
+    ...text.matchAll(/Band\s+([A-D])\s*(\d+)/gi)
+  ];
 
-    return {
-      'Band A': match[1],
-      'Band B': match[2],
-      'Band C': match[3],
-      'Band D': match[4],
-      'Band E': match[5]
-    };
+  for (const match of matches) {
+    bandValues[`Band ${match[1].toUpperCase()}`] = match[2];
   }
+
+  if (Object.keys(bandValues).length === 0) {
+    throw new Error(
+      `Unable to parse band values from page text: "${text}"`
+    );
+  }
+
+  return bandValues;
+}
 
   async getActiveBand() {
     const bandValues = await this.getBandValues();

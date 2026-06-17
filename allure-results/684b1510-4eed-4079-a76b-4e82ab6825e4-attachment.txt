@@ -1,0 +1,15 @@
+
+[NODE ENERGY ANALYSIS RESULT]
+Distribution Transformer
+DT Number                : 060018110941
+LAR                     : 4617.357
+PAR                     : 4693.793
+Energy Delta            : 76.436
+MF                      : 1
+Energy Received         : 76.436
+Retailed Energy         : 44.625
+Losses                  : 31.811
+Loss %                  : 41.618
+Active Band             : Band A
+Tariff Rate             : 209.5
+Expected Revenue        : 10809005.850

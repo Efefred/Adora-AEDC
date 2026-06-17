@@ -1,0 +1,12 @@
+
+[NODE ENERGY ANALYSIS RESULT]
+Outgoing 33KV Feeders
+Feeder 33 No             : 230401079633
+LAR                     : 142788
+PAR                     : 149160
+Energy Delta            : 6372.000
+MF                      : 1
+Energy Received         : 6372.000
+Retailed Energy         : null
+Losses                  : 1141.333
+Loss %                  : 17.912

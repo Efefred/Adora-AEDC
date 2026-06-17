@@ -1,0 +1,345 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - img "Cancel" [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e10]: You have been dormant for too long
+      - generic [ref=e11]: "You will be logged out in : 30"
+    - generic [ref=e12]:
+      - button "Stay logged in" [ref=e13] [cursor=pointer]
+      - button "Log out" [ref=e14] [cursor=pointer]
+  - generic [ref=e16]:
+    - generic [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e21] [cursor=pointer]:
+          - img [ref=e22]
+          - generic [ref=e24]: Dashboard
+        - generic [ref=e26] [cursor=pointer]:
+          - img [ref=e27]
+          - generic [ref=e29]: Dashboard Enhanced
+        - generic [ref=e31] [cursor=pointer]:
+          - img [ref=e32]
+          - generic [ref=e34]: Administrative Dashboard
+        - generic [ref=e36] [cursor=pointer]:
+          - img [ref=e37]
+          - generic [ref=e39]: Summary Executive Dashboard
+        - generic [ref=e41] [cursor=pointer]:
+          - img [ref=e42]
+          - generic [ref=e44]: Executive Dashboard
+        - generic [ref=e46] [cursor=pointer]:
+          - img [ref=e47]
+          - generic [ref=e49]: Managerial Dashboard
+        - generic [ref=e51] [cursor=pointer]:
+          - img [ref=e52]
+          - generic [ref=e54]: System Reliability Indices
+        - generic [ref=e55] [cursor=pointer]:
+          - generic:
+            - img
+            - generic: Grid Energy Profile
+            - img "arrow icon"
+        - generic [ref=e57]:
+          - generic:
+            - generic: Node Energy Analysis
+          - generic [ref=e59] [cursor=pointer]: Energy Flow Analysis
+          - generic [ref=e61] [cursor=pointer]: Network Accounting
+        - generic [ref=e63] [cursor=pointer]:
+          - img [ref=e64]
+          - generic [ref=e66]: CIM Grid Energy Profile
+          - img "arrow icon" [ref=e67]
+        - generic [ref=e69] [cursor=pointer]:
+          - img [ref=e70]
+          - generic [ref=e72]: Outage & Availability
+          - img "arrow icon" [ref=e73]
+        - generic [ref=e75] [cursor=pointer]:
+          - img [ref=e76]
+          - generic [ref=e78]: Trend Analysis
+          - img "arrow icon" [ref=e79]
+        - generic [ref=e81] [cursor=pointer]:
+          - img [ref=e82]
+          - generic [ref=e84]: Watch List
+        - generic [ref=e86] [cursor=pointer]:
+          - img [ref=e87]
+          - generic [ref=e89]: Assets Load Forecast
+        - generic [ref=e91] [cursor=pointer]:
+          - img [ref=e92]
+          - generic [ref=e94]: Settings
+          - img "arrow icon" [ref=e95]
+        - generic [ref=e97] [cursor=pointer]:
+          - img [ref=e98]
+          - generic [ref=e100]: Reports
+      - generic [ref=e101]:
+        - generic [ref=e102]:
+          - img "Network Management" [ref=e104]
+          - generic [ref=e105]:
+            - generic [ref=e106]: Module
+            - generic [ref=e107]: Network Management
+          - generic [ref=e108] [cursor=pointer]: Switch Module
+        - generic [ref=e111] [cursor=pointer]:
+          - generic [ref=e112]: Logout
+          - img "Logout icon" [ref=e113]
+    - generic [ref=e116]:
+      - generic [ref=e117]:
+        - img "Left Alignment icon" [ref=e118] [cursor=pointer]
+        - img "Header icon" [ref=e119] [cursor=pointer]
+      - generic [ref=e120]:
+        - button "English" [ref=e121] [cursor=pointer]
+        - button "French" [ref=e122] [cursor=pointer]
+        - generic [ref=e123] [cursor=pointer]:
+          - generic [ref=e124]:
+            - img "Network Management" [ref=e125]
+            - text: Network Management
+          - generic [ref=e126]:
+            - text: Switch
+            - img "Chevron right" [ref=e127]
+        - img "Header Notification icon" [ref=e129] [cursor=pointer]
+        - button "BA BPS AEDC" [ref=e131] [cursor=pointer]:
+          - generic [ref=e133]: BA
+          - generic [ref=e135]: BPS AEDC
+          - img [ref=e136]
+    - main [ref=e139]:
+      - generic [ref=e140]:
+        - generic [ref=e141]: Grid Energy Profile
+        - generic [ref=e147] [cursor=pointer]: Add Filter
+        - generic [ref=e153]:
+          - generic [ref=e154]: Network
+          - generic [ref=e155] [cursor=pointer]: Organisation
+        - generic [ref=e156]:
+          - generic [ref=e157]:
+            - generic [ref=e159]:
+              - generic [ref=e160] [cursor=pointer]: TS Points
+              - generic [ref=e161] [cursor=pointer]: Outgoing 33KV Feeders
+              - generic [ref=e162] [cursor=pointer]: INJ Sub Station
+              - generic [ref=e163] [cursor=pointer]: Outgoing 11KV Feeders
+              - generic [ref=e164]: Distribution Transformer
+              - generic [ref=e165] [cursor=pointer]: Customers
+            - generic [ref=e167]:
+              - generic [ref=e168] [cursor=pointer]:
+                - generic [ref=e169]: Table View
+                - img [ref=e170]
+              - generic [ref=e172]:
+                - generic [ref=e173]: Map View
+                - img [ref=e174]
+          - generic [ref=e176]:
+            - generic [ref=e177]:
+              - generic [ref=e180] [cursor=pointer]:
+                - generic [ref=e181]:
+                  - img [ref=e182]
+                  - generic [ref=e184]: Period
+                - generic [ref=e185]:
+                  - textbox "Select date range" [ref=e186]: 01/04/26 - 30/04/26
+                  - img [ref=e187]
+              - generic [ref=e193] [cursor=pointer]: Add Filter
+              - generic [ref=e196]:
+                - img [ref=e197] [cursor=pointer]
+                - textbox "060018110941" [ref=e199] [cursor=pointer]:
+                  - /placeholder: Search by DT name or number
+            - generic [ref=e200]:
+              - button "Download Availability" [ref=e203] [cursor=pointer]:
+                - generic [ref=e204]: Download Availability
+                - img [ref=e205]
+              - button "Download Report" [ref=e209] [cursor=pointer]:
+                - generic [ref=e210]: Download Report
+                - img [ref=e211]
+        - generic [ref=e214]:
+          - generic [ref=e216]:
+            - generic [ref=e217]:
+              - generic [ref=e218]:
+                - generic [ref=e219]: Total DT Energy
+                - generic [ref=e220]: 78.932MWh
+              - generic [ref=e221]:
+                - generic [ref=e222]: NGN
+                - generic [ref=e223]: 15,998,790.480
+            - generic [ref=e224]:
+              - generic [ref=e225]:
+                - generic [ref=e226]: Total Retailed Energy
+                - generic [ref=e227]: 32.815MWh
+              - generic [ref=e228]:
+                - generic [ref=e229]: NGN
+                - generic [ref=e230]: 6,956,207.440
+            - generic [ref=e231]:
+              - generic [ref=e232]:
+                - generic [ref=e233]: Difference
+                - generic [ref=e234]: 46.117MWh
+              - generic [ref=e235]:
+                - generic [ref=e236]: NGN
+                - generic [ref=e237]: 9,042,583.040
+          - generic [ref=e238]:
+            - generic [ref=e240]:
+              - generic [ref=e241]: All DTs1
+              - generic [ref=e242] [cursor=pointer]: Band A1
+              - generic [ref=e243] [cursor=pointer]: Band B0
+              - generic [ref=e244] [cursor=pointer]: Band C0
+              - generic [ref=e245] [cursor=pointer]: Band D0
+            - generic [ref=e246]:
+              - generic [ref=e247]: "Communicating Assets: 1"
+              - generic [ref=e248]: "Non Communicating Assets: 0"
+          - table [ref=e252]:
+            - rowgroup [ref=e253]:
+              - columnheader [ref=e254]:
+                - checkbox [ref=e255] [cursor=pointer]
+              - columnheader "CBO" [ref=e256]:
+                - generic "CBO" [ref=e257]
+              - columnheader "CBO MANAGER NAME" [ref=e258]:
+                - generic "CBO MANAGER NAME" [ref=e259]
+              - columnheader "DT TYPE" [ref=e260]:
+                - generic [ref=e262] [cursor=pointer]:
+                  - generic "Dt Type" [ref=e263]: DT TYPE
+                  - img [ref=e264]
+              - columnheader "DT NAME" [ref=e266]:
+                - generic "DT NAME" [ref=e267]
+              - columnheader "METER NUMBER" [ref=e268]:
+                - generic "METER NUMBER" [ref=e269]
+              - columnheader "FEEDER TYPE" [ref=e270]:
+                - generic [ref=e272] [cursor=pointer]:
+                  - generic "Feeder Type" [ref=e273]: FEEDER TYPE
+                  - img [ref=e274]
+              - columnheader "FEEDER NAME" [ref=e276]:
+                - generic "FEEDER NAME" [ref=e277]
+              - columnheader "SUBSTATION NAME" [ref=e278]:
+                - generic "SUBSTATION NAME" [ref=e279]
+              - columnheader "AVG. AVAILABILITY" [ref=e280]:
+                - generic "AVG. AVAILABILITY" [ref=e281]
+              - columnheader "LAR (MWH)" [ref=e282]:
+                - generic "LAR (MWH)" [ref=e283]
+              - columnheader "PAR (MWH)" [ref=e284]:
+                - generic "PAR (MWH)" [ref=e285]
+              - columnheader "MF" [ref=e286]:
+                - generic "MF" [ref=e287]
+              - columnheader "ENERGY RECEIVED (MWH)" [ref=e288]:
+                - generic "ENERGY RECEIVED (MWH)" [ref=e289]
+              - columnheader "EXPECTED REVENUE" [ref=e290]:
+                - generic "EXPECTED REVENUE" [ref=e291]
+              - columnheader "RETAILED ENERGY" [ref=e292]:
+                - generic "RETAILED ENERGY" [ref=e293]
+              - columnheader "COLLECTIONS (NGN)" [ref=e294]:
+                - generic "COLLECTIONS (NGN)" [ref=e295]
+              - columnheader "RETAILED AMOUNT (NGN)" [ref=e296]:
+                - generic "RETAILED AMOUNT (NGN)" [ref=e297]
+              - columnheader "BE (%)" [ref=e298]:
+                - generic "BE (%)" [ref=e299]
+              - columnheader "CE (%)" [ref=e300]:
+                - generic "CE (%)" [ref=e301]
+              - columnheader "LOSSES (MWH)" [ref=e302]:
+                - generic "LOSSES (MWH)" [ref=e303]
+              - columnheader "LOSSES (%)" [ref=e304]:
+                - generic "LOSSES (%)" [ref=e305]
+              - columnheader "LOSSES (NGN)" [ref=e306]:
+                - generic "LOSSES (NGN)" [ref=e307]
+              - columnheader "ATC&C (%)" [ref=e308]:
+                - generic "ATC&C (%)" [ref=e309]
+              - columnheader "TOTAL CONSUMPTION - CUSTOMERS" [ref=e310]:
+                - generic "TOTAL CONSUMPTION - CUSTOMERS" [ref=e311]
+              - columnheader "COMM STATUS (LAST 24HRS)" [ref=e312]:
+                - generic [ref=e314] [cursor=pointer]:
+                  - generic "Comm Status (Last 24Hrs)" [ref=e315]: COMM STATUS (LAST 24HRS)
+                  - img [ref=e316]
+              - columnheader "CONNECTED CUSTOMERS" [ref=e318]:
+                - generic "CONNECTED CUSTOMERS" [ref=e319]
+              - columnheader "CRO NAME" [ref=e320]:
+                - generic "CRO NAME" [ref=e321]
+              - columnheader "DT NUMBER" [ref=e322]:
+                - generic "DT NUMBER" [ref=e323]
+              - columnheader "CLOSEST LANDMARK" [ref=e324]:
+                - generic "CLOSEST LANDMARK" [ref=e325]
+              - columnheader "READ TYPE" [ref=e326]:
+                - generic [ref=e328] [cursor=pointer]:
+                  - generic "Read Type" [ref=e329]: READ TYPE
+                  - img [ref=e330]
+            - rowgroup [ref=e332]:
+              - row "CBO-WUSE N/A Public JENEW ESTATE S/S Copy 060018110941 33KV 132KV KUBWA TS_33KV DAWAKI FDR_PL_PL N/A 16h 42min 4,538.425 04/01/2026 00:00:00 4,617.357 05/01/2026 00:00:00 1 78.932 15,998,790.480 32.815 6,956,207.440 6,956,207.440 41.574 100 46.117 58.426 9,042,583.040 58.426 0 Yes 05/21/2026 12:00:00 147 N/A AEDCDT0002222 By Genuine Estate gate Actual See More" [ref=e333]:
+                - cell [ref=e334]:
+                  - checkbox [ref=e335] [cursor=pointer]
+                - cell "CBO-WUSE" [ref=e336]:
+                  - generic "CBO-WUSE" [ref=e338]
+                - cell "N/A" [ref=e339]:
+                  - generic [ref=e341]: N/A
+                - cell "Public" [ref=e342]:
+                  - generic [ref=e344]: Public
+                - cell "JENEW ESTATE S/S Copy" [ref=e345]:
+                  - generic [ref=e346]:
+                    - generic "JENEW ESTATE S/S" [ref=e347]
+                    - img "Copy" [ref=e348]
+                - cell "060018110941" [ref=e349]:
+                  - generic "060018110941" [ref=e351]
+                - cell "33KV" [ref=e352]:
+                  - generic "33KV" [ref=e354]
+                - cell "132KV KUBWA TS_33KV DAWAKI FDR_PL_PL" [ref=e355]:
+                  - generic "132KV KUBWA TS_33KV DAWAKI FDR_PL_PL" [ref=e357]
+                - cell "N/A" [ref=e358]:
+                  - generic [ref=e360]: N/A
+                - cell "16h 42min" [ref=e361]:
+                  - generic "501 hours" [ref=e363]: 16h 42min
+                - cell "4,538.425 04/01/2026 00:00:00" [ref=e364]:
+                  - generic [ref=e365]:
+                    - generic "4538.424871" [ref=e366]: 4,538.425
+                    - generic "04/01/2026 00:00:00" [ref=e367]:
+                      - img [ref=e368]
+                - cell "4,617.357 05/01/2026 00:00:00" [ref=e370]:
+                  - generic [ref=e371]:
+                    - generic "4617.356697" [ref=e372]: 4,617.357
+                    - generic "05/01/2026 00:00:00" [ref=e373]:
+                      - img [ref=e374]
+                - cell "1" [ref=e376]:
+                  - generic "1" [ref=e378]
+                - cell "78.932" [ref=e379]:
+                  - generic "78.93183" [ref=e381]: "78.932"
+                - cell "15,998,790.480" [ref=e382]:
+                  - generic "15998790.48" [ref=e384]: 15,998,790.480
+                - cell "32.815" [ref=e385]:
+                  - generic "32.815" [ref=e387]
+                - cell "6,956,207.440" [ref=e388]:
+                  - generic "6956207.44" [ref=e390]: 6,956,207.440
+                - cell "6,956,207.440" [ref=e391]:
+                  - generic "6956207.44" [ref=e393]: 6,956,207.440
+                - cell "41.574" [ref=e394]:
+                  - generic "41.574" [ref=e396]
+                - cell "100" [ref=e397]:
+                  - generic "100" [ref=e399]
+                - cell "46.117" [ref=e400]:
+                  - generic "46.11683000000001" [ref=e402]: "46.117"
+                - cell "58.426" [ref=e403]:
+                  - generic "58.42615076832756" [ref=e405]: "58.426"
+                - cell "9,042,583.040" [ref=e406]:
+                  - generic "9042583.04" [ref=e408]: 9,042,583.040
+                - cell "58.426" [ref=e409]:
+                  - generic "58.426" [ref=e411]
+                - cell "0" [ref=e412]:
+                  - 'generic "Prepaid: 0, Postpaid: 0, COMMON.BOTH: 0" [ref=e414]': "0"
+                - cell "Yes 05/21/2026 12:00:00" [ref=e415]:
+                  - generic [ref=e416]:
+                    - generic "Yes" [ref=e417]
+                    - generic "05/21/2026 12:00:00" [ref=e418]:
+                      - img [ref=e419]
+                - cell "147" [ref=e421]:
+                  - 'generic "Prepaid: 147, Postpaid: 0" [ref=e423]': "147"
+                - cell "N/A" [ref=e424]:
+                  - generic [ref=e426]: N/A
+                - cell "AEDCDT0002222" [ref=e427]:
+                  - generic "AEDCDT0002222" [ref=e429]
+                - cell "By Genuine Estate gate" [ref=e430]:
+                  - generic "By Genuine Estate gate" [ref=e432]
+                - cell "Actual" [ref=e433]:
+                  - generic "Actual" [ref=e435]
+                - cell "See More" [ref=e436]:
+                  - button "See More" [ref=e437] [cursor=pointer]
+          - navigation "Page navigation example" [ref=e440]:
+            - list [ref=e441]:
+              - generic [ref=e442]: Page 1 of 1
+              - generic [ref=e443]:
+                - listitem:
+                  - generic:
+                    - img "<<"
+                - listitem:
+                  - generic:
+                    - img "<"
+                - listitem:
+                  - generic: "1"
+                - listitem:
+                  - generic:
+                    - img ">"
+                - listitem:
+                  - generic:
+                    - img ">>"
+```
